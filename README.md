@@ -54,6 +54,17 @@ VitaleSDK.shared.showVitale()
 
 ```
 
+### Custom navigation bar logo
+
+Add your App’s logo to the navigationBar.
+
+```swift
+VitaleSDK.shared.setSmallLogo(UIImage(named: "IMAGE_NAME"))
+
+```
+
+
+
 ## Author
 
 MyVitale, info@myvitale.com
