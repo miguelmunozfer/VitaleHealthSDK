@@ -1,0 +1,2063 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name VitaleHealthSDK
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import AVFoundation
+import AVKit
+import Accelerate
+import AudioToolbox
+import CometChatPro
+import CommonCrypto
+import CoreGraphics
+import CoreImage
+import CoreMedia
+import Darwin
+import Foundation
+import ImageIO
+import Localize_Swift
+import MobileCoreServices
+import NutritionIASDK
+import QuartzCore
+import QuickLook
+import Swift
+import UIKit
+@_exported import VitaleHealthSDK
+import WebKit
+import WorkoutLib
+import _Concurrency
+import _StringProcessing
+public typealias Transformer = (CoreImage.CIImage) -> CoreImage.CIImage?
+public protocol CIImageProcessor : VitaleHealthSDK.ImageProcessor {
+  var filter: VitaleHealthSDK.Filter { get }
+}
+extension VitaleHealthSDK.CIImageProcessor {
+  public func process(item: VitaleHealthSDK.ImageProcessItem, options: VitaleHealthSDK.CometChatKingfisherParsedOptionsInfo) -> VitaleHealthSDK.CFCrossPlatformImage?
+}
+public struct Filter {
+  public init(transform: @escaping VitaleHealthSDK.Transformer)
+  public static var tint: (_ color: VitaleHealthSDK.CFCrossPlatformColor) -> VitaleHealthSDK.Filter
+  public typealias ColorElement = (CoreFoundation.CGFloat, CoreFoundation.CGFloat, CoreFoundation.CGFloat, CoreFoundation.CGFloat)
+  public static var colorControl: (_ arg: VitaleHealthSDK.Filter.ColorElement) -> VitaleHealthSDK.Filter
+}
+extension VitaleHealthSDK.CometChatKingfisherWrapper where Base : UIKit.UIImage {
+  public func apply(_ filter: VitaleHealthSDK.Filter) -> VitaleHealthSDK.CFCrossPlatformImage
+}
+public protocol ChatViewInternalDelegate : AnyObject {
+  func didMicrophoneButtonPressed(with: UIKit.UILongPressGestureRecognizer)
+  func didSendButtonPressed()
+  func didAttachmentButtonPressed()
+  func didReactionButtonPressed()
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @IBDesignable @_Concurrency.MainActor(unsafe) open class ChatView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) weak open var internalDelegate: VitaleHealthSDK.ChatViewInternalDelegate?
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc public protocol CometChatGrowingTextViewDelegate : UIKit.UITextViewDelegate {
+  @objc optional func textViewDidChangeHeight(_ textView: VitaleHealthSDK.CometChatGrowingTextView, height: CoreFoundation.CGFloat)
+}
+@_inheritsConvenienceInitializers @IBDesignable @objc @_Concurrency.MainActor(unsafe) open class CometChatGrowingTextView : UIKit.UITextView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var text: Swift.String! {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var maxLength: Swift.Int
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var trimWhiteSpaceWhenEndEditing: Swift.Bool
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var minHeight: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var maxHeight: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var placeholder: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var placeholderColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var attributedPlaceholder: Foundation.NSAttributedString? {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect, textContainer: UIKit.NSTextContainer?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var intrinsicContentSize: CoreFoundation.CGSize {
+    @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func draw(_ rect: CoreFoundation.CGRect)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class CometChatUserInfo : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func loadView()
+  @objc @_Concurrency.MainActor(unsafe) public func set(title: Swift.String, mode: UIKit.UINavigationItem.LargeTitleDisplayMode)
+  @_Concurrency.MainActor(unsafe) public func updateUserInformation(withName: Swift.String?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension VitaleHealthSDK.CometChatUserInfo : UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func numberOfSections(in tableView: UIKit.UITableView) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForHeaderInSection section: Swift.Int) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, viewForHeaderInSection section: Swift.Int) -> UIKit.UIView?
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class AudioVisualizationView : VitaleHealthSDK.BaseNibView {
+  public enum AudioVisualizationMode {
+    case read
+    case write
+    public static func == (a: VitaleHealthSDK.AudioVisualizationView.AudioVisualizationMode, b: VitaleHealthSDK.AudioVisualizationView.AudioVisualizationMode) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var meteringLevelBarWidth: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var meteringLevelBarInterItem: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var meteringLevelBarCornerRadius: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var meteringLevelBarSingleStick: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) public var audioVisualizationMode: VitaleHealthSDK.AudioVisualizationView.AudioVisualizationMode
+  @_Concurrency.MainActor(unsafe) public var audioVisualizationTimeInterval: Swift.Double
+  @_Concurrency.MainActor(unsafe) public var currentGradientPercentage: Swift.Float?
+  @_Concurrency.MainActor(unsafe) public var meteringLevels: [Swift.Float]? {
+    get
+    set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var gradientStartColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var gradientEndColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func draw(_ rect: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) public func reset()
+  @_Concurrency.MainActor(unsafe) public func add(meteringLevel: Swift.Float)
+  @_Concurrency.MainActor(unsafe) public func scaleSoundDataToFitScreen() -> [Swift.Float]
+  @_Concurrency.MainActor(unsafe) public func play(from url: Foundation.URL)
+  @_Concurrency.MainActor(unsafe) public func play(for duration: Foundation.TimeInterval)
+  @_Concurrency.MainActor(unsafe) public func pause()
+  @_Concurrency.MainActor(unsafe) public func stop()
+  @objc deinit
+}
+public protocol ImageDataProvider {
+  var cacheKey: Swift.String { get }
+  func data(handler: @escaping (Swift.Result<Foundation.Data, Swift.Error>) -> Swift.Void)
+}
+public struct LocalFileImageDataProvider : VitaleHealthSDK.ImageDataProvider {
+  public let fileURL: Foundation.URL
+  public init(fileURL: Foundation.URL, cacheKey: Swift.String? = nil)
+  public var cacheKey: Swift.String
+  public func data(handler: (Swift.Result<Foundation.Data, Swift.Error>) -> Swift.Void)
+}
+public struct Base64ImageDataProvider : VitaleHealthSDK.ImageDataProvider {
+  public let base64String: Swift.String
+  public init(base64String: Swift.String, cacheKey: Swift.String)
+  public var cacheKey: Swift.String
+  public func data(handler: (Swift.Result<Foundation.Data, Swift.Error>) -> Swift.Void)
+}
+public struct RawImageDataProvider : VitaleHealthSDK.ImageDataProvider {
+  public let data: Foundation.Data
+  public init(data: Foundation.Data, cacheKey: Swift.String)
+  public var cacheKey: Swift.String
+  public func data(handler: @escaping (Swift.Result<Foundation.Data, Swift.Error>) -> Swift.Void)
+}
+extension UIKit.UIFont {
+  public class func loadAllFonts(bundleIdentifierString: Swift.String)
+  public static func registerFontWithFilenameString(filenameString: Swift.String, bundleIdentifierString: Swift.String)
+}
+public protocol ConversationListDelegate : AnyObject {
+  func didSelectConversationAtIndexPath(conversation: CometChatPro.Conversation, indexPath: Foundation.IndexPath)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class CometChatConversationList : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func loadView()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc deinit
+  @objc @_Concurrency.MainActor(unsafe) public func set(title: Swift.String, mode: UIKit.UINavigationItem.LargeTitleDisplayMode)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+extension VitaleHealthSDK.CometChatConversationList : UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForHeaderInSection section: Swift.Int) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, viewForHeaderInSection section: Swift.Int) -> UIKit.UIView?
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func numberOfSections(in tableView: UIKit.UITableView) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+}
+extension VitaleHealthSDK.CometChatConversationList : UIKit.UISearchBarDelegate, UIKit.UISearchResultsUpdating {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func updateSearchResults(for searchController: UIKit.UISearchController)
+}
+extension VitaleHealthSDK.CometChatConversationList : CometChatPro.CometChatMessageDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onTextMessageReceived(textMessage: CometChatPro.TextMessage)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onMediaMessageReceived(mediaMessage: CometChatPro.MediaMessage)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onTypingStarted(_ typingDetails: CometChatPro.TypingIndicator)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onTypingEnded(_ typingDetails: CometChatPro.TypingIndicator)
+}
+extension VitaleHealthSDK.CometChatConversationList : CometChatPro.CometChatUserDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onUserOnline(user: CometChatPro.User)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onUserOffline(user: CometChatPro.User)
+}
+extension VitaleHealthSDK.CometChatConversationList : CometChatPro.CometChatGroupDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onGroupMemberJoined(action: CometChatPro.ActionMessage, joinedUser: CometChatPro.User, joinedGroup: CometChatPro.Group)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onGroupMemberLeft(action: CometChatPro.ActionMessage, leftUser: CometChatPro.User, leftGroup: CometChatPro.Group)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onGroupMemberKicked(action: CometChatPro.ActionMessage, kickedUser: CometChatPro.User, kickedBy: CometChatPro.User, kickedFrom: CometChatPro.Group)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onGroupMemberBanned(action: CometChatPro.ActionMessage, bannedUser: CometChatPro.User, bannedBy: CometChatPro.User, bannedFrom: CometChatPro.Group)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onGroupMemberUnbanned(action: CometChatPro.ActionMessage, unbannedUser: CometChatPro.User, unbannedBy: CometChatPro.User, unbannedFrom: CometChatPro.Group)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onGroupMemberScopeChanged(action: CometChatPro.ActionMessage, scopeChangeduser: CometChatPro.User, scopeChangedBy: CometChatPro.User, scopeChangedTo: Swift.String, scopeChangedFrom: Swift.String, group: CometChatPro.Group)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onMemberAddedToGroup(action: CometChatPro.ActionMessage, addedBy: CometChatPro.User, addedUser: CometChatPro.User, addedTo: CometChatPro.Group)
+}
+public typealias CFCrossPlatformImage = UIKit.UIImage
+public typealias CFCrossPlatformColor = UIKit.UIColor
+public typealias CFCrossPlatformImageView = UIKit.UIImageView
+public typealias CFCrossPlatformView = UIKit.UIView
+public typealias CFCrossPlatformButton = UIKit.UIButton
+public struct CometChatKingfisherWrapper<Base> {
+  public let base: Base
+  public init(_ base: Base)
+}
+public protocol CometChatKingfisherCompatible : AnyObject {
+}
+public protocol CometChatKingfisherCompatibleValue {
+}
+extension VitaleHealthSDK.CometChatKingfisherCompatible {
+  public var cf: VitaleHealthSDK.CometChatKingfisherWrapper<Self> {
+    get
+    set
+  }
+}
+extension VitaleHealthSDK.CometChatKingfisherCompatibleValue {
+  public var cf: VitaleHealthSDK.CometChatKingfisherWrapper<Self> {
+    get
+    set
+  }
+}
+extension UIKit.UIImage : VitaleHealthSDK.CometChatKingfisherCompatible {
+}
+extension UIKit.UIImageView : VitaleHealthSDK.CometChatKingfisherCompatible {
+}
+extension UIKit.UIButton : VitaleHealthSDK.CometChatKingfisherCompatible {
+}
+public protocol ImageDownloadRedirectHandler {
+  func handleHTTPRedirection(for task: VitaleHealthSDK.SessionDataTask, response: Foundation.HTTPURLResponse, newRequest: Foundation.URLRequest, completionHandler: @escaping (Foundation.URLRequest?) -> Swift.Void)
+}
+public struct AnyRedirectHandler : VitaleHealthSDK.ImageDownloadRedirectHandler {
+  public func handleHTTPRedirection(for task: VitaleHealthSDK.SessionDataTask, response: Foundation.HTTPURLResponse, newRequest: Foundation.URLRequest, completionHandler: @escaping (Foundation.URLRequest?) -> Swift.Void)
+  public init(handle: @escaping (VitaleHealthSDK.SessionDataTask, Foundation.HTTPURLResponse, Foundation.URLRequest, (Foundation.URLRequest?) -> Swift.Void) -> Swift.Void)
+}
+extension UIKit.UIImageView {
+  @_Concurrency.MainActor(unsafe) open func setImage(string: Swift.String?, color: UIKit.UIColor? = nil, circular: Swift.Bool = false, stroke: Swift.Bool = false, textAttributes: [Foundation.NSAttributedString.Key : Any]? = nil)
+}
+extension UIKit.UIColor {
+  public static var random: UIKit.UIColor {
+    get
+  }
+  public static func colorHash(name: Swift.String?) -> UIKit.UIColor
+}
+extension Swift.String {
+  public var initials: Swift.String {
+    get
+  }
+}
+public typealias IndicatorView = UIKit.UIView
+public enum IndicatorType {
+  case none
+  case activity
+  case image(imageData: Foundation.Data)
+  case custom(indicator: VitaleHealthSDK.Indicator)
+}
+public protocol Indicator {
+  func startAnimatingView()
+  func stopAnimatingView()
+  var centerOffset: CoreFoundation.CGPoint { get }
+  var view: VitaleHealthSDK.IndicatorView { get }
+  func sizeStrategy(in imageView: VitaleHealthSDK.CFCrossPlatformImageView) -> VitaleHealthSDK.IndicatorSizeStrategy
+}
+public enum IndicatorSizeStrategy {
+  case intrinsicSize
+  case full
+  case size(CoreFoundation.CGSize)
+}
+extension VitaleHealthSDK.Indicator {
+  public var centerOffset: CoreFoundation.CGPoint {
+    get
+  }
+  public func sizeStrategy(in imageView: VitaleHealthSDK.CFCrossPlatformImageView) -> VitaleHealthSDK.IndicatorSizeStrategy
+}
+@_hasMissingDesignatedInitializers final public class AudioContext {
+  final public let audioURL: Foundation.URL
+  final public let totalSamples: Swift.Int
+  final public let asset: AVFoundation.AVAsset
+  final public let assetTrack: AVFoundation.AVAssetTrack
+  public static func load(fromAudioURL audioURL: Foundation.URL, completionHandler: @escaping (_ audioContext: VitaleHealthSDK.AudioContext?) -> ())
+  final public func render(targetSamples: Swift.Int = 100) -> [Swift.Float]
+  @objc deinit
+}
+public typealias DownloadProgressBlock = ((_ receivedSize: Swift.Int64, _ totalSize: Swift.Int64) -> Swift.Void)
+public struct RetrieveImageResult {
+  public let image: VitaleHealthSDK.CFCrossPlatformImage
+  public let cacheType: VitaleHealthSDK.CacheType
+  public let source: VitaleHealthSDK.Source
+  public let originalSource: VitaleHealthSDK.Source
+}
+public struct PropagationError {
+  public let source: VitaleHealthSDK.Source
+  public let error: VitaleHealthSDK.CometChatKingfisherError
+}
+public typealias DownloadTaskUpdatedBlock = ((_ newTask: VitaleHealthSDK.DownloadTask?) -> Swift.Void)
+public class CometChatKingfisherManager {
+  public static let shared: VitaleHealthSDK.CometChatKingfisherManager
+  public var cache: VitaleHealthSDK.ImageCache
+  public var downloader: VitaleHealthSDK.ImageDownloader
+  public var defaultOptions: VitaleHealthSDK.CometChatKingfisherOptionsInfo
+  public init(downloader: VitaleHealthSDK.ImageDownloader, cache: VitaleHealthSDK.ImageCache)
+  @discardableResult
+  public func retrieveImage(with resource: VitaleHealthSDK.Resource, options: VitaleHealthSDK.CometChatKingfisherOptionsInfo? = nil, progressBlock: VitaleHealthSDK.DownloadProgressBlock? = nil, downloadTaskUpdated: VitaleHealthSDK.DownloadTaskUpdatedBlock? = nil, completionHandler: ((Swift.Result<VitaleHealthSDK.RetrieveImageResult, VitaleHealthSDK.CometChatKingfisherError>) -> Swift.Void)?) -> VitaleHealthSDK.DownloadTask?
+  public func retrieveImage(with source: VitaleHealthSDK.Source, options: VitaleHealthSDK.CometChatKingfisherOptionsInfo? = nil, progressBlock: VitaleHealthSDK.DownloadProgressBlock? = nil, downloadTaskUpdated: VitaleHealthSDK.DownloadTaskUpdatedBlock? = nil, completionHandler: ((Swift.Result<VitaleHealthSDK.RetrieveImageResult, VitaleHealthSDK.CometChatKingfisherError>) -> Swift.Void)?) -> VitaleHealthSDK.DownloadTask?
+  @objc deinit
+}
+public protocol NewCallListDelegate : AnyObject {
+  func didSelectUserAtIndexPath(user: CometChatPro.User, indexPath: Foundation.IndexPath)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class CometChatNewCallList : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func loadView()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc @_Concurrency.MainActor(unsafe) public func set(title: Swift.String, mode: UIKit.UINavigationItem.LargeTitleDisplayMode)
+  @objc @_Concurrency.MainActor(unsafe) public func set(barColor: UIKit.UIColor, titleColor color: UIKit.UIColor)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension VitaleHealthSDK.CometChatNewCallList : UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func numberOfSections(in tableView: UIKit.UITableView) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForHeaderInSection section: Swift.Int) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, viewForHeaderInSection section: Swift.Int) -> UIKit.UIView?
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, willDisplay cell: UIKit.UITableViewCell, forRowAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, sectionForSectionIndexTitle title: Swift.String, at index: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+}
+extension VitaleHealthSDK.CometChatNewCallList : UIKit.UISearchBarDelegate, UIKit.UISearchResultsUpdating {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func updateSearchResults(for searchController: UIKit.UISearchController)
+}
+public enum CometChatKingfisherError : Swift.Error {
+  public enum RequestErrorReason {
+    case emptyRequest
+    case invalidURL(request: Foundation.URLRequest)
+    case taskCancelled(task: VitaleHealthSDK.SessionDataTask, token: VitaleHealthSDK.SessionDataTask.CancelToken)
+  }
+  public enum ResponseErrorReason {
+    case invalidURLResponse(response: Foundation.URLResponse)
+    case invalidHTTPStatusCode(response: Foundation.HTTPURLResponse)
+    case URLSessionError(error: Swift.Error)
+    case dataModifyingFailed(task: VitaleHealthSDK.SessionDataTask)
+    case noURLResponse(task: VitaleHealthSDK.SessionDataTask)
+  }
+  public enum CacheErrorReason {
+    case fileEnumeratorCreationFailed(url: Foundation.URL)
+    case invalidFileEnumeratorContent(url: Foundation.URL)
+    case invalidURLResource(error: Swift.Error, key: Swift.String, url: Foundation.URL)
+    case cannotLoadDataFromDisk(url: Foundation.URL, error: Swift.Error)
+    case cannotCreateDirectory(path: Swift.String, error: Swift.Error)
+    case imageNotExisting(key: Swift.String)
+    case cannotConvertToData(object: Any, error: Swift.Error)
+    case cannotSerializeImage(image: VitaleHealthSDK.CFCrossPlatformImage?, original: Foundation.Data?, serializer: VitaleHealthSDK.CacheSerializer)
+    case cannotCreateCacheFile(fileURL: Foundation.URL, key: Swift.String, data: Foundation.Data, error: Swift.Error)
+    case cannotSetCacheFileAttribute(filePath: Swift.String, attributes: [Foundation.FileAttributeKey : Any], error: Swift.Error)
+  }
+  public enum ProcessorErrorReason {
+    case processingFailed(processor: VitaleHealthSDK.ImageProcessor, item: VitaleHealthSDK.ImageProcessItem)
+  }
+  public enum ImageSettingErrorReason {
+    case emptySource
+    case notCurrentSourceTask(result: VitaleHealthSDK.RetrieveImageResult?, error: Swift.Error?, source: VitaleHealthSDK.Source)
+    case dataProviderError(provider: VitaleHealthSDK.ImageDataProvider, error: Swift.Error)
+    case alternativeSourcesExhausted([VitaleHealthSDK.PropagationError])
+  }
+  case requestError(reason: VitaleHealthSDK.CometChatKingfisherError.RequestErrorReason)
+  case responseError(reason: VitaleHealthSDK.CometChatKingfisherError.ResponseErrorReason)
+  case cacheError(reason: VitaleHealthSDK.CometChatKingfisherError.CacheErrorReason)
+  case processorError(reason: VitaleHealthSDK.CometChatKingfisherError.ProcessorErrorReason)
+  case imageSettingError(reason: VitaleHealthSDK.CometChatKingfisherError.ImageSettingErrorReason)
+  public var isTaskCancelled: Swift.Bool {
+    get
+  }
+  public func isInvalidResponseStatusCode(_ code: Swift.Int) -> Swift.Bool
+  public var isInvalidResponseStatusCode: Swift.Bool {
+    get
+  }
+  public var isNotCurrentTask: Swift.Bool {
+    get
+  }
+}
+extension VitaleHealthSDK.CometChatKingfisherError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+extension VitaleHealthSDK.CometChatKingfisherError : Foundation.CustomNSError {
+  public static let domain: Swift.String
+  public var errorCode: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @IBDesignable @_Concurrency.MainActor(unsafe) public class StatusIndicator : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var backgroundColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func draw(_ rect: CoreFoundation.CGRect)
+  @objc @_Concurrency.MainActor(unsafe) public func set(cornerRadius: CoreFoundation.CGFloat) -> VitaleHealthSDK.StatusIndicator
+  @objc @_Concurrency.MainActor(unsafe) public func set(borderColor: UIKit.UIColor) -> VitaleHealthSDK.StatusIndicator
+  @objc @_Concurrency.MainActor(unsafe) public func set(borderWidth: CoreFoundation.CGFloat) -> VitaleHealthSDK.StatusIndicator
+  @objc @_Concurrency.MainActor(unsafe) public func set(color: UIKit.UIColor) -> VitaleHealthSDK.StatusIndicator
+  @objc @_Concurrency.MainActor(unsafe) public func set(status: CometChatPro.CometChat.UserStatus) -> VitaleHealthSDK.StatusIndicator
+  @objc deinit
+}
+public enum CallbackQueue {
+  case mainAsync
+  case mainCurrentOrAsync
+  case untouch
+  case dispatch(Dispatch.DispatchQueue)
+  public func execute(_ block: @escaping () -> Swift.Void)
+}
+public enum StorageExpiration {
+  case never
+  case seconds(Foundation.TimeInterval)
+  case days(Swift.Int)
+  case date(Foundation.Date)
+  case expired
+}
+public enum ExpirationExtending {
+  case none
+  case cacheTime
+  case expirationTime(_: VitaleHealthSDK.StorageExpiration)
+}
+public protocol CacheCostCalculable {
+  var cacheCost: Swift.Int { get }
+}
+public protocol DataTransformable {
+  func toData() throws -> Foundation.Data
+  static func fromData(_ data: Foundation.Data) throws -> Self
+  static var empty: Self { get }
+}
+extension UIKit.UIDevice {
+  @_Concurrency.MainActor(unsafe) public static let modelName: Swift.String
+}
+public struct Units {
+  public let bytes: Swift.Int64
+  public var kilobytes: Swift.Double {
+    get
+  }
+  public var megabytes: Swift.Double {
+    get
+  }
+  public var gigabytes: Swift.Double {
+    get
+  }
+  public init(bytes: Swift.Int64)
+  public func getReadableUnit() -> Swift.String
+}
+extension UIKit.UIImage {
+  convenience public init?(color: UIKit.UIColor, size: CoreFoundation.CGSize = CGSize(width: 1, height: 1))
+}
+@_hasMissingDesignatedInitializers @IBDesignable @objc @_Concurrency.MainActor(unsafe) public class Avatar : UIKit.UIImageView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+  @objc @_Concurrency.MainActor(unsafe) public func set(cornerRadius: CoreFoundation.CGFloat) -> VitaleHealthSDK.Avatar
+  @objc @_Concurrency.MainActor(unsafe) public func set(borderColor: UIKit.UIColor) -> VitaleHealthSDK.Avatar
+  @objc @_Concurrency.MainActor(unsafe) public func set(backgroundColor: UIKit.UIColor) -> VitaleHealthSDK.Avatar
+  @objc @_Concurrency.MainActor(unsafe) public func set(borderWidth: CoreFoundation.CGFloat) -> VitaleHealthSDK.Avatar
+  @objc @_Concurrency.MainActor(unsafe) public func set(image: Swift.String)
+  @objc @_Concurrency.MainActor(unsafe) public func set(image: Swift.String, with name: Swift.String)
+  @objc @_Concurrency.MainActor(unsafe) public func set(entity: CometChatPro.AppEntity)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class CometChatIncomingCall : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc @_Concurrency.MainActor(unsafe) public func setCall(call: CometChatPro.Call)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension VitaleHealthSDK.CometChatIncomingCall : VitaleHealthSDK.IncomingCallDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onIncomingCallReceived(incomingCall: CometChatPro.Call, error: CometChatPro.CometChatException?)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onIncomingCallCancelled(canceledCall: CometChatPro.Call, error: CometChatPro.CometChatException?)
+}
+extension VitaleHealthSDK.CometChatKingfisherWrapper where Base : UIKit.UIButton {
+  @discardableResult
+  public func setImage(with source: VitaleHealthSDK.Source?, for state: UIKit.UIControl.State, placeholder: UIKit.UIImage? = nil, options: VitaleHealthSDK.CometChatKingfisherOptionsInfo? = nil, progressBlock: VitaleHealthSDK.DownloadProgressBlock? = nil, completionHandler: ((Swift.Result<VitaleHealthSDK.RetrieveImageResult, VitaleHealthSDK.CometChatKingfisherError>) -> Swift.Void)? = nil) -> VitaleHealthSDK.DownloadTask?
+  @discardableResult
+  public func setImage(with resource: VitaleHealthSDK.Resource?, for state: UIKit.UIControl.State, placeholder: UIKit.UIImage? = nil, options: VitaleHealthSDK.CometChatKingfisherOptionsInfo? = nil, progressBlock: VitaleHealthSDK.DownloadProgressBlock? = nil, completionHandler: ((Swift.Result<VitaleHealthSDK.RetrieveImageResult, VitaleHealthSDK.CometChatKingfisherError>) -> Swift.Void)? = nil) -> VitaleHealthSDK.DownloadTask?
+  public func cancelImageDownloadTask()
+  @discardableResult
+  public func setBackgroundImage(with source: VitaleHealthSDK.Source?, for state: UIKit.UIControl.State, placeholder: UIKit.UIImage? = nil, options: VitaleHealthSDK.CometChatKingfisherOptionsInfo? = nil, progressBlock: VitaleHealthSDK.DownloadProgressBlock? = nil, completionHandler: ((Swift.Result<VitaleHealthSDK.RetrieveImageResult, VitaleHealthSDK.CometChatKingfisherError>) -> Swift.Void)? = nil) -> VitaleHealthSDK.DownloadTask?
+  @discardableResult
+  public func setBackgroundImage(with resource: VitaleHealthSDK.Resource?, for state: UIKit.UIControl.State, placeholder: UIKit.UIImage? = nil, options: VitaleHealthSDK.CometChatKingfisherOptionsInfo? = nil, progressBlock: VitaleHealthSDK.DownloadProgressBlock? = nil, completionHandler: ((Swift.Result<VitaleHealthSDK.RetrieveImageResult, VitaleHealthSDK.CometChatKingfisherError>) -> Swift.Void)? = nil) -> VitaleHealthSDK.DownloadTask?
+  public func cancelBackgroundImageDownloadTask()
+}
+extension VitaleHealthSDK.CometChatKingfisherWrapper where Base : UIKit.UIButton {
+  public func taskIdentifier(for state: UIKit.UIControl.State) -> VitaleHealthSDK.Source.Identifier.Value?
+}
+extension VitaleHealthSDK.CometChatKingfisherWrapper where Base : UIKit.UIButton {
+  public func backgroundTaskIdentifier(for state: UIKit.UIControl.State) -> VitaleHealthSDK.Source.Identifier.Value?
+}
+extension VitaleHealthSDK.CometChatKingfisherWrapper where Base : UIKit.UIButton {
+  @available(*, deprecated, message: "Use `taskIdentifier` instead to identify a setting task.")
+  public func webURL(for state: UIKit.UIControl.State) -> Foundation.URL?
+  @available(*, deprecated, message: "Use `backgroundTaskIdentifier` instead to identify a setting task.")
+  public func backgroundWebURL(for state: UIKit.UIControl.State) -> Foundation.URL?
+}
+public struct FormatIndicatedCacheSerializer : VitaleHealthSDK.CacheSerializer {
+  public static let png: VitaleHealthSDK.FormatIndicatedCacheSerializer
+  public static let jpeg: VitaleHealthSDK.FormatIndicatedCacheSerializer
+  public static let gif: VitaleHealthSDK.FormatIndicatedCacheSerializer
+  public func data(with image: VitaleHealthSDK.CFCrossPlatformImage, original: Foundation.Data?) -> Foundation.Data?
+  public func image(with data: Foundation.Data, options: VitaleHealthSDK.CometChatKingfisherParsedOptionsInfo) -> VitaleHealthSDK.CFCrossPlatformImage?
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @IBDesignable @_Concurrency.MainActor(unsafe) public class BadgeCount : UIKit.UILabel {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func drawText(in rect: CoreFoundation.CGRect)
+  @objc @_Concurrency.MainActor(unsafe) public func set(borderColor: UIKit.UIColor) -> VitaleHealthSDK.BadgeCount
+  @objc @_Concurrency.MainActor(unsafe) public func set(borderWidth: CoreFoundation.CGFloat) -> VitaleHealthSDK.BadgeCount
+  @objc @_Concurrency.MainActor(unsafe) public func set(backgroundColor: UIKit.UIColor) -> VitaleHealthSDK.BadgeCount
+  @objc @_Concurrency.MainActor(unsafe) public func set(cornerRadius: CoreFoundation.CGFloat) -> VitaleHealthSDK.BadgeCount
+  @objc @_Concurrency.MainActor(unsafe) public func set(count: Swift.Int) -> VitaleHealthSDK.BadgeCount
+  @objc @_Concurrency.MainActor(unsafe) public func incrementCount()
+  @objc deinit
+}
+public enum Source {
+  public enum Identifier {
+    public typealias Value = Swift.UInt
+  }
+  case network(VitaleHealthSDK.Resource)
+  case provider(VitaleHealthSDK.ImageDataProvider)
+  public var cacheKey: Swift.String {
+    get
+  }
+  public var url: Foundation.URL? {
+    get
+  }
+}
+extension VitaleHealthSDK.CometChatKingfisherWrapper where Base : UIKit.UIImage {
+  public var normalized: VitaleHealthSDK.CFCrossPlatformImage {
+    get
+  }
+}
+extension VitaleHealthSDK.CometChatKingfisherWrapper where Base : UIKit.UIImage {
+  public func pngRepresentation() -> Foundation.Data?
+  public func jpegRepresentation(compressionQuality: CoreFoundation.CGFloat) -> Foundation.Data?
+  public func gifRepresentation() -> Foundation.Data?
+  public func data(format: VitaleHealthSDK.ImageFormat) -> Foundation.Data?
+}
+extension VitaleHealthSDK.CometChatKingfisherWrapper where Base : UIKit.UIImage {
+  public static func animatedImage(data: Foundation.Data, options: VitaleHealthSDK.ImageCreatingOptions) -> VitaleHealthSDK.CFCrossPlatformImage?
+  public static func image(data: Foundation.Data, options: VitaleHealthSDK.ImageCreatingOptions) -> VitaleHealthSDK.CFCrossPlatformImage?
+  public static func downsampledImage(data: Foundation.Data, to pointSize: CoreFoundation.CGSize, scale: CoreFoundation.CGFloat) -> VitaleHealthSDK.CFCrossPlatformImage?
+}
+public enum ImageFormat {
+  case unknown
+  case PNG
+  case JPEG
+  case GIF
+  public enum JPEGMarker {
+    case SOF0
+    case SOF2
+    case DHT
+    case DQT
+    case DRI
+    case SOS
+    case RSTn(Swift.UInt8)
+    case APPn
+    case COM
+    case EOI
+  }
+  public static func == (a: VitaleHealthSDK.ImageFormat, b: VitaleHealthSDK.ImageFormat) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension Foundation.Data : VitaleHealthSDK.CometChatKingfisherCompatibleValue {
+}
+extension VitaleHealthSDK.CometChatKingfisherWrapper where Base == Foundation.Data {
+  public var imageFormat: VitaleHealthSDK.ImageFormat {
+    get
+  }
+  public func contains(jpeg marker: VitaleHealthSDK.ImageFormat.JPEGMarker) -> Swift.Bool
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class BaseNibView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func awakeFromNib()
+  @objc deinit
+}
+extension Foundation.NSNotification.Name {
+  public static let CometChatKingfisherDidCleanDiskCache: Foundation.Notification.Name
+}
+public let CometChatKingfisherDiskCacheCleanedHashKey: Swift.String
+public enum CacheType {
+  case none
+  case memory
+  case disk
+  public var cached: Swift.Bool {
+    get
+  }
+  public static func == (a: VitaleHealthSDK.CacheType, b: VitaleHealthSDK.CacheType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct CacheStoreResult {
+  public let memoryCacheResult: Swift.Result<(), Swift.Never>
+  public let diskCacheResult: Swift.Result<(), VitaleHealthSDK.CometChatKingfisherError>
+}
+extension UIKit.UIImage : VitaleHealthSDK.CacheCostCalculable {
+  public var cacheCost: Swift.Int {
+    get
+  }
+}
+extension Foundation.Data : VitaleHealthSDK.DataTransformable {
+  public func toData() throws -> Foundation.Data
+  public static func fromData(_ data: Foundation.Data) throws -> Foundation.Data
+  public static let empty: Foundation.Data
+}
+public enum ImageCacheResult {
+  case disk(VitaleHealthSDK.CFCrossPlatformImage)
+  case memory(VitaleHealthSDK.CFCrossPlatformImage)
+  case none
+  public var image: VitaleHealthSDK.CFCrossPlatformImage? {
+    get
+  }
+  public var cacheType: VitaleHealthSDK.CacheType {
+    get
+  }
+}
+open class ImageCache {
+  public static let `default`: VitaleHealthSDK.ImageCache
+  final public let memoryStorage: VitaleHealthSDK.MemoryStorage.Backend<VitaleHealthSDK.CFCrossPlatformImage>
+  final public let diskStorage: VitaleHealthSDK.DiskStorage.Backend<Foundation.Data>
+  public typealias DiskCachePathClosure = (Foundation.URL, Swift.String) -> Foundation.URL
+  public init(memoryStorage: VitaleHealthSDK.MemoryStorage.Backend<VitaleHealthSDK.CFCrossPlatformImage>, diskStorage: VitaleHealthSDK.DiskStorage.Backend<Foundation.Data>)
+  convenience public init(name: Swift.String)
+  convenience public init(name: Swift.String, cacheDirectoryURL: Foundation.URL?, diskCachePathClosure: VitaleHealthSDK.ImageCache.DiskCachePathClosure? = nil) throws
+  @objc deinit
+  open func store(_ image: VitaleHealthSDK.CFCrossPlatformImage, original: Foundation.Data? = nil, forKey key: Swift.String, options: VitaleHealthSDK.CometChatKingfisherParsedOptionsInfo, toDisk: Swift.Bool = true, completionHandler: ((VitaleHealthSDK.CacheStoreResult) -> Swift.Void)? = nil)
+  open func store(_ image: VitaleHealthSDK.CFCrossPlatformImage, original: Foundation.Data? = nil, forKey key: Swift.String, processorIdentifier identifier: Swift.String = "", cacheSerializer serializer: VitaleHealthSDK.CacheSerializer = DefaultCacheSerializer.default, toDisk: Swift.Bool = true, callbackQueue: VitaleHealthSDK.CallbackQueue = .untouch, completionHandler: ((VitaleHealthSDK.CacheStoreResult) -> Swift.Void)? = nil)
+  open func storeToDisk(_ data: Foundation.Data, forKey key: Swift.String, processorIdentifier identifier: Swift.String = "", expiration: VitaleHealthSDK.StorageExpiration? = nil, callbackQueue: VitaleHealthSDK.CallbackQueue = .untouch, completionHandler: ((VitaleHealthSDK.CacheStoreResult) -> Swift.Void)? = nil)
+  open func removeImage(forKey key: Swift.String, processorIdentifier identifier: Swift.String = "", fromMemory: Swift.Bool = true, fromDisk: Swift.Bool = true, callbackQueue: VitaleHealthSDK.CallbackQueue = .untouch, completionHandler: (() -> Swift.Void)? = nil)
+  open func retrieveImage(forKey key: Swift.String, options: VitaleHealthSDK.CometChatKingfisherOptionsInfo? = nil, callbackQueue: VitaleHealthSDK.CallbackQueue = .mainCurrentOrAsync, completionHandler: ((Swift.Result<VitaleHealthSDK.ImageCacheResult, VitaleHealthSDK.CometChatKingfisherError>) -> Swift.Void)?)
+  open func retrieveImageInMemoryCache(forKey key: Swift.String, options: VitaleHealthSDK.CometChatKingfisherOptionsInfo? = nil) -> VitaleHealthSDK.CFCrossPlatformImage?
+  open func retrieveImageInDiskCache(forKey key: Swift.String, options: VitaleHealthSDK.CometChatKingfisherOptionsInfo? = nil, callbackQueue: VitaleHealthSDK.CallbackQueue = .untouch, completionHandler: @escaping (Swift.Result<VitaleHealthSDK.CFCrossPlatformImage?, VitaleHealthSDK.CometChatKingfisherError>) -> Swift.Void)
+  @objc public func clearMemoryCache()
+  open func clearDiskCache(completion handler: (() -> ())? = nil)
+  open func cleanExpiredMemoryCache()
+  open func cleanExpiredDiskCache(completion handler: (() -> Swift.Void)? = nil)
+  @objc public func backgroundCleanExpiredDiskCache()
+  open func imageCachedType(forKey key: Swift.String, processorIdentifier identifier: Swift.String = DefaultImageProcessor.default.identifier) -> VitaleHealthSDK.CacheType
+  public func isCached(forKey key: Swift.String, processorIdentifier identifier: Swift.String = DefaultImageProcessor.default.identifier) -> Swift.Bool
+  open func hash(forKey key: Swift.String, processorIdentifier identifier: Swift.String = DefaultImageProcessor.default.identifier) -> Swift.String
+  open func calculateDiskStorageSize(completion handler: @escaping ((Swift.Result<Swift.UInt, VitaleHealthSDK.CometChatKingfisherError>) -> Swift.Void))
+  open func cachePath(forKey key: Swift.String, processorIdentifier identifier: Swift.String = DefaultImageProcessor.default.identifier) -> Swift.String
+}
+extension UIKit.UIApplication : VitaleHealthSDK.CometChatKingfisherCompatible {
+}
+extension VitaleHealthSDK.CometChatKingfisherWrapper where Base : UIKit.UIApplication {
+  public static var shared: UIKit.UIApplication? {
+    get
+  }
+}
+extension VitaleHealthSDK.ImageCache {
+  @available(*, deprecated, renamed: "init(name:cacheDirectoryURL:diskCachePathClosure:)", message: "Use `init(name:cacheDirectoryURL:diskCachePathClosure:)` instead")
+  convenience public init(name: Swift.String, path: Swift.String?, diskCachePathClosure: VitaleHealthSDK.ImageCache.DiskCachePathClosure? = nil) throws
+}
+public protocol ImageDownloaderDelegate : AnyObject {
+  func imageDownloader(_ downloader: VitaleHealthSDK.ImageDownloader, willDownloadImageForURL url: Foundation.URL, with request: Foundation.URLRequest?)
+  func imageDownloader(_ downloader: VitaleHealthSDK.ImageDownloader, didFinishDownloadingImageForURL url: Foundation.URL, with response: Foundation.URLResponse?, error: Swift.Error?)
+  func imageDownloader(_ downloader: VitaleHealthSDK.ImageDownloader, didDownload data: Foundation.Data, for url: Foundation.URL) -> Foundation.Data?
+  func imageDownloader(_ downloader: VitaleHealthSDK.ImageDownloader, didDownload image: VitaleHealthSDK.CFCrossPlatformImage, for url: Foundation.URL, with response: Foundation.URLResponse?)
+  func isValidStatusCode(_ code: Swift.Int, for downloader: VitaleHealthSDK.ImageDownloader) -> Swift.Bool
+}
+extension VitaleHealthSDK.ImageDownloaderDelegate {
+  public func imageDownloader(_ downloader: VitaleHealthSDK.ImageDownloader, willDownloadImageForURL url: Foundation.URL, with request: Foundation.URLRequest?)
+  public func imageDownloader(_ downloader: VitaleHealthSDK.ImageDownloader, didFinishDownloadingImageForURL url: Foundation.URL, with response: Foundation.URLResponse?, error: Swift.Error?)
+  public func imageDownloader(_ downloader: VitaleHealthSDK.ImageDownloader, didDownload image: VitaleHealthSDK.CFCrossPlatformImage, for url: Foundation.URL, with response: Foundation.URLResponse?)
+  public func isValidStatusCode(_ code: Swift.Int, for downloader: VitaleHealthSDK.ImageDownloader) -> Swift.Bool
+  public func imageDownloader(_ downloader: VitaleHealthSDK.ImageDownloader, didDownload data: Foundation.Data, for url: Foundation.URL) -> Foundation.Data?
+}
+public enum Reaction {
+  case heart
+  case thumbsup
+  public static func == (a: VitaleHealthSDK.Reaction, b: VitaleHealthSDK.Reaction) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class CometChatMessageList : UIKit.UIViewController, AVFAudio.AVAudioRecorderDelegate, AVFAudio.AVAudioPlayerDelegate, UIKit.UIGestureRecognizerDelegate {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func loadView()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc deinit
+  @objc @_Concurrency.MainActor(unsafe) public func set(conversationWith: CometChatPro.AppEntity, type: CometChatPro.CometChat.ReceiverType)
+  @_Concurrency.MainActor(unsafe) public func set(liveReaction: VitaleHealthSDK.Reaction)
+  @_Concurrency.MainActor(unsafe) @objc public func gestureRecognizer(_ gestureRecognizer: UIKit.UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIKit.UIGestureRecognizer) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+extension VitaleHealthSDK.CometChatMessageList : UIKit.UIDocumentPickerDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func documentPicker(_ controller: UIKit.UIDocumentPickerViewController, didPickDocumentsAt urls: [Foundation.URL])
+}
+extension VitaleHealthSDK.CometChatMessageList : UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func numberOfSections(in tableView: UIKit.UITableView) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, viewForHeaderInSection section: Swift.Int) -> UIKit.UIView?
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForHeaderInSection section: Swift.Int) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, estimatedHeightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, didDeselectRowAt indexPath: Foundation.IndexPath)
+}
+extension VitaleHealthSDK.CometChatMessageList : UIKit.UITextViewDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func textViewDidEndEditing(_ textView: UIKit.UITextView)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func textViewDidChange(_ textView: UIKit.UITextView)
+}
+extension VitaleHealthSDK.CometChatMessageList : QuickLook.QLPreviewControllerDataSource, QuickLook.QLPreviewControllerDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func numberOfPreviewItems(in controller: QuickLook.QLPreviewController) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func previewController(_ controller: QuickLook.QLPreviewController, previewItemAt index: Swift.Int) -> QuickLook.QLPreviewItem
+}
+extension VitaleHealthSDK.CometChatMessageList : VitaleHealthSDK.ChatViewInternalDelegate {
+  @_Concurrency.MainActor(unsafe) public func didReactionButtonPressed()
+  @_Concurrency.MainActor(unsafe) public func didMicrophoneButtonPressed(with: UIKit.UILongPressGestureRecognizer)
+  @_Concurrency.MainActor(unsafe) public func didAttachmentButtonPressed()
+  @_Concurrency.MainActor(unsafe) public func didStickerButtonPressed()
+  @_Concurrency.MainActor(unsafe) public func didSendButtonPressed()
+}
+extension VitaleHealthSDK.CometChatMessageList : CometChatPro.CometChatMessageDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onTextMessageReceived(textMessage: CometChatPro.TextMessage)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onMediaMessageReceived(mediaMessage: CometChatPro.MediaMessage)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onMessagesRead(receipt: CometChatPro.MessageReceipt)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onMessagesDelivered(receipt: CometChatPro.MessageReceipt)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onTypingStarted(_ typingDetails: CometChatPro.TypingIndicator)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onTypingEnded(_ typingDetails: CometChatPro.TypingIndicator)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onMessageEdited(message: CometChatPro.BaseMessage)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onMessageDeleted(message: CometChatPro.BaseMessage)
+}
+extension VitaleHealthSDK.CometChatMessageList : CometChatPro.CometChatUserDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onUserOnline(user: CometChatPro.User)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onUserOffline(user: CometChatPro.User)
+}
+extension VitaleHealthSDK.CometChatMessageList : CometChatPro.CometChatGroupDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onGroupMemberJoined(action: CometChatPro.ActionMessage, joinedUser: CometChatPro.User, joinedGroup: CometChatPro.Group)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onGroupMemberLeft(action: CometChatPro.ActionMessage, leftUser: CometChatPro.User, leftGroup: CometChatPro.Group)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onGroupMemberKicked(action: CometChatPro.ActionMessage, kickedUser: CometChatPro.User, kickedBy: CometChatPro.User, kickedFrom: CometChatPro.Group)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onGroupMemberBanned(action: CometChatPro.ActionMessage, bannedUser: CometChatPro.User, bannedBy: CometChatPro.User, bannedFrom: CometChatPro.Group)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onGroupMemberUnbanned(action: CometChatPro.ActionMessage, unbannedUser: CometChatPro.User, unbannedBy: CometChatPro.User, unbannedFrom: CometChatPro.Group)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onGroupMemberScopeChanged(action: CometChatPro.ActionMessage, scopeChangeduser: CometChatPro.User, scopeChangedBy: CometChatPro.User, scopeChangedTo: Swift.String, scopeChangedFrom: Swift.String, group: CometChatPro.Group)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onMemberAddedToGroup(action: CometChatPro.ActionMessage, addedBy: CometChatPro.User, addedUser: CometChatPro.User, addedTo: CometChatPro.Group)
+}
+extension VitaleHealthSDK.CometChatMessageList : VitaleHealthSDK.LinkPreviewDelegate {
+  @_Concurrency.MainActor(unsafe) public func didVisitButtonPressed(link: Swift.String, sender: UIKit.UIButton)
+  @_Concurrency.MainActor(unsafe) public func didPlayButtonPressed(link: Swift.String, sender: UIKit.UIButton)
+}
+public protocol CallsListDelegate : AnyObject {
+  func didSelectCallsAtIndexPath(call: CometChatPro.BaseMessage, indexPath: Foundation.IndexPath)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class CometChatCallsList : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func loadView()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc deinit
+  @objc @_Concurrency.MainActor(unsafe) public func set(title: Swift.String, mode: UIKit.UINavigationItem.LargeTitleDisplayMode)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+extension VitaleHealthSDK.CometChatCallsList : UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForHeaderInSection section: Swift.Int) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, viewForHeaderInSection section: Swift.Int) -> UIKit.UIView?
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, willDisplay cell: UIKit.UITableViewCell, forRowAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func numberOfSections(in tableView: UIKit.UITableView) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+  @available(iOS 13.0, *)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, contextMenuConfigurationForRowAt indexPath: Foundation.IndexPath, point: CoreFoundation.CGPoint) -> UIKit.UIContextMenuConfiguration?
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, canEditRowAt indexPath: Foundation.IndexPath) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, commit editingStyle: UIKit.UITableViewCell.EditingStyle, forRowAt indexPath: Foundation.IndexPath)
+}
+extension VitaleHealthSDK.CometChatCallsList : CometChatPro.CometChatMessageDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onTextMessageReceived(textMessage: CometChatPro.TextMessage)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onMediaMessageReceived(mediaMessage: CometChatPro.MediaMessage)
+}
+@_hasMissingDesignatedInitializers public class SessionDataTask {
+  public typealias CancelToken = Swift.Int
+  public var mutableData: Foundation.Data {
+    get
+  }
+  final public let task: Foundation.URLSessionDataTask
+  @objc deinit
+}
+public protocol ImageModifier {
+  func modify(_ image: VitaleHealthSDK.CFCrossPlatformImage) -> VitaleHealthSDK.CFCrossPlatformImage
+}
+public struct AnyImageModifier : VitaleHealthSDK.ImageModifier {
+  public init(modify: @escaping (VitaleHealthSDK.CFCrossPlatformImage) throws -> VitaleHealthSDK.CFCrossPlatformImage)
+  public func modify(_ image: VitaleHealthSDK.CFCrossPlatformImage) -> VitaleHealthSDK.CFCrossPlatformImage
+}
+public struct RenderingModeImageModifier : VitaleHealthSDK.ImageModifier {
+  public let renderingMode: UIKit.UIImage.RenderingMode
+  public init(renderingMode: UIKit.UIImage.RenderingMode = .automatic)
+  public func modify(_ image: VitaleHealthSDK.CFCrossPlatformImage) -> VitaleHealthSDK.CFCrossPlatformImage
+}
+public struct FlipsForRightToLeftLayoutDirectionImageModifier : VitaleHealthSDK.ImageModifier {
+  public init()
+  public func modify(_ image: VitaleHealthSDK.CFCrossPlatformImage) -> VitaleHealthSDK.CFCrossPlatformImage
+}
+public struct AlignmentRectInsetsImageModifier : VitaleHealthSDK.ImageModifier {
+  public let alignmentInsets: UIKit.UIEdgeInsets
+  public init(alignmentInsets: UIKit.UIEdgeInsets)
+  public func modify(_ image: VitaleHealthSDK.CFCrossPlatformImage) -> VitaleHealthSDK.CFCrossPlatformImage
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class CometChatBannedMembers : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func loadView()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) public func set(group: CometChatPro.Group)
+  @objc @_Concurrency.MainActor(unsafe) public func set(title: Swift.String, mode: UIKit.UINavigationItem.LargeTitleDisplayMode)
+  @objc @_Concurrency.MainActor(unsafe) public func set(barColor: UIKit.UIColor, titleColor color: UIKit.UIColor)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension VitaleHealthSDK.CometChatBannedMembers : UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func numberOfSections(in tableView: UIKit.UITableView) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForHeaderInSection section: Swift.Int) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @available(iOS 13.0, *)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, contextMenuConfigurationForRowAt indexPath: Foundation.IndexPath, point: CoreFoundation.CGPoint) -> UIKit.UIContextMenuConfiguration?
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+}
+extension VitaleHealthSDK.CometChatBannedMembers : CometChatPro.CometChatGroupDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onGroupMemberJoined(action: CometChatPro.ActionMessage, joinedUser: CometChatPro.User, joinedGroup: CometChatPro.Group)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onGroupMemberLeft(action: CometChatPro.ActionMessage, leftUser: CometChatPro.User, leftGroup: CometChatPro.Group)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onGroupMemberKicked(action: CometChatPro.ActionMessage, kickedUser: CometChatPro.User, kickedBy: CometChatPro.User, kickedFrom: CometChatPro.Group)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onGroupMemberBanned(action: CometChatPro.ActionMessage, bannedUser: CometChatPro.User, bannedBy: CometChatPro.User, bannedFrom: CometChatPro.Group)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onGroupMemberUnbanned(action: CometChatPro.ActionMessage, unbannedUser: CometChatPro.User, unbannedBy: CometChatPro.User, unbannedFrom: CometChatPro.Group)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onGroupMemberScopeChanged(action: CometChatPro.ActionMessage, scopeChangeduser: CometChatPro.User, scopeChangedBy: CometChatPro.User, scopeChangedTo: Swift.String, scopeChangedFrom: Swift.String, group: CometChatPro.Group)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onMemberAddedToGroup(action: CometChatPro.ActionMessage, addedBy: CometChatPro.User, addedUser: CometChatPro.User, addedTo: CometChatPro.Group)
+}
+public protocol UserListDelegate : AnyObject {
+  func didSelectUserAtIndexPath(user: CometChatPro.User, indexPath: Foundation.IndexPath)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class CometChatUserList : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func loadView()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc @_Concurrency.MainActor(unsafe) public func set(title: Swift.String, mode: UIKit.UINavigationItem.LargeTitleDisplayMode)
+  @objc @_Concurrency.MainActor(unsafe) public func set(barColor: UIKit.UIColor, titleColor color: UIKit.UIColor)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension VitaleHealthSDK.CometChatUserList : UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func numberOfSections(in tableView: UIKit.UITableView) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForHeaderInSection section: Swift.Int) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, viewForHeaderInSection section: Swift.Int) -> UIKit.UIView?
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, willDisplay cell: UIKit.UITableViewCell, forRowAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, sectionForSectionIndexTitle title: Swift.String, at index: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+}
+extension VitaleHealthSDK.CometChatUserList : UIKit.UISearchBarDelegate, UIKit.UISearchResultsUpdating {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func updateSearchResults(for searchController: UIKit.UISearchController)
+}
+@objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor(unsafe) final public class CCActivityIndicator : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) final public var animationDuration: Swift.Double
+  @_Concurrency.MainActor(unsafe) final public var rotationDuration: Swift.Double
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) final public var numSegments: Swift.Int {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) final public var strokeColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) final public var lineWidth: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) final public var hidesWhenStopped: Swift.Bool
+  @_Concurrency.MainActor(unsafe) final public var isAnimating: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override final public func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) final public func startAnimating()
+  @_Concurrency.MainActor(unsafe) final public func stopAnimating()
+  @_Concurrency.MainActor(unsafe) @objc override final public var intrinsicContentSize: CoreFoundation.CGSize {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class CometChatOutgoingCall : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) public func makeCall(call: CometChatPro.CometChat.CallType, to: CometChatPro.AppEntity)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension VitaleHealthSDK.CometChatOutgoingCall : VitaleHealthSDK.OutgoingCallDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onOutgoingCallAccepted(acceptedCall: CometChatPro.Call, error: CometChatPro.CometChatException?)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onOutgoingCallRejected(rejectedCall: CometChatPro.Call, error: CometChatPro.CometChatException?)
+}
+extension VitaleHealthSDK.CometChatKingfisherWrapper where Base : UIKit.UIImage {
+  @available(*, deprecated, message: "Will be removed soon. Pass parameters with `ImageCreatingOptions`, use `image(with:options:)` instead.")
+  public static func image(data: Foundation.Data, scale: CoreFoundation.CGFloat, preloadAllAnimationData: Swift.Bool, onlyFirstFrame: Swift.Bool) -> VitaleHealthSDK.CFCrossPlatformImage?
+  @available(*, deprecated, message: "Will be removed soon. Pass parameters with `ImageCreatingOptions`, use `animatedImage(with:options:)` instead.")
+  public static func animated(with data: Foundation.Data, scale: CoreFoundation.CGFloat = 1.0, duration: Foundation.TimeInterval = 0.0, preloadAll: Swift.Bool, onlyFirstFrame: Swift.Bool = false) -> VitaleHealthSDK.CFCrossPlatformImage?
+}
+@available(*, deprecated, message: "Will be removed soon. Use `Result<RetrieveImageResult>` based callback instead")
+public typealias CompletionHandler = ((_ image: VitaleHealthSDK.CFCrossPlatformImage?, _ error: Foundation.NSError?, _ cacheType: VitaleHealthSDK.CacheType, _ imageURL: Foundation.URL?) -> Swift.Void)
+@available(*, deprecated, message: "Will be removed soon. Use `Result<ImageLoadingResult>` based callback instead")
+public typealias ImageDownloaderCompletionHandler = ((_ image: VitaleHealthSDK.CFCrossPlatformImage?, _ error: Foundation.NSError?, _ url: Foundation.URL?, _ originalData: Foundation.Data?) -> Swift.Void)
+@available(*, deprecated, message: "Will be removed soon. Use `DownloadTask` to cancel a task.")
+extension VitaleHealthSDK.RetrieveImageTask {
+  @available(*, deprecated, message: "RetrieveImageTask.empty will be removed soon. Use `nil` to represent a no task.")
+  public static let empty: VitaleHealthSDK.RetrieveImageTask
+}
+extension VitaleHealthSDK.CometChatKingfisherManager {
+  @available(*, deprecated, message: "Use `Result` based callback instead.")
+  @discardableResult
+  public func retrieveImage(with resource: VitaleHealthSDK.Resource, options: VitaleHealthSDK.CometChatKingfisherOptionsInfo?, progressBlock: VitaleHealthSDK.DownloadProgressBlock?, completionHandler: VitaleHealthSDK.CompletionHandler?) -> VitaleHealthSDK.DownloadTask?
+}
+extension VitaleHealthSDK.ImageDownloader {
+  @available(*, deprecated, message: "Use `Result` based callback instead.")
+  @discardableResult
+  open func downloadImage(with url: Foundation.URL, retrieveImageTask: VitaleHealthSDK.RetrieveImageTask? = nil, options: VitaleHealthSDK.CometChatKingfisherOptionsInfo? = nil, progressBlock: VitaleHealthSDK.ImageDownloaderProgressBlock? = nil, completionHandler: VitaleHealthSDK.ImageDownloaderCompletionHandler?) -> VitaleHealthSDK.DownloadTask?
+}
+@available(*, deprecated, message: "RetrieveImageDownloadTask is removed. Use `DownloadTask` to cancel a task.")
+public struct RetrieveImageDownloadTask {
+}
+@_hasMissingDesignatedInitializers @available(*, deprecated, message: "RetrieveImageTask is removed. Use `DownloadTask` to cancel a task.")
+final public class RetrieveImageTask {
+  @objc deinit
+}
+@available(*, deprecated, renamed: "DownloadProgressBlock", message: "Use `DownloadProgressBlock` instead.")
+public typealias ImageDownloaderProgressBlock = VitaleHealthSDK.DownloadProgressBlock
+extension VitaleHealthSDK.CometChatKingfisherWrapper where Base : UIKit.UIImageView {
+  @available(*, deprecated, message: "Use `Result` based callback instead.")
+  @discardableResult
+  public func setImage(with resource: VitaleHealthSDK.Resource?, placeholder: VitaleHealthSDK.Placeholder? = nil, options: VitaleHealthSDK.CometChatKingfisherOptionsInfo? = nil, progressBlock: VitaleHealthSDK.DownloadProgressBlock? = nil, completionHandler: VitaleHealthSDK.CompletionHandler?) -> VitaleHealthSDK.DownloadTask?
+}
+extension VitaleHealthSDK.CometChatKingfisherWrapper where Base : UIKit.UIButton {
+  @available(*, deprecated, message: "Use `Result` based callback instead.")
+  @discardableResult
+  public func setImage(with resource: VitaleHealthSDK.Resource?, for state: UIKit.UIControl.State, placeholder: UIKit.UIImage? = nil, options: VitaleHealthSDK.CometChatKingfisherOptionsInfo? = nil, progressBlock: VitaleHealthSDK.DownloadProgressBlock? = nil, completionHandler: VitaleHealthSDK.CompletionHandler?) -> VitaleHealthSDK.DownloadTask?
+  @available(*, deprecated, message: "Use `Result` based callback instead.")
+  @discardableResult
+  public func setBackgroundImage(with resource: VitaleHealthSDK.Resource?, for state: UIKit.UIControl.State, placeholder: UIKit.UIImage? = nil, options: VitaleHealthSDK.CometChatKingfisherOptionsInfo? = nil, progressBlock: VitaleHealthSDK.DownloadProgressBlock? = nil, completionHandler: VitaleHealthSDK.CompletionHandler?) -> VitaleHealthSDK.DownloadTask?
+}
+extension VitaleHealthSDK.ImageCache {
+  @available(*, deprecated, renamed: "memoryStorage.config.totalCostLimit", message: "Use `memoryStorage.config.totalCostLimit` instead.")
+  open var maxMemoryCost: Swift.Int {
+    get
+    set
+  }
+  @available(*, deprecated, message: "Not needed anymore.")
+  final public class func defaultDiskCachePathClosure(path: Swift.String?, cacheName: Swift.String) -> Swift.String
+  @available(*, deprecated, renamed: "diskStorage.config.pathExtension", message: "Use `diskStorage.config.pathExtension` instead.")
+  open var pathExtension: Swift.String? {
+    get
+    set
+  }
+  @available(*, deprecated, renamed: "diskStorage.directoryURL.absoluteString", message: "Use `diskStorage.directoryURL.absoluteString` instead.")
+  public var diskCachePath: Swift.String {
+    get
+  }
+  @available(*, deprecated, renamed: "diskStorage.config.sizeLimit", message: "Use `diskStorage.config.sizeLimit` instead.")
+  open var maxDiskCacheSize: Swift.UInt {
+    get
+    set
+  }
+  @available(*, deprecated, renamed: "diskStorage.cacheFileURL(forKey:)", message: "Use `diskStorage.cacheFileURL(forKey:).path` instead.")
+  open func cachePath(forComputedKey key: Swift.String) -> Swift.String
+  @available(*, deprecated, renamed: "retrieveImageInDiskCache(forKey:options:callbackQueue:completionHandler:)", message: "Use `Result` based `retrieveImageInDiskCache(forKey:options:callbackQueue:completionHandler:)` instead.")
+  open func retrieveImageInDiskCache(forKey key: Swift.String, options: VitaleHealthSDK.CometChatKingfisherOptionsInfo? = nil) -> VitaleHealthSDK.CFCrossPlatformImage?
+  @available(*, deprecated, renamed: "retrieveImage(forKey:options:callbackQueue:completionHandler:)", message: "Use `Result` based `retrieveImage(forKey:options:callbackQueue:completionHandler:)` instead.")
+  open func retrieveImage(forKey key: Swift.String, options: VitaleHealthSDK.CometChatKingfisherOptionsInfo?, completionHandler: ((VitaleHealthSDK.CFCrossPlatformImage?, VitaleHealthSDK.CacheType) -> Swift.Void)?)
+  @available(*, deprecated, message: "Deprecated. Use `diskStorage.config.expiration` instead")
+  open var maxCachePeriodInSecond: Foundation.TimeInterval {
+    get
+    set
+  }
+  @available(*, deprecated, message: "Use `Result` based callback instead.")
+  open func store(_ image: VitaleHealthSDK.CFCrossPlatformImage, original: Foundation.Data? = nil, forKey key: Swift.String, processorIdentifier identifier: Swift.String = "", cacheSerializer serializer: VitaleHealthSDK.CacheSerializer = DefaultCacheSerializer.default, toDisk: Swift.Bool = true, completionHandler: (() -> Swift.Void)?)
+  @available(*, deprecated, message: "Use the `Result`-based `calculateDiskStorageSize` instead.")
+  open func calculateDiskCacheSize(completion handler: @escaping ((_ size: Swift.UInt) -> Swift.Void))
+}
+extension Swift.Collection where Self.Element == VitaleHealthSDK.CometChatKingfisherOptionsInfoItem {
+  @available(*, deprecated, renamed: "callbackQueue", message: "Use `callbackQueue` instead.")
+  public var callbackDispatchQueue: Dispatch.DispatchQueue {
+    get
+  }
+}
+@available(*, deprecated, renamed: "CometChatKingfisherError.domain", message: "Use `CometChatKingfisherError.domain` instead.")
+public let CometChatKingfisherErrorDomain: Swift.String
+@available(*, unavailable, message: "Use `.invalidHTTPStatusCode` or `isInvalidResponseStatusCode` of `CometChatKingfisherError` instead for the status code.")
+public let CometChatKingfisherErrorStatusCodeKey: Swift.String
+extension Swift.Collection where Self.Element == VitaleHealthSDK.CometChatKingfisherOptionsInfoItem {
+  @available(*, deprecated, message: "Create a `CometChatKingfisherParsedOptionsInfo` from `CometChatKingfisherOptionsInfo` and use `targetCache` instead.")
+  public var targetCache: VitaleHealthSDK.ImageCache? {
+    get
+  }
+  @available(*, deprecated, message: "Create a `CometChatKingfisherParsedOptionsInfo` from `CometChatKingfisherOptionsInfo` and use `originalCache` instead.")
+  public var originalCache: VitaleHealthSDK.ImageCache? {
+    get
+  }
+  @available(*, deprecated, message: "Create a `CometChatKingfisherParsedOptionsInfo` from `CometChatKingfisherOptionsInfo` and use `downloader` instead.")
+  public var downloader: VitaleHealthSDK.ImageDownloader? {
+    get
+  }
+  @available(*, deprecated, message: "Create a `CometChatKingfisherParsedOptionsInfo` from `CometChatKingfisherOptionsInfo` and use `transition` instead.")
+  public var transition: VitaleHealthSDK.ImageTransition {
+    get
+  }
+  @available(*, deprecated, message: "Create a `CometChatKingfisherParsedOptionsInfo` from `CometChatKingfisherOptionsInfo` and use `downloadPriority` instead.")
+  public var downloadPriority: Swift.Float {
+    get
+  }
+  @available(*, deprecated, message: "Create a `CometChatKingfisherParsedOptionsInfo` from `CometChatKingfisherOptionsInfo` and use `forceRefresh` instead.")
+  public var forceRefresh: Swift.Bool {
+    get
+  }
+  @available(*, deprecated, message: "Create a `CometChatKingfisherParsedOptionsInfo` from `CometChatKingfisherOptionsInfo` and use `fromMemoryCacheOrRefresh` instead.")
+  public var fromMemoryCacheOrRefresh: Swift.Bool {
+    get
+  }
+  @available(*, deprecated, message: "Create a `CometChatKingfisherParsedOptionsInfo` from `CometChatKingfisherOptionsInfo` and use `forceTransition` instead.")
+  public var forceTransition: Swift.Bool {
+    get
+  }
+  @available(*, deprecated, message: "Create a `CometChatKingfisherParsedOptionsInfo` from `CometChatKingfisherOptionsInfo` and use `cacheMemoryOnly` instead.")
+  public var cacheMemoryOnly: Swift.Bool {
+    get
+  }
+  @available(*, deprecated, message: "Create a `CometChatKingfisherParsedOptionsInfo` from `CometChatKingfisherOptionsInfo` and use `waitForCache` instead.")
+  public var waitForCache: Swift.Bool {
+    get
+  }
+  @available(*, deprecated, message: "Create a `CometChatKingfisherParsedOptionsInfo` from `CometChatKingfisherOptionsInfo` and use `onlyFromCache` instead.")
+  public var onlyFromCache: Swift.Bool {
+    get
+  }
+  @available(*, deprecated, message: "Create a `CometChatKingfisherParsedOptionsInfo` from `CometChatKingfisherOptionsInfo` and use `backgroundDecode` instead.")
+  public var backgroundDecode: Swift.Bool {
+    get
+  }
+  @available(*, deprecated, message: "Create a `CometChatKingfisherParsedOptionsInfo` from `CometChatKingfisherOptionsInfo` and use `preloadAllAnimationData` instead.")
+  public var preloadAllAnimationData: Swift.Bool {
+    get
+  }
+  @available(*, deprecated, message: "Create a `CometChatKingfisherParsedOptionsInfo` from `CometChatKingfisherOptionsInfo` and use `callbackQueue` instead.")
+  public var callbackQueue: VitaleHealthSDK.CallbackQueue {
+    get
+  }
+  @available(*, deprecated, message: "Create a `CometChatKingfisherParsedOptionsInfo` from `CometChatKingfisherOptionsInfo` and use `scaleFactor` instead.")
+  public var scaleFactor: CoreFoundation.CGFloat {
+    get
+  }
+  @available(*, deprecated, message: "Create a `CometChatKingfisherParsedOptionsInfo` from `CometChatKingfisherOptionsInfo` and use `requestModifier` instead.")
+  public var modifier: VitaleHealthSDK.ImageDownloadRequestModifier? {
+    get
+  }
+  @available(*, deprecated, message: "Create a `CometChatKingfisherParsedOptionsInfo` from `CometChatKingfisherOptionsInfo` and use `processor` instead.")
+  public var processor: VitaleHealthSDK.ImageProcessor {
+    get
+  }
+  @available(*, deprecated, message: "Create a `CometChatKingfisherParsedOptionsInfo` from `CometChatKingfisherOptionsInfo` and use `imageModifier` instead.")
+  public var imageModifier: VitaleHealthSDK.ImageModifier? {
+    get
+  }
+  @available(*, deprecated, message: "Create a `CometChatKingfisherParsedOptionsInfo` from `CometChatKingfisherOptionsInfo` and use `cacheSerializer` instead.")
+  public var cacheSerializer: VitaleHealthSDK.CacheSerializer {
+    get
+  }
+  @available(*, deprecated, message: "Create a `CometChatKingfisherParsedOptionsInfo` from `CometChatKingfisherOptionsInfo` and use `keepCurrentImageWhileLoading` instead.")
+  public var keepCurrentImageWhileLoading: Swift.Bool {
+    get
+  }
+  @available(*, deprecated, message: "Create a `CometChatKingfisherParsedOptionsInfo` from `CometChatKingfisherOptionsInfo` and use `onlyLoadFirstFrame` instead.")
+  public var onlyLoadFirstFrame: Swift.Bool {
+    get
+  }
+  @available(*, deprecated, message: "Create a `CometChatKingfisherParsedOptionsInfo` from `CometChatKingfisherOptionsInfo` and use `cacheOriginalImage` instead.")
+  public var cacheOriginalImage: Swift.Bool {
+    get
+  }
+  @available(*, deprecated, message: "Create a `CometChatKingfisherParsedOptionsInfo` from `CometChatKingfisherOptionsInfo` and use `onFailureImage` instead.")
+  public var onFailureImage: Swift.Optional<VitaleHealthSDK.CFCrossPlatformImage?> {
+    get
+  }
+  @available(*, deprecated, message: "Create a `CometChatKingfisherParsedOptionsInfo` from `CometChatKingfisherOptionsInfo` and use `alsoPrefetchToMemory` instead.")
+  public var alsoPrefetchToMemory: Swift.Bool {
+    get
+  }
+  @available(*, deprecated, message: "Create a `CometChatKingfisherParsedOptionsInfo` from `CometChatKingfisherOptionsInfo` and use `loadDiskFileSynchronously` instead.")
+  public var loadDiskFileSynchronously: Swift.Bool {
+    get
+  }
+}
+@available(*, deprecated, message: "Use `nil` in CometChatKingfisherOptionsInfo to indicate no modifier.")
+public struct DefaultImageModifier : VitaleHealthSDK.ImageModifier {
+  public static let `default`: VitaleHealthSDK.DefaultImageModifier
+  public func modify(_ image: VitaleHealthSDK.CFCrossPlatformImage) -> VitaleHealthSDK.CFCrossPlatformImage
+}
+@available(*, deprecated, message: "Use `CFCrossPlatformImage` instead.")
+public typealias Image = VitaleHealthSDK.CFCrossPlatformImage
+@available(*, deprecated, message: "Use `CFCrossPlatformColor` instead.")
+public typealias Color = VitaleHealthSDK.CFCrossPlatformColor
+@available(*, deprecated, message: "Use `CFCrossPlatformImageView` instead.")
+public typealias ImageView = VitaleHealthSDK.CFCrossPlatformImageView
+@available(*, deprecated, message: "Use `CFCrossPlatformView` instead.")
+public typealias View = VitaleHealthSDK.CFCrossPlatformView
+@available(*, deprecated, message: "Use `CFCrossPlatformButton` instead.")
+public typealias Button = VitaleHealthSDK.CFCrossPlatformButton
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class CometChatAddAdministrators : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func loadView()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) public func set(group: CometChatPro.Group)
+  @objc @_Concurrency.MainActor(unsafe) public func set(title: Swift.String, mode: UIKit.UINavigationItem.LargeTitleDisplayMode)
+  @objc @_Concurrency.MainActor(unsafe) public func set(barColor: UIKit.UIColor, titleColor color: UIKit.UIColor)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension VitaleHealthSDK.CometChatAddAdministrators : UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func numberOfSections(in tableView: UIKit.UITableView) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForHeaderInSection section: Swift.Int) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @available(iOS 13.0, *)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, contextMenuConfigurationForRowAt indexPath: Foundation.IndexPath, point: CoreFoundation.CGPoint) -> UIKit.UIContextMenuConfiguration?
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+}
+extension VitaleHealthSDK.CometChatAddAdministrators : CometChatPro.CometChatGroupDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onGroupMemberJoined(action: CometChatPro.ActionMessage, joinedUser: CometChatPro.User, joinedGroup: CometChatPro.Group)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onGroupMemberLeft(action: CometChatPro.ActionMessage, leftUser: CometChatPro.User, leftGroup: CometChatPro.Group)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onGroupMemberKicked(action: CometChatPro.ActionMessage, kickedUser: CometChatPro.User, kickedBy: CometChatPro.User, kickedFrom: CometChatPro.Group)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onGroupMemberBanned(action: CometChatPro.ActionMessage, bannedUser: CometChatPro.User, bannedBy: CometChatPro.User, bannedFrom: CometChatPro.Group)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onGroupMemberUnbanned(action: CometChatPro.ActionMessage, unbannedUser: CometChatPro.User, unbannedBy: CometChatPro.User, unbannedFrom: CometChatPro.Group)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onGroupMemberScopeChanged(action: CometChatPro.ActionMessage, scopeChangeduser: CometChatPro.User, scopeChangedBy: CometChatPro.User, scopeChangedTo: Swift.String, scopeChangedFrom: Swift.String, group: CometChatPro.Group)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onMemberAddedToGroup(action: CometChatPro.ActionMessage, addedBy: CometChatPro.User, addedUser: CometChatPro.User, addedTo: CometChatPro.Group)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class CometChatAddModerators : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func loadView()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) public func set(group: CometChatPro.Group)
+  @objc @_Concurrency.MainActor(unsafe) public func set(title: Swift.String, mode: UIKit.UINavigationItem.LargeTitleDisplayMode)
+  @objc @_Concurrency.MainActor(unsafe) public func set(barColor: UIKit.UIColor, titleColor color: UIKit.UIColor)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension VitaleHealthSDK.CometChatAddModerators : UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func numberOfSections(in tableView: UIKit.UITableView) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForHeaderInSection section: Swift.Int) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @available(iOS 13.0, *)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, contextMenuConfigurationForRowAt indexPath: Foundation.IndexPath, point: CoreFoundation.CGPoint) -> UIKit.UIContextMenuConfiguration?
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+}
+extension VitaleHealthSDK.CometChatAddModerators : CometChatPro.CometChatGroupDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onGroupMemberJoined(action: CometChatPro.ActionMessage, joinedUser: CometChatPro.User, joinedGroup: CometChatPro.Group)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onGroupMemberLeft(action: CometChatPro.ActionMessage, leftUser: CometChatPro.User, leftGroup: CometChatPro.Group)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onGroupMemberKicked(action: CometChatPro.ActionMessage, kickedUser: CometChatPro.User, kickedBy: CometChatPro.User, kickedFrom: CometChatPro.Group)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onGroupMemberBanned(action: CometChatPro.ActionMessage, bannedUser: CometChatPro.User, bannedBy: CometChatPro.User, bannedFrom: CometChatPro.Group)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onGroupMemberUnbanned(action: CometChatPro.ActionMessage, unbannedUser: CometChatPro.User, unbannedBy: CometChatPro.User, unbannedFrom: CometChatPro.Group)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onGroupMemberScopeChanged(action: CometChatPro.ActionMessage, scopeChangeduser: CometChatPro.User, scopeChangedBy: CometChatPro.User, scopeChangedTo: Swift.String, scopeChangedFrom: Swift.String, group: CometChatPro.Group)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onMemberAddedToGroup(action: CometChatPro.ActionMessage, addedBy: CometChatPro.User, addedUser: CometChatPro.User, addedTo: CometChatPro.Group)
+}
+public protocol AnimatedImageViewDelegate : AnyObject {
+  func animatedImageView(_ imageView: VitaleHealthSDK.AnimatedImageView, didPlayAnimationLoops count: Swift.UInt)
+  func animatedImageViewDidFinishAnimating(_ imageView: VitaleHealthSDK.AnimatedImageView)
+}
+extension VitaleHealthSDK.AnimatedImageViewDelegate {
+  public func animatedImageView(_ imageView: VitaleHealthSDK.AnimatedImageView, didPlayAnimationLoops count: Swift.UInt)
+  public func animatedImageViewDidFinishAnimating(_ imageView: VitaleHealthSDK.AnimatedImageView)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class AnimatedImageView : UIKit.UIImageView {
+  public enum RepeatCount : Swift.Equatable {
+    case once
+    case finite(count: Swift.UInt)
+    case infinite
+    public static func == (lhs: VitaleHealthSDK.AnimatedImageView.RepeatCount, rhs: VitaleHealthSDK.AnimatedImageView.RepeatCount) -> Swift.Bool
+  }
+  @_Concurrency.MainActor(unsafe) public var autoPlayAnimatedImage: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var framePreloadCount: Swift.Int
+  @_Concurrency.MainActor(unsafe) public var needsPrescaling: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var backgroundDecode: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var runLoopMode: Foundation.RunLoop.Mode {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var repeatCount: VitaleHealthSDK.AnimatedImageView.RepeatCount {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) weak public var delegate: VitaleHealthSDK.AnimatedImageViewDelegate?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var image: VitaleHealthSDK.CFCrossPlatformImage? {
+    @objc get
+    @objc set
+  }
+  @objc deinit
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var isAnimating: Swift.Bool {
+    @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func startAnimating()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func stopAnimating()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func display(_ layer: QuartzCore.CALayer)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func didMoveToWindow()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func didMoveToSuperview()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(image: UIKit.UIImage?)
+  @available(iOS 3.0, *)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(image: UIKit.UIImage?, highlightedImage: UIKit.UIImage?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+public protocol Resource {
+  var cacheKey: Swift.String { get }
+  var downloadURL: Foundation.URL { get }
+}
+public struct ImageResource : VitaleHealthSDK.Resource {
+  public init(downloadURL: Foundation.URL, cacheKey: Swift.String? = nil)
+  public let cacheKey: Swift.String
+  public let downloadURL: Foundation.URL
+}
+extension Foundation.URL : VitaleHealthSDK.Resource {
+  public var cacheKey: Swift.String {
+    get
+  }
+  public var downloadURL: Foundation.URL {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class VitaleSDK {
+  public static let shared: VitaleHealthSDK.VitaleSDK
+  weak public var vitaleSDKDelegate: VitaleHealthSDK.VitaleSDKDelegate?
+  public func setDelegate(_ delegate: VitaleHealthSDK.VitaleSDKDelegate)
+  public func startSDKWithConfig(config: Swift.String, userID: Swift.String)
+  public func setMainColor(color: Swift.String)
+  public func setPrimaryButtonColor(_ color: Swift.String)
+  public func setNavigationBarColor(color: Swift.String)
+  public func setNavigationTintColor(color: Swift.String)
+  public func showVitale()
+  public func setSmallLogo(_ logo: UIKit.UIImage?)
+  @objc deinit
+}
+public protocol VitaleSDKDelegate : AnyObject {
+  func newEvent(_ eventName: Swift.String)
+}
+public enum ImageProcessItem {
+  case image(VitaleHealthSDK.CFCrossPlatformImage)
+  case data(Foundation.Data)
+}
+public protocol ImageProcessor {
+  var identifier: Swift.String { get }
+  @available(*, deprecated, message: "Deprecated. Implement the method with same name but with `CometChatKingfisherParsedOptionsInfo` instead.")
+  func process(item: VitaleHealthSDK.ImageProcessItem, options: VitaleHealthSDK.CometChatKingfisherOptionsInfo) -> VitaleHealthSDK.CFCrossPlatformImage?
+  func process(item: VitaleHealthSDK.ImageProcessItem, options: VitaleHealthSDK.CometChatKingfisherParsedOptionsInfo) -> VitaleHealthSDK.CFCrossPlatformImage?
+}
+extension VitaleHealthSDK.ImageProcessor {
+  public func process(item: VitaleHealthSDK.ImageProcessItem, options: VitaleHealthSDK.CometChatKingfisherOptionsInfo) -> VitaleHealthSDK.CFCrossPlatformImage?
+}
+extension VitaleHealthSDK.ImageProcessor {
+  public func append(another: VitaleHealthSDK.ImageProcessor) -> VitaleHealthSDK.ImageProcessor
+}
+public struct DefaultImageProcessor : VitaleHealthSDK.ImageProcessor {
+  public static let `default`: VitaleHealthSDK.DefaultImageProcessor
+  public let identifier: Swift.String
+  public init()
+  public func process(item: VitaleHealthSDK.ImageProcessItem, options: VitaleHealthSDK.CometChatKingfisherParsedOptionsInfo) -> VitaleHealthSDK.CFCrossPlatformImage?
+}
+public struct RectCorner : Swift.OptionSet {
+  public let rawValue: Swift.Int
+  public static let topLeft: VitaleHealthSDK.RectCorner
+  public static let topRight: VitaleHealthSDK.RectCorner
+  public static let bottomLeft: VitaleHealthSDK.RectCorner
+  public static let bottomRight: VitaleHealthSDK.RectCorner
+  public static let all: VitaleHealthSDK.RectCorner
+  public init(rawValue: Swift.Int)
+  public typealias ArrayLiteralElement = VitaleHealthSDK.RectCorner
+  public typealias Element = VitaleHealthSDK.RectCorner
+  public typealias RawValue = Swift.Int
+}
+public struct BlendImageProcessor : VitaleHealthSDK.ImageProcessor {
+  public let identifier: Swift.String
+  public let blendMode: CoreGraphics.CGBlendMode
+  public let alpha: CoreFoundation.CGFloat
+  public let backgroundColor: VitaleHealthSDK.CFCrossPlatformColor?
+  public init(blendMode: CoreGraphics.CGBlendMode, alpha: CoreFoundation.CGFloat = 1.0, backgroundColor: VitaleHealthSDK.CFCrossPlatformColor? = nil)
+  public func process(item: VitaleHealthSDK.ImageProcessItem, options: VitaleHealthSDK.CometChatKingfisherParsedOptionsInfo) -> VitaleHealthSDK.CFCrossPlatformImage?
+}
+public struct RoundCornerImageProcessor : VitaleHealthSDK.ImageProcessor {
+  public let identifier: Swift.String
+  public let cornerRadius: CoreFoundation.CGFloat
+  public let roundingCorners: VitaleHealthSDK.RectCorner
+  public let targetSize: CoreFoundation.CGSize?
+  public let backgroundColor: VitaleHealthSDK.CFCrossPlatformColor?
+  public init(cornerRadius: CoreFoundation.CGFloat, targetSize: CoreFoundation.CGSize? = nil, roundingCorners corners: VitaleHealthSDK.RectCorner = .all, backgroundColor: VitaleHealthSDK.CFCrossPlatformColor? = nil)
+  public func process(item: VitaleHealthSDK.ImageProcessItem, options: VitaleHealthSDK.CometChatKingfisherParsedOptionsInfo) -> VitaleHealthSDK.CFCrossPlatformImage?
+}
+public enum ContentMode {
+  case none
+  case aspectFit
+  case aspectFill
+  public static func == (a: VitaleHealthSDK.ContentMode, b: VitaleHealthSDK.ContentMode) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct ResizingImageProcessor : VitaleHealthSDK.ImageProcessor {
+  public let identifier: Swift.String
+  public let referenceSize: CoreFoundation.CGSize
+  public let targetContentMode: VitaleHealthSDK.ContentMode
+  public init(referenceSize: CoreFoundation.CGSize, mode: VitaleHealthSDK.ContentMode = .none)
+  public func process(item: VitaleHealthSDK.ImageProcessItem, options: VitaleHealthSDK.CometChatKingfisherParsedOptionsInfo) -> VitaleHealthSDK.CFCrossPlatformImage?
+}
+public struct BlurImageProcessor : VitaleHealthSDK.ImageProcessor {
+  public let identifier: Swift.String
+  public let blurRadius: CoreFoundation.CGFloat
+  public init(blurRadius: CoreFoundation.CGFloat)
+  public func process(item: VitaleHealthSDK.ImageProcessItem, options: VitaleHealthSDK.CometChatKingfisherParsedOptionsInfo) -> VitaleHealthSDK.CFCrossPlatformImage?
+}
+public struct OverlayImageProcessor : VitaleHealthSDK.ImageProcessor {
+  public let identifier: Swift.String
+  public let overlay: VitaleHealthSDK.CFCrossPlatformColor
+  public let fraction: CoreFoundation.CGFloat
+  public init(overlay: VitaleHealthSDK.CFCrossPlatformColor, fraction: CoreFoundation.CGFloat = 0.5)
+  public func process(item: VitaleHealthSDK.ImageProcessItem, options: VitaleHealthSDK.CometChatKingfisherParsedOptionsInfo) -> VitaleHealthSDK.CFCrossPlatformImage?
+}
+public struct TintImageProcessor : VitaleHealthSDK.ImageProcessor {
+  public let identifier: Swift.String
+  public let tint: VitaleHealthSDK.CFCrossPlatformColor
+  public init(tint: VitaleHealthSDK.CFCrossPlatformColor)
+  public func process(item: VitaleHealthSDK.ImageProcessItem, options: VitaleHealthSDK.CometChatKingfisherParsedOptionsInfo) -> VitaleHealthSDK.CFCrossPlatformImage?
+}
+public struct ColorControlsProcessor : VitaleHealthSDK.ImageProcessor {
+  public let identifier: Swift.String
+  public let brightness: CoreFoundation.CGFloat
+  public let contrast: CoreFoundation.CGFloat
+  public let saturation: CoreFoundation.CGFloat
+  public let inputEV: CoreFoundation.CGFloat
+  public init(brightness: CoreFoundation.CGFloat, contrast: CoreFoundation.CGFloat, saturation: CoreFoundation.CGFloat, inputEV: CoreFoundation.CGFloat)
+  public func process(item: VitaleHealthSDK.ImageProcessItem, options: VitaleHealthSDK.CometChatKingfisherParsedOptionsInfo) -> VitaleHealthSDK.CFCrossPlatformImage?
+}
+public struct BlackWhiteProcessor : VitaleHealthSDK.ImageProcessor {
+  public let identifier: Swift.String
+  public init()
+  public func process(item: VitaleHealthSDK.ImageProcessItem, options: VitaleHealthSDK.CometChatKingfisherParsedOptionsInfo) -> VitaleHealthSDK.CFCrossPlatformImage?
+}
+public struct CroppingImageProcessor : VitaleHealthSDK.ImageProcessor {
+  public let identifier: Swift.String
+  public let size: CoreFoundation.CGSize
+  public let anchor: CoreFoundation.CGPoint
+  public init(size: CoreFoundation.CGSize, anchor: CoreFoundation.CGPoint = CGPoint(x: 0.5, y: 0.5))
+  public func process(item: VitaleHealthSDK.ImageProcessItem, options: VitaleHealthSDK.CometChatKingfisherParsedOptionsInfo) -> VitaleHealthSDK.CFCrossPlatformImage?
+}
+public struct DownsamplingImageProcessor : VitaleHealthSDK.ImageProcessor {
+  public let size: CoreFoundation.CGSize
+  public let identifier: Swift.String
+  public init(size: CoreFoundation.CGSize)
+  public func process(item: VitaleHealthSDK.ImageProcessItem, options: VitaleHealthSDK.CometChatKingfisherParsedOptionsInfo) -> VitaleHealthSDK.CFCrossPlatformImage?
+}
+@available(*, deprecated, renamed: "|>", message: "Will be removed soon. Use `|>` instead.")
+public func >> (left: VitaleHealthSDK.ImageProcessor, right: VitaleHealthSDK.ImageProcessor) -> VitaleHealthSDK.ImageProcessor
+infix operator |> : AdditionPrecedence
+public func |> (left: VitaleHealthSDK.ImageProcessor, right: VitaleHealthSDK.ImageProcessor) -> VitaleHealthSDK.ImageProcessor
+public protocol AuthenticationChallengeResponsable : AnyObject {
+  func downloader(_ downloader: VitaleHealthSDK.ImageDownloader, didReceive challenge: Foundation.URLAuthenticationChallenge, completionHandler: @escaping (Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?) -> Swift.Void)
+  func downloader(_ downloader: VitaleHealthSDK.ImageDownloader, task: Foundation.URLSessionTask, didReceive challenge: Foundation.URLAuthenticationChallenge, completionHandler: @escaping (Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?) -> Swift.Void)
+}
+extension VitaleHealthSDK.AuthenticationChallengeResponsable {
+  public func downloader(_ downloader: VitaleHealthSDK.ImageDownloader, didReceive challenge: Foundation.URLAuthenticationChallenge, completionHandler: @escaping (Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?) -> Swift.Void)
+  public func downloader(_ downloader: VitaleHealthSDK.ImageDownloader, task: Foundation.URLSessionTask, didReceive challenge: Foundation.URLAuthenticationChallenge, completionHandler: @escaping (Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?) -> Swift.Void)
+}
+public struct ImageLoadingResult {
+  public let image: VitaleHealthSDK.CFCrossPlatformImage
+  public let url: Foundation.URL?
+  public let originalData: Foundation.Data
+}
+public struct DownloadTask {
+  public let sessionTask: VitaleHealthSDK.SessionDataTask
+  public let cancelToken: VitaleHealthSDK.SessionDataTask.CancelToken
+  public func cancel()
+}
+open class ImageDownloader {
+  public static let `default`: VitaleHealthSDK.ImageDownloader
+  open var downloadTimeout: Swift.Double
+  open var trustedHosts: Swift.Set<Swift.String>?
+  open var sessionConfiguration: Foundation.URLSessionConfiguration {
+    get
+    set
+  }
+  open var requestsUsePipelining: Swift.Bool
+  weak open var delegate: VitaleHealthSDK.ImageDownloaderDelegate?
+  weak open var authenticationChallengeResponder: VitaleHealthSDK.AuthenticationChallengeResponsable?
+  public init(name: Swift.String)
+  @objc deinit
+  @discardableResult
+  open func downloadImage(with url: Foundation.URL, options: VitaleHealthSDK.CometChatKingfisherParsedOptionsInfo, completionHandler: ((Swift.Result<VitaleHealthSDK.ImageLoadingResult, VitaleHealthSDK.CometChatKingfisherError>) -> Swift.Void)? = nil) -> VitaleHealthSDK.DownloadTask?
+  @discardableResult
+  open func downloadImage(with url: Foundation.URL, options: VitaleHealthSDK.CometChatKingfisherOptionsInfo? = nil, progressBlock: VitaleHealthSDK.DownloadProgressBlock? = nil, completionHandler: ((Swift.Result<VitaleHealthSDK.ImageLoadingResult, VitaleHealthSDK.CometChatKingfisherError>) -> Swift.Void)? = nil) -> VitaleHealthSDK.DownloadTask?
+}
+extension VitaleHealthSDK.ImageDownloader {
+  public func cancelAll()
+  public func cancel(url: Foundation.URL)
+}
+extension VitaleHealthSDK.ImageDownloader : VitaleHealthSDK.AuthenticationChallengeResponsable {
+}
+extension VitaleHealthSDK.ImageDownloader : VitaleHealthSDK.ImageDownloaderDelegate {
+}
+public typealias PrefetcherProgressBlock = ((_ skippedResources: [VitaleHealthSDK.Resource], _ failedResources: [VitaleHealthSDK.Resource], _ completedResources: [VitaleHealthSDK.Resource]) -> Swift.Void)
+public typealias PrefetcherSourceProgressBlock = ((_ skippedSources: [VitaleHealthSDK.Source], _ failedSources: [VitaleHealthSDK.Source], _ completedSources: [VitaleHealthSDK.Source]) -> Swift.Void)
+public typealias PrefetcherCompletionHandler = ((_ skippedResources: [VitaleHealthSDK.Resource], _ failedResources: [VitaleHealthSDK.Resource], _ completedResources: [VitaleHealthSDK.Resource]) -> Swift.Void)
+public typealias PrefetcherSourceCompletionHandler = ((_ skippedSources: [VitaleHealthSDK.Source], _ failedSources: [VitaleHealthSDK.Source], _ completedSources: [VitaleHealthSDK.Source]) -> Swift.Void)
+@_hasMissingDesignatedInitializers public class ImagePrefetcher : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+  public var maxConcurrentDownloads: Swift.Int
+  convenience public init(urls: [Foundation.URL], options: VitaleHealthSDK.CometChatKingfisherOptionsInfo? = nil, progressBlock: VitaleHealthSDK.PrefetcherProgressBlock? = nil, completionHandler: VitaleHealthSDK.PrefetcherCompletionHandler? = nil)
+  convenience public init(resources: [VitaleHealthSDK.Resource], options: VitaleHealthSDK.CometChatKingfisherOptionsInfo? = nil, progressBlock: VitaleHealthSDK.PrefetcherProgressBlock? = nil, completionHandler: VitaleHealthSDK.PrefetcherCompletionHandler? = nil)
+  convenience public init(sources: [VitaleHealthSDK.Source], options: VitaleHealthSDK.CometChatKingfisherOptionsInfo? = nil, progressBlock: VitaleHealthSDK.PrefetcherSourceProgressBlock? = nil, completionHandler: VitaleHealthSDK.PrefetcherSourceCompletionHandler? = nil)
+  public func start()
+  public func stop()
+  @objc deinit
+}
+public protocol ForwardMessageListDelegate : AnyObject {
+  func didSelectConversationAtIndexPath(conversation: CometChatPro.Conversation, indexPath: Foundation.IndexPath)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class CometChatForwardMessageList : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func loadView()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc @_Concurrency.MainActor(unsafe) public func set(title: Swift.String, mode: UIKit.UINavigationItem.LargeTitleDisplayMode)
+  @objc @_Concurrency.MainActor(unsafe) public func set(message: CometChatPro.BaseMessage)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension VitaleHealthSDK.CometChatForwardMessageList : UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForHeaderInSection section: Swift.Int) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, viewForHeaderInSection section: Swift.Int) -> UIKit.UIView?
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func numberOfSections(in tableView: UIKit.UITableView) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, didDeselectRowAt indexPath: Foundation.IndexPath)
+}
+extension VitaleHealthSDK.CometChatForwardMessageList : CometChatPro.CometChatMessageDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onTextMessageReceived(textMessage: CometChatPro.TextMessage)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onMediaMessageReceived(mediaMessage: CometChatPro.MediaMessage)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onTypingStarted(_ typingDetails: CometChatPro.TypingIndicator)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onTypingEnded(_ typingDetails: CometChatPro.TypingIndicator)
+}
+extension VitaleHealthSDK.CometChatForwardMessageList : CometChatPro.CometChatUserDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onUserOnline(user: CometChatPro.User)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onUserOffline(user: CometChatPro.User)
+}
+extension VitaleHealthSDK.CometChatForwardMessageList : CometChatPro.CometChatGroupDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onGroupMemberJoined(action: CometChatPro.ActionMessage, joinedUser: CometChatPro.User, joinedGroup: CometChatPro.Group)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onGroupMemberLeft(action: CometChatPro.ActionMessage, leftUser: CometChatPro.User, leftGroup: CometChatPro.Group)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onGroupMemberKicked(action: CometChatPro.ActionMessage, kickedUser: CometChatPro.User, kickedBy: CometChatPro.User, kickedFrom: CometChatPro.Group)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onGroupMemberBanned(action: CometChatPro.ActionMessage, bannedUser: CometChatPro.User, bannedBy: CometChatPro.User, bannedFrom: CometChatPro.Group)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onGroupMemberUnbanned(action: CometChatPro.ActionMessage, unbannedUser: CometChatPro.User, unbannedBy: CometChatPro.User, unbannedFrom: CometChatPro.Group)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onGroupMemberScopeChanged(action: CometChatPro.ActionMessage, scopeChangeduser: CometChatPro.User, scopeChangedBy: CometChatPro.User, scopeChangedTo: Swift.String, scopeChangedFrom: Swift.String, group: CometChatPro.Group)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onMemberAddedToGroup(action: CometChatPro.ActionMessage, addedBy: CometChatPro.User, addedUser: CometChatPro.User, addedTo: CometChatPro.Group)
+}
+public struct ImageCreatingOptions {
+  public let scale: CoreFoundation.CGFloat
+  public let duration: Foundation.TimeInterval
+  public let preloadAll: Swift.Bool
+  public let onlyFirstFrame: Swift.Bool
+  public init(scale: CoreFoundation.CGFloat = 1.0, duration: Foundation.TimeInterval = 0.0, preloadAll: Swift.Bool = false, onlyFirstFrame: Swift.Bool = false)
+}
+public struct ImageProgressive {
+  public static let `default`: VitaleHealthSDK.ImageProgressive
+  public init(isBlur: Swift.Bool, isFastestScan: Swift.Bool, scanInterval: Foundation.TimeInterval)
+}
+@objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor(unsafe) public class LiveReaction : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func awakeFromNib()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc @_Concurrency.MainActor(unsafe) public class CometChatUnified : UIKit.UITabBarController {
+  @_Concurrency.MainActor(unsafe) final public let conversations: UIKit.UINavigationController
+  @_Concurrency.MainActor(unsafe) final public let calls: UIKit.UINavigationController
+  @_Concurrency.MainActor(unsafe) final public let users: UIKit.UINavigationController
+  @_Concurrency.MainActor(unsafe) final public let groups: UIKit.UINavigationController
+  @_Concurrency.MainActor(unsafe) final public let more: UIKit.UINavigationController
+  @objc @_Concurrency.MainActor(unsafe) public func set(controllers: [UIKit.UIViewController]?)
+  @objc @_Concurrency.MainActor(unsafe) public func setup(withStyle: UIKit.UIModalPresentationStyle)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public enum SoundCometChat {
+  case incomingCall
+  case incomingMessage
+  case incomingMessageForOther
+  case outgoingCall
+  case outgoingMessage
+  public static func == (a: VitaleHealthSDK.SoundCometChat, b: VitaleHealthSDK.SoundCometChat) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public var audioPlayer: AVFAudio.AVAudioPlayer?
+@objc @_inheritsConvenienceInitializers final public class CometChatSoundManager : ObjectiveC.NSObject {
+  final public func play(sound: VitaleHealthSDK.SoundCometChat, bool: Swift.Bool)
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension VitaleHealthSDK.CometChatKingfisherWrapper where Base : UIKit.UIImageView {
+  @discardableResult
+  public func setImage(with source: VitaleHealthSDK.Source?, placeholder: VitaleHealthSDK.Placeholder? = nil, options: VitaleHealthSDK.CometChatKingfisherOptionsInfo? = nil, progressBlock: VitaleHealthSDK.DownloadProgressBlock? = nil, completionHandler: ((Swift.Result<VitaleHealthSDK.RetrieveImageResult, VitaleHealthSDK.CometChatKingfisherError>) -> Swift.Void)? = nil) -> VitaleHealthSDK.DownloadTask?
+  @discardableResult
+  public func setImage(with resource: VitaleHealthSDK.Resource?, placeholder: VitaleHealthSDK.Placeholder? = nil, options: VitaleHealthSDK.CometChatKingfisherOptionsInfo? = nil, progressBlock: VitaleHealthSDK.DownloadProgressBlock? = nil, completionHandler: ((Swift.Result<VitaleHealthSDK.RetrieveImageResult, VitaleHealthSDK.CometChatKingfisherError>) -> Swift.Void)? = nil) -> VitaleHealthSDK.DownloadTask?
+  @discardableResult
+  public func setImage(with provider: VitaleHealthSDK.ImageDataProvider?, placeholder: VitaleHealthSDK.Placeholder? = nil, options: VitaleHealthSDK.CometChatKingfisherOptionsInfo? = nil, progressBlock: VitaleHealthSDK.DownloadProgressBlock? = nil, completionHandler: ((Swift.Result<VitaleHealthSDK.RetrieveImageResult, VitaleHealthSDK.CometChatKingfisherError>) -> Swift.Void)? = nil) -> VitaleHealthSDK.DownloadTask?
+  public func cancelDownloadTask()
+}
+extension VitaleHealthSDK.CometChatKingfisherWrapper where Base : UIKit.UIImageView {
+  public var taskIdentifier: VitaleHealthSDK.Source.Identifier.Value? {
+    get
+  }
+  public var indicatorType: VitaleHealthSDK.IndicatorType {
+    get
+    set
+  }
+  public var indicator: VitaleHealthSDK.Indicator? {
+    get
+  }
+  public var placeholder: VitaleHealthSDK.Placeholder? {
+    get
+  }
+}
+extension VitaleHealthSDK.CometChatKingfisherWrapper where Base : UIKit.UIImageView {
+  @available(*, deprecated, message: "Use `taskIdentifier` instead to identify a setting task.")
+  public var webURL: Foundation.URL? {
+    get
+  }
+}
+public enum MemoryStorage {
+  public class Backend<T> where T : VitaleHealthSDK.CacheCostCalculable {
+    public var config: VitaleHealthSDK.MemoryStorage.Config {
+      get
+      set
+    }
+    public init(config: VitaleHealthSDK.MemoryStorage.Config)
+    @objc deinit
+  }
+}
+extension VitaleHealthSDK.MemoryStorage {
+  public struct Config {
+    public var totalCostLimit: Swift.Int
+    public var countLimit: Swift.Int
+    public var expiration: VitaleHealthSDK.StorageExpiration
+    public let cleanInterval: Foundation.TimeInterval
+    public init(totalCostLimit: Swift.Int, cleanInterval: Foundation.TimeInterval = 120)
+  }
+}
+public protocol GroupListDelegate : AnyObject {
+  func didSelectGroupAtIndexPath(group: CometChatPro.Group, indexPath: Foundation.IndexPath)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class CometChatGroupList : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func loadView()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc @_Concurrency.MainActor(unsafe) public func set(title: Swift.String, mode: UIKit.UINavigationItem.LargeTitleDisplayMode)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension VitaleHealthSDK.CometChatGroupList : UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func numberOfSections(in tableView: UIKit.UITableView) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForHeaderInSection section: Swift.Int) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, viewForHeaderInSection section: Swift.Int) -> UIKit.UIView?
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, willDisplay cell: UIKit.UITableViewCell, forRowAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+}
+extension VitaleHealthSDK.CometChatGroupList : UIKit.UISearchBarDelegate, UIKit.UISearchResultsUpdating {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func updateSearchResults(for searchController: UIKit.UISearchController)
+}
+public enum DiskStorage {
+  public class Backend<T> where T : VitaleHealthSDK.DataTransformable {
+    public var config: VitaleHealthSDK.DiskStorage.Config
+    final public let directoryURL: Foundation.URL
+    public init(config: VitaleHealthSDK.DiskStorage.Config) throws
+    public func cacheFileURL(forKey key: Swift.String) -> Foundation.URL
+    @objc deinit
+  }
+}
+extension VitaleHealthSDK.DiskStorage {
+  public struct Config {
+    public var sizeLimit: Swift.UInt
+    public var expiration: VitaleHealthSDK.StorageExpiration
+    public var pathExtension: Swift.String?
+    public var usesHashedFileName: Swift.Bool
+    public init(name: Swift.String, sizeLimit: Swift.UInt, fileManager: Foundation.FileManager = .default, directory: Foundation.URL? = nil)
+  }
+}
+public protocol ImageDownloadRequestModifier {
+  func modified(for request: Foundation.URLRequest) -> Foundation.URLRequest?
+}
+public struct AnyModifier : VitaleHealthSDK.ImageDownloadRequestModifier {
+  public func modified(for request: Foundation.URLRequest) -> Foundation.URLRequest?
+  public init(modify: @escaping (Foundation.URLRequest) -> Foundation.URLRequest?)
+}
+extension VitaleHealthSDK.CometChatKingfisherWrapper where Base : UIKit.UIImage {
+  public func image(withBlendMode blendMode: CoreGraphics.CGBlendMode, alpha: CoreFoundation.CGFloat = 1.0, backgroundColor: VitaleHealthSDK.CFCrossPlatformColor? = nil) -> VitaleHealthSDK.CFCrossPlatformImage
+  public func image(withRoundRadius radius: CoreFoundation.CGFloat, fit size: CoreFoundation.CGSize, roundingCorners corners: VitaleHealthSDK.RectCorner = .all, backgroundColor: VitaleHealthSDK.CFCrossPlatformColor? = nil) -> VitaleHealthSDK.CFCrossPlatformImage
+  public func resize(to size: CoreFoundation.CGSize) -> VitaleHealthSDK.CFCrossPlatformImage
+  public func resize(to targetSize: CoreFoundation.CGSize, for contentMode: VitaleHealthSDK.ContentMode) -> VitaleHealthSDK.CFCrossPlatformImage
+  public func crop(to size: CoreFoundation.CGSize, anchorOn anchor: CoreFoundation.CGPoint) -> VitaleHealthSDK.CFCrossPlatformImage
+  public func blurred(withRadius radius: CoreFoundation.CGFloat) -> VitaleHealthSDK.CFCrossPlatformImage
+  public func overlaying(with color: VitaleHealthSDK.CFCrossPlatformColor, fraction: CoreFoundation.CGFloat) -> VitaleHealthSDK.CFCrossPlatformImage
+  public func tinted(with color: VitaleHealthSDK.CFCrossPlatformColor) -> VitaleHealthSDK.CFCrossPlatformImage
+  public func adjusted(brightness: CoreFoundation.CGFloat, contrast: CoreFoundation.CGFloat, saturation: CoreFoundation.CGFloat, inputEV: CoreFoundation.CGFloat) -> VitaleHealthSDK.CFCrossPlatformImage
+  public func scaled(to scale: CoreFoundation.CGFloat) -> VitaleHealthSDK.CFCrossPlatformImage
+}
+extension VitaleHealthSDK.CometChatKingfisherWrapper where Base : UIKit.UIImage {
+  public var decoded: VitaleHealthSDK.CFCrossPlatformImage {
+    get
+  }
+  public func decoded(scale: CoreFoundation.CGFloat) -> VitaleHealthSDK.CFCrossPlatformImage
+}
+extension Swift.String : VitaleHealthSDK.CometChatKingfisherCompatibleValue {
+}
+@objc final public class Chronometer : ObjectiveC.NSObject {
+  final public var isPlaying: Swift.Bool
+  final public var timerCurrentValue: Swift.Double
+  final public var timerDidUpdate: ((Foundation.TimeInterval) -> ())?
+  final public var timerDidComplete: (() -> ())?
+  public init(withTimeInterval timeInterval: Foundation.TimeInterval = 0.0)
+  final public func start(shouldFire fire: Swift.Bool = true)
+  final public func pause()
+  final public func stop()
+  @objc deinit
+}
+public protocol CacheSerializer {
+  func data(with image: VitaleHealthSDK.CFCrossPlatformImage, original: Foundation.Data?) -> Foundation.Data?
+  func image(with data: Foundation.Data, options: VitaleHealthSDK.CometChatKingfisherParsedOptionsInfo) -> VitaleHealthSDK.CFCrossPlatformImage?
+  @available(*, deprecated, message: "Deprecated. Implement the method with same name but with `CometChatKingfisherParsedOptionsInfo` instead.")
+  func image(with data: Foundation.Data, options: VitaleHealthSDK.CometChatKingfisherOptionsInfo?) -> VitaleHealthSDK.CFCrossPlatformImage?
+}
+extension VitaleHealthSDK.CacheSerializer {
+  public func image(with data: Foundation.Data, options: VitaleHealthSDK.CometChatKingfisherOptionsInfo?) -> VitaleHealthSDK.CFCrossPlatformImage?
+}
+public struct DefaultCacheSerializer : VitaleHealthSDK.CacheSerializer {
+  public static let `default`: VitaleHealthSDK.DefaultCacheSerializer
+  public func data(with image: VitaleHealthSDK.CFCrossPlatformImage, original: Foundation.Data?) -> Foundation.Data?
+  public func image(with data: Foundation.Data, options: VitaleHealthSDK.CometChatKingfisherParsedOptionsInfo) -> VitaleHealthSDK.CFCrossPlatformImage?
+}
+public protocol LinkPreviewDelegate {
+  func didVisitButtonPressed(link: Swift.String, sender: UIKit.UIButton)
+  func didPlayButtonPressed(link: Swift.String, sender: UIKit.UIButton)
+}
+extension CoreFoundation.CGSize : VitaleHealthSDK.CometChatKingfisherCompatibleValue {
+}
+extension VitaleHealthSDK.CometChatKingfisherWrapper where Base == CoreFoundation.CGSize {
+  public func resize(to size: CoreFoundation.CGSize, for contentMode: VitaleHealthSDK.ContentMode) -> CoreFoundation.CGSize
+  public func constrained(_ size: CoreFoundation.CGSize) -> CoreFoundation.CGSize
+  public func filling(_ size: CoreFoundation.CGSize) -> CoreFoundation.CGSize
+  public func constrainedRect(for size: CoreFoundation.CGSize, anchor: CoreFoundation.CGPoint) -> CoreFoundation.CGRect
+}
+public typealias CometChatKingfisherOptionsInfo = [VitaleHealthSDK.CometChatKingfisherOptionsInfoItem]
+public enum CometChatKingfisherOptionsInfoItem {
+  case targetCache(VitaleHealthSDK.ImageCache)
+  case originalCache(VitaleHealthSDK.ImageCache)
+  case downloader(VitaleHealthSDK.ImageDownloader)
+  case transition(VitaleHealthSDK.ImageTransition)
+  case downloadPriority(Swift.Float)
+  case forceRefresh
+  case fromMemoryCacheOrRefresh
+  case forceTransition
+  case cacheMemoryOnly
+  case waitForCache
+  case onlyFromCache
+  case backgroundDecode
+  @available(*, deprecated, message: "Use `.callbackQueue(CallbackQueue)` instead.")
+  case callbackDispatchQueue(Dispatch.DispatchQueue?)
+  case callbackQueue(VitaleHealthSDK.CallbackQueue)
+  case scaleFactor(CoreFoundation.CGFloat)
+  case preloadAllAnimationData
+  case requestModifier(VitaleHealthSDK.ImageDownloadRequestModifier)
+  case redirectHandler(VitaleHealthSDK.ImageDownloadRedirectHandler)
+  case processor(VitaleHealthSDK.ImageProcessor)
+  case cacheSerializer(VitaleHealthSDK.CacheSerializer)
+  case imageModifier(VitaleHealthSDK.ImageModifier)
+  case keepCurrentImageWhileLoading
+  case onlyLoadFirstFrame
+  case cacheOriginalImage
+  case onFailureImage(VitaleHealthSDK.CFCrossPlatformImage?)
+  case alsoPrefetchToMemory
+  case loadDiskFileSynchronously
+  case memoryCacheExpiration(VitaleHealthSDK.StorageExpiration)
+  case memoryCacheAccessExtendingExpiration(VitaleHealthSDK.ExpirationExtending)
+  case diskCacheExpiration(VitaleHealthSDK.StorageExpiration)
+  case diskCacheAccessExtendingExpiration(VitaleHealthSDK.ExpirationExtending)
+  case processingQueue(VitaleHealthSDK.CallbackQueue)
+  case progressiveJPEG(VitaleHealthSDK.ImageProgressive)
+  case alternativeSources([VitaleHealthSDK.Source])
+}
+public struct CometChatKingfisherParsedOptionsInfo {
+  public var targetCache: VitaleHealthSDK.ImageCache?
+  public var originalCache: VitaleHealthSDK.ImageCache?
+  public var downloader: VitaleHealthSDK.ImageDownloader?
+  public var transition: VitaleHealthSDK.ImageTransition
+  public var downloadPriority: Swift.Float
+  public var forceRefresh: Swift.Bool
+  public var fromMemoryCacheOrRefresh: Swift.Bool
+  public var forceTransition: Swift.Bool
+  public var cacheMemoryOnly: Swift.Bool
+  public var waitForCache: Swift.Bool
+  public var onlyFromCache: Swift.Bool
+  public var backgroundDecode: Swift.Bool
+  public var preloadAllAnimationData: Swift.Bool
+  public var callbackQueue: VitaleHealthSDK.CallbackQueue
+  public var scaleFactor: CoreFoundation.CGFloat
+  public var requestModifier: VitaleHealthSDK.ImageDownloadRequestModifier?
+  public var redirectHandler: VitaleHealthSDK.ImageDownloadRedirectHandler?
+  public var processor: VitaleHealthSDK.ImageProcessor
+  public var imageModifier: VitaleHealthSDK.ImageModifier?
+  public var cacheSerializer: VitaleHealthSDK.CacheSerializer
+  public var keepCurrentImageWhileLoading: Swift.Bool
+  public var onlyLoadFirstFrame: Swift.Bool
+  public var cacheOriginalImage: Swift.Bool
+  public var onFailureImage: VitaleHealthSDK.CFCrossPlatformImage??
+  public var alsoPrefetchToMemory: Swift.Bool
+  public var loadDiskFileSynchronously: Swift.Bool
+  public var memoryCacheExpiration: VitaleHealthSDK.StorageExpiration?
+  public var memoryCacheAccessExtendingExpiration: VitaleHealthSDK.ExpirationExtending
+  public var diskCacheExpiration: VitaleHealthSDK.StorageExpiration?
+  public var diskCacheAccessExtendingExpiration: VitaleHealthSDK.ExpirationExtending
+  public var processingQueue: VitaleHealthSDK.CallbackQueue?
+  public var progressiveJPEG: VitaleHealthSDK.ImageProgressive?
+  public var alternativeSources: [VitaleHealthSDK.Source]?
+  public init(_ info: VitaleHealthSDK.CometChatKingfisherOptionsInfo?)
+}
+public enum ImageTransition {
+  case none
+  case fade(Foundation.TimeInterval)
+  case flipFromLeft(Foundation.TimeInterval)
+  case flipFromRight(Foundation.TimeInterval)
+  case flipFromTop(Foundation.TimeInterval)
+  case flipFromBottom(Foundation.TimeInterval)
+  case custom(duration: Foundation.TimeInterval, options: UIKit.UIView.AnimationOptions, animations: ((UIKit.UIImageView, UIKit.UIImage) -> Swift.Void)?, completion: ((Swift.Bool) -> Swift.Void)?)
+}
+@objc public enum CometChatSnackbarDuration : Swift.Int {
+  case short = 1
+  case middle = 3
+  case long = 5
+  case forever = 2147483647
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum CometChatSnackbarAnimationType : Swift.Int {
+  case fadeInFadeOut
+  case slideFromBottomToTop
+  case slideFromBottomBackToBottom
+  case slideFromLeftToRight
+  case slideFromRightToLeft
+  case slideFromTopToBottom
+  case slideFromTopBackToTop
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension UIKit.UIColor {
+  @objc dynamic open class var CometChatDefaultText: UIKit.UIColor {
+    @objc get
+  }
+  @objc dynamic open class var CometChatDefaultBackground: UIKit.UIColor {
+    @objc get
+  }
+  @objc dynamic open class var CometChatDefaultShadow: UIKit.UIColor {
+    @objc get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class CometChatSnackbar : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public static var snackbarDefaultFrame: CoreFoundation.CGRect
+  @_Concurrency.MainActor(unsafe) public static var snackbarMinHeight: CoreFoundation.CGFloat
+  public typealias CometChatActionBlock = (_ snackbar: VitaleHealthSDK.CometChatSnackbar) -> Swift.Void
+  public typealias CometChatDismissBlock = (_ snackbar: VitaleHealthSDK.CometChatSnackbar) -> Swift.Void
+  public typealias CometChatSwipeBlock = (_ snackbar: VitaleHealthSDK.CometChatSnackbar, _ direction: UIKit.UISwipeGestureRecognizer.Direction) -> Swift.Void
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var onTapBlock: VitaleHealthSDK.CometChatSnackbar.CometChatActionBlock?
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var onSwipeBlock: VitaleHealthSDK.CometChatSnackbar.CometChatSwipeBlock?
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var shouldDismissOnSwipe: Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var shouldActivateLeftAndRightMarginOnCustomContentView: Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var actionBlock: VitaleHealthSDK.CometChatSnackbar.CometChatActionBlock?
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var secondActionBlock: VitaleHealthSDK.CometChatSnackbar.CometChatActionBlock?
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var dismissBlock: VitaleHealthSDK.CometChatSnackbar.CometChatDismissBlock?
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var duration: VitaleHealthSDK.CometChatSnackbarDuration
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var animationType: VitaleHealthSDK.CometChatSnackbarAnimationType
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var animationDuration: Swift.Double
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var cornerRadius: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var borderColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var borderWidth: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var leftMargin: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var rightMargin: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var bottomMargin: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var topMargin: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var contentInset: UIKit.UIEdgeInsets {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var message: Swift.String {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var messageTextColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var messageTextFont: UIKit.UIFont {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var messageTextAlign: UIKit.NSTextAlignment {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var actionText: Swift.String {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var actionIcon: UIKit.UIImage? {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var secondActionText: Swift.String {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var actionTextColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var secondActionTextColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var actionTextFont: UIKit.UIFont {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var secondActionTextFont: UIKit.UIFont {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var actionMaxWidth: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var actionTextNumberOfLines: Swift.Int {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var icon: UIKit.UIImage? {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var iconContentMode: UIKit.UIView.ContentMode {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var iconBackgroundColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var iconTintColor: UIKit.UIColor! {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var iconImageViewWidth: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var containerView: UIKit.UIView?
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var customContentView: UIKit.UIView?
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var separateViewBackgroundColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var activityIndicatorViewStyle: UIKit.UIActivityIndicatorView.Style {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var activityIndicatorViewColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var animationSpringWithDamping: CoreFoundation.CGFloat
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var animationInitialSpringVelocity: CoreFoundation.CGFloat
+  @objc deinit
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public init()
+  @objc @_Concurrency.MainActor(unsafe) public init(message: Swift.String, duration: VitaleHealthSDK.CometChatSnackbarDuration)
+  @_Concurrency.MainActor(unsafe) public init(customContentView: UIKit.UIView, duration: VitaleHealthSDK.CometChatSnackbarDuration)
+  @_Concurrency.MainActor(unsafe) public init(message: Swift.String, duration: VitaleHealthSDK.CometChatSnackbarDuration, actionText: Swift.String, actionBlock: @escaping VitaleHealthSDK.CometChatSnackbar.CometChatActionBlock)
+  @_Concurrency.MainActor(unsafe) public init(message: Swift.String, duration: VitaleHealthSDK.CometChatSnackbarDuration, actionText: Swift.String, messageFont: UIKit.UIFont, actionTextFont: UIKit.UIFont, actionBlock: @escaping VitaleHealthSDK.CometChatSnackbar.CometChatActionBlock)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+}
+extension VitaleHealthSDK.CometChatSnackbar {
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func show()
+}
+extension VitaleHealthSDK.CometChatSnackbar {
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func dismiss()
+}
+public protocol Placeholder {
+  func add(to imageView: VitaleHealthSDK.CFCrossPlatformImageView)
+  func remove(from imageView: VitaleHealthSDK.CFCrossPlatformImageView)
+}
+extension UIKit.UIImage : VitaleHealthSDK.Placeholder {
+  public func add(to imageView: VitaleHealthSDK.CFCrossPlatformImageView)
+  public func remove(from imageView: VitaleHealthSDK.CFCrossPlatformImageView)
+}
+extension VitaleHealthSDK.Placeholder where Self : UIKit.UIView {
+  public func add(to imageView: VitaleHealthSDK.CFCrossPlatformImageView)
+  public func remove(from imageView: VitaleHealthSDK.CFCrossPlatformImageView)
+}
+@_inheritsConvenienceInitializers @objc public class CometChatCallManager : ObjectiveC.NSObject {
+  @objc weak public static var incomingCallDelegate: VitaleHealthSDK.IncomingCallDelegate?
+  @objc weak public static var outgoingCallDelegate: VitaleHealthSDK.OutgoingCallDelegate?
+  @objc public func registerForCalls(application: UIKit.UIResponder)
+  @objc public func makeCall(call: CometChatPro.CometChat.CallType, to: CometChatPro.AppEntity)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public protocol IncomingCallDelegate {
+  @objc func onIncomingCallReceived(incomingCall: CometChatPro.Call, error: CometChatPro.CometChatException?)
+  @objc func onIncomingCallCancelled(canceledCall: CometChatPro.Call, error: CometChatPro.CometChatException?)
+}
+@objc public protocol OutgoingCallDelegate {
+  @objc func onOutgoingCallAccepted(acceptedCall: CometChatPro.Call, error: CometChatPro.CometChatException?)
+  @objc func onOutgoingCallRejected(rejectedCall: CometChatPro.Call, error: CometChatPro.CometChatException?)
+}
+extension VitaleHealthSDK.VitaleSDK : CometChatPro.CometChatCallDelegate {
+  @objc dynamic public func onIncomingCallReceived(incomingCall: CometChatPro.Call?, error: CometChatPro.CometChatException?)
+  @objc dynamic public func onOutgoingCallAccepted(acceptedCall: CometChatPro.Call?, error: CometChatPro.CometChatException?)
+  @objc dynamic public func onOutgoingCallRejected(rejectedCall: CometChatPro.Call?, error: CometChatPro.CometChatException?)
+  @objc dynamic public func onIncomingCallCancelled(canceledCall: CometChatPro.Call?, error: CometChatPro.CometChatException?)
+}
+extension UIKit.UILabel {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func awakeFromNib()
+}
+extension UIKit.UIButton {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func awakeFromNib()
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class CometChatAddMembers : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func loadView()
+  @_Concurrency.MainActor(unsafe) public func set(group: CometChatPro.Group)
+  @objc @_Concurrency.MainActor(unsafe) public func set(title: Swift.String, mode: UIKit.UINavigationItem.LargeTitleDisplayMode)
+  @objc @_Concurrency.MainActor(unsafe) public func set(barColor: UIKit.UIColor, titleColor color: UIKit.UIColor)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension VitaleHealthSDK.CometChatAddMembers : UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func numberOfSections(in tableView: UIKit.UITableView) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForHeaderInSection section: Swift.Int) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, viewForHeaderInSection section: Swift.Int) -> UIKit.UIView?
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, willDisplay cell: UIKit.UITableViewCell, forRowAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, sectionForSectionIndexTitle title: Swift.String, at index: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+}
+extension VitaleHealthSDK.CometChatAddMembers : UIKit.UISearchBarDelegate, UIKit.UISearchResultsUpdating {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func updateSearchResults(for searchController: UIKit.UISearchController)
+}
+extension VitaleHealthSDK.AudioVisualizationView.AudioVisualizationMode : Swift.Equatable {}
+extension VitaleHealthSDK.AudioVisualizationView.AudioVisualizationMode : Swift.Hashable {}
+extension VitaleHealthSDK.ImageFormat : Swift.Equatable {}
+extension VitaleHealthSDK.ImageFormat : Swift.Hashable {}
+extension VitaleHealthSDK.CacheType : Swift.Equatable {}
+extension VitaleHealthSDK.CacheType : Swift.Hashable {}
+extension VitaleHealthSDK.Reaction : Swift.Equatable {}
+extension VitaleHealthSDK.Reaction : Swift.Hashable {}
+extension VitaleHealthSDK.ContentMode : Swift.Equatable {}
+extension VitaleHealthSDK.ContentMode : Swift.Hashable {}
+extension VitaleHealthSDK.SoundCometChat : Swift.Equatable {}
+extension VitaleHealthSDK.SoundCometChat : Swift.Hashable {}
+extension VitaleHealthSDK.CometChatSnackbarDuration : Swift.Equatable {}
+extension VitaleHealthSDK.CometChatSnackbarDuration : Swift.Hashable {}
+extension VitaleHealthSDK.CometChatSnackbarDuration : Swift.RawRepresentable {}
+extension VitaleHealthSDK.CometChatSnackbarAnimationType : Swift.Equatable {}
+extension VitaleHealthSDK.CometChatSnackbarAnimationType : Swift.Hashable {}
+extension VitaleHealthSDK.CometChatSnackbarAnimationType : Swift.RawRepresentable {}
