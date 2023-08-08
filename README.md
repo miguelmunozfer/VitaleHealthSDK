@@ -47,6 +47,13 @@ VitaleSDK.shared.startSDKWithConfig(config: "vitaleCredentials", userID: "USER_I
 
 ```
 
+### Show health module
+
+```swift
+VitaleSDK.shared.showVitale()
+
+```
+
 ## Author
 
 MyVitale, info@myvitale.com
