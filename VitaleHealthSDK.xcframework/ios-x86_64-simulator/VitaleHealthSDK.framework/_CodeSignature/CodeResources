@@ -6,27 +6,27 @@
 	<dict>
 		<key>ActionMessageBubble.nib</key>
 		<data>
-		4Tjj9tsCHnbns/U5xmnY723z9I0=
+		RjrAEKrSC389tZuLTb4QSqewICQ=
 		</data>
 		<key>AddMemberView.nib/objects-14.0+.nib</key>
 		<data>
-		Dqfma8vCZznMeAzyVv/URW8xATI=
+		0CWnrZae6UQzMaSIqBqMcLQnMQw=
 		</data>
 		<key>AddMemberView.nib/runtime.nib</key>
 		<data>
-		Vt3R6Ano+9b0bg3wHuS/sud3dNY=
+		yRT5k5LByAPQPxuNfBkCbUQ1feE=
 		</data>
 		<key>AdministratorView.nib</key>
 		<data>
-		H7ussySgJOSHOrXDBhh8IA0vlco=
+		Wv80cLfhc/Cb7XQTMAAeEAqCryc=
 		</data>
 		<key>Assets.car</key>
 		<data>
-		4zxcIqi1MvEs2HsoH1CC+Bii58c=
+		IqjjL689ouflGV7UJ8oTN3deW60=
 		</data>
 		<key>AudioVisualizationView.nib</key>
 		<data>
-		LoxIDqiHrBo4dJcPQwIoSpAyzkI=
+		Wur1oYaqvlC80/NmkFHAXTaYvx4=
 		</data>
 		<key>Base.lproj/Leyenda.plist</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Base.lproj/SharedMediaView.nib</key>
 		<data>
-		AwQUgzYpYaLnEiTMGEkAcH7Gw5E=
+		ckJ0AS3Wwd+bm6RNnvCb0X/Ok1s=
 		</data>
 		<key>Base.lproj/StartVirtualViewController.nib</key>
 		<data>
@@ -418,67 +418,67 @@
 		</data>
 		<key>ChatView.nib</key>
 		<data>
-		uKsM9I2Ic1u23O9LzqiUfGdCPF0=
+		2Xz8ZK+E6BjdtH9dJFCmVziSciY=
 		</data>
 		<key>CometChatCallDetailLogView.nib</key>
 		<data>
-		8EwzHd16tlu4SQD4GBfPfxreXR8=
+		KEe/8v/30W19bH4Jjvoi5N0pCtA=
 		</data>
 		<key>CometChatCallsView.nib/objects-14.0+.nib</key>
 		<data>
-		FGSzxaUJQvQrUeprRoF5AIVe8+w=
+		BcMaD2tNOVpuxhPedGQvsFMfvb0=
 		</data>
 		<key>CometChatCallsView.nib/runtime.nib</key>
 		<data>
-		rkT684iyjfGK3VRDSGMW2CpaNGQ=
+		NmrJKXZU5GEtBvsNZWbRous5bw8=
 		</data>
 		<key>CometChatConversationView.nib</key>
 		<data>
-		5GstL7jGQQb58U549waewL4Tg/w=
+		YgwEkMYK2HcA9psB9rYLHe4sGfI=
 		</data>
 		<key>CometChatCreateGroup.nib/objects-14.0+.nib</key>
 		<data>
-		ROUClwQvP1RAEYxtWMkyTKHDM30=
+		57vWyOuW8OyaiZIizykVn1itysg=
 		</data>
 		<key>CometChatCreateGroup.nib/runtime.nib</key>
 		<data>
-		/x9IH+2BZbZkQfSsYqhSw2xv8h8=
+		PZ+Ybqj+9lrt+U6Ox++CNWHiH/w=
 		</data>
 		<key>CometChatDetailView.nib</key>
 		<data>
-		vAzxTwlEx7m//K2ELHyUNb0Ceic=
+		s09sDHoy9X42ofkmw49UHNVL9zY=
 		</data>
 		<key>CometChatGroupView.nib</key>
 		<data>
-		8zYbCACD/PCZGX6XAlzxA4jRpsQ=
+		CvHJcBEiDXm+OROOoy0Kt6bprDc=
 		</data>
 		<key>CometChatIncomingCall.nib</key>
 		<data>
-		SsChEEQb5HRZZP0/5xnvbXFMHH8=
+		i867dfS55mHe2nqI2R+nhWt7wKI=
 		</data>
 		<key>CometChatMessageList.nib/objects-14.0+.nib</key>
 		<data>
-		Hap+H7qjQetq+k9XOcz9kGKnkEA=
+		6xrj3fZEx7GBg5ITPAuvrvZoAEI=
 		</data>
 		<key>CometChatMessageList.nib/runtime.nib</key>
 		<data>
-		vcX0CAftqihi7+ZoMwbputrXDdc=
+		G4oeNWoliRsN6FmHRBWAYlzUbKo=
 		</data>
 		<key>CometChatOutgoingCall.nib</key>
 		<data>
-		EDb7WJ3X0Fhgi4P4RrOEoRimiPE=
+		rHKQuM3CGaM+jqtPMjLnh26PkuY=
 		</data>
 		<key>CometChatSettingsView.nib</key>
 		<data>
-		HBPaaSr2Ar4McpVnFsT52gmzByw=
+		wrm9Pad2cliXttuQmD9rvLLFFAo=
 		</data>
 		<key>CometChatUserView.nib</key>
 		<data>
-		hClb/op52SmghDc7YSnUKzhMOvw=
+		VPsGe5eiJ2SMlv/Gv4G/XlNZ7Fc=
 		</data>
 		<key>Headers/VitaleHealthSDK-Swift.h</key>
 		<data>
-		BL03ytHJ+vDEdy1n7wJxfgwSIxQ=
+		1CGM2Yu/o5jOHYzL/NLQHulBWg0=
 		</data>
 		<key>Headers/VitaleHealthSDK.h</key>
 		<data>
@@ -486,11 +486,11 @@
 		</data>
 		<key>HomeCell.nib</key>
 		<data>
-		a4QFjBQVgaM4BNyG0Df8t/fcL/U=
+		KFTz1iYkHBc2Wx8XXyUIJaCnXHs=
 		</data>
 		<key>HomeViewController.nib</key>
 		<data>
-		0sayg4u4aLmbitcmRKJD4p07kD0=
+		aPjQd6Q8RtA5Yc47MfPYNUqHb/4=
 		</data>
 		<key>IncomingCall.wav</key>
 		<data>
@@ -506,47 +506,47 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Va6afGkBbke9z+Zcr+FH1u3+doQ=
+		jGpaN90pZnsSEirssPOVGA6I3X8=
 		</data>
 		<key>KnowMoreViewController.nib</key>
 		<data>
-		Xk9DCqR1r/V+pWkDyV+tYRziayM=
+		BDJAhOGauV3AsJWDdMg7MXRXAXw=
 		</data>
 		<key>LeftAudioMessageBubble.nib/objects-14.0+.nib</key>
 		<data>
-		4nO+00c5/UJBlAbqDMxT5dqIzdY=
+		UqnqchBTBI1fCzJxjU+KL3ujRMc=
 		</data>
 		<key>LeftAudioMessageBubble.nib/runtime.nib</key>
 		<data>
-		of4nBtlpw0N2dGgqiYjPmEaZGV0=
+		tRXHk5pLDDnJhmHHE0rwEpCCw0o=
 		</data>
 		<key>LeftFileMessageBubble.nib/objects-14.0+.nib</key>
 		<data>
-		ThP3Oa99+spwE5wdMb92SQtQHNY=
+		0+ol2UEi7lpjP7KMSxACAnu+rfY=
 		</data>
 		<key>LeftFileMessageBubble.nib/runtime.nib</key>
 		<data>
-		EeA/6wf/hkhihFJoygY9E/3l+i4=
+		iJ23y/CMgX5LYDaU+0DbMIlGg8E=
 		</data>
 		<key>LeftImageMessageBubble.nib</key>
 		<data>
-		2Q44xfrBI++DU8hBgAayHQoYs+o=
+		p/LDDf2ZBBCpuAPv7hm5utVk0AE=
 		</data>
 		<key>LeftLinkPreviewBubble.nib</key>
 		<data>
-		2eDKp/96voXZoW0i/vmq8uhxysc=
+		NRjwe2PhF1SfBw0qMz4qjTkXnOQ=
 		</data>
 		<key>LeftReplyMessageBubble.nib</key>
 		<data>
-		RcBGcMuoLCZEYMPSt2HC3WpAtgU=
+		ujYnwYJBV0TN3rnfANIN3cwafjc=
 		</data>
 		<key>LeftTextMessageBubble.nib</key>
 		<data>
-		bChx4tuwWbZ2yc/4329XR3fOq6M=
+		oWu9Jxc2A5+s8c8CwwDQ4MXBxq4=
 		</data>
 		<key>LeftVideoMessageBubble.nib</key>
 		<data>
-		nY72nXxqkQJIi7uxfzUQj/8hoeE=
+		c8QIv42sVHxVH59FdkdbgSby+no=
 		</data>
 		<key>Localizable.strings</key>
 		<data>
@@ -558,31 +558,31 @@
 		</data>
 		<key>MembersView.nib</key>
 		<data>
-		H7Ho88gyiMTzo9r+fG5OJ+XSwq4=
+		apr/2h15RjDt+ozXB/s8XBe+1BI=
 		</data>
 		<key>Modules/VitaleHealthSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		sO8Drx4KVbywWBdmG2rPS11lLys=
+		xBGUjJnxm7DfbMw6AWAGyXruP7Q=
 		</data>
 		<key>Modules/VitaleHealthSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		dfPWMYNJLtL1SqDrH++reBKYrqE=
+		hjv7oXccQ0oFfild0Vaywfh8j5s=
 		</data>
 		<key>Modules/VitaleHealthSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		3u+WTeb57NoAhPL4QWuDMEtAesg=
+		r9NPx2LfLZdXUnrVyt9k09sM+0Q=
 		</data>
 		<key>Modules/VitaleHealthSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		dfPWMYNJLtL1SqDrH++reBKYrqE=
+		hjv7oXccQ0oFfild0Vaywfh8j5s=
 		</data>
 		<key>Modules/VitaleHealthSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		xcpO29rRNQSPPoXBfhHZZ4YlgRg=
+		nmPZ7nhCnueFKdTGwh5pi2li/Xw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		9xRMcAWglqF/tC1Qnx2QiiLwukU=
+		mwUnnOCYok5mjfaP9bZIUgazkDs=
 		</data>
 		<key>NewAnnouncement.wav</key>
 		<data>
@@ -590,7 +590,7 @@
 		</data>
 		<key>NotificationsView.nib</key>
 		<data>
-		k0AsCM073id2JDW8U06GspCXbcE=
+		v8UrziIyRVDRl7VndHo+U3/nSvs=
 		</data>
 		<key>OutgoingCall.wav</key>
 		<data>
@@ -602,47 +602,47 @@
 		</data>
 		<key>ProfileViewController.nib</key>
 		<data>
-		WxE/UQGR9WUENfD90ycUUYBYX4s=
+		n6CNr+iM4D9qF8MAtZ6dfijcxAM=
 		</data>
 		<key>ProgressIndicatorView.nib</key>
 		<data>
-		+zm2o/jtS19NOt182Xk67e4RJz0=
+		Sr4iWSf3BisPjSSkQ19/1vzXGTI=
 		</data>
 		<key>RightAudioMessageBubble.nib/objects-14.0+.nib</key>
 		<data>
-		eKCUYyA8wx3+q48rOmoECqGQ30U=
+		YAcSTyp1B+VjfxDbIwKtIe0cplI=
 		</data>
 		<key>RightAudioMessageBubble.nib/runtime.nib</key>
 		<data>
-		qjlJ2qbbQQxnWlRYb+xxuVHEYqg=
+		k4AA5+g4amw98HTLXRsDgWKFZ0E=
 		</data>
 		<key>RightFileMessageBubble.nib/objects-14.0+.nib</key>
 		<data>
-		sg2hv/A/B5AmrMTesPGdMto3his=
+		kd7dUOwLhbI0pbSrbZyCKckf88w=
 		</data>
 		<key>RightFileMessageBubble.nib/runtime.nib</key>
 		<data>
-		EVwrqoSLOHcg4G3DDhsXRFKyU8M=
+		szOhFEZZ6okBJBvE/+qTzXuzrgU=
 		</data>
 		<key>RightImageMessageBubble.nib</key>
 		<data>
-		pIuhg2sHsLzqwaxKh1cmQBlw6oY=
+		3a7k91mGl3IFq5Hs0w0LXx1LR5U=
 		</data>
 		<key>RightLinkPreviewBubble.nib</key>
 		<data>
-		Rjq3mrPwSlMGA8SM7U/lhDocpuA=
+		Kitb99ctzOxRHiI6yNcToB3Jedk=
 		</data>
 		<key>RightReplyMessageBubble.nib</key>
 		<data>
-		yVtremI6m6CjdWfd3MlKaG1kim4=
+		DzI2Uk3vfIZ2hh9gnKtsCjc+pFE=
 		</data>
 		<key>RightTextMessageBubble.nib</key>
 		<data>
-		sVUYF3CUhVjUdGpxc78reuT1v40=
+		O3VIK8G7I31LeTj+i9cnx7Mg3Qk=
 		</data>
 		<key>RightVideoMessageBubble.nib</key>
 		<data>
-		bqy8bNEDOEgvnxQs31FukXCbioI=
+		WXrV9SM3E/FIX9v1B46vQtF+V5Y=
 		</data>
 		<key>SF-Pro-Display-Black.otf</key>
 		<data>
@@ -718,15 +718,15 @@
 		</data>
 		<key>SharedMediaCell.nib/objects-14.0+.nib</key>
 		<data>
-		I/vgrSNUAIA2DigWaIftJd/lNYM=
+		oB2AekypgCi+FRbjQM5FKGSayqs=
 		</data>
 		<key>SharedMediaCell.nib/runtime.nib</key>
 		<data>
-		6hwCmeWd4q1YC7O8xjM5EV0UR84=
+		akrFA5Q8g7EgucdQMQmbgeU5pMc=
 		</data>
 		<key>SmartReplyCell.nib</key>
 		<data>
-		Y0mcCb2hqr6A4OsvOK7oxvno3vk=
+		i34tr5Z38ZxmwLbd7DXPAXS/x34=
 		</data>
 		<key>StartVirtualViewController.strings</key>
 		<data>
@@ -734,7 +734,7 @@
 		</data>
 		<key>SupportView.nib</key>
 		<data>
-		VRXN2eSQzSuRB2v0I23GUPOingY=
+		ukIzUh5+bSY/h0oU4nk/T0rpeK0=
 		</data>
 		<key>TrainingProfile1ViewController.strings</key>
 		<data>
@@ -983,7 +983,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			oeULdHOHr2FmDspP/3vOCQwAees=
+			5lQN5tKmAK8YFdZggsa9pvFxvHM=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1234,15 +1234,6 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>eu.lproj/SharedMediaView.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			FCxnTnBEAK5oDVgNZmSXJY2nDug=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
 		<key>eu.lproj/VirtualTraining.strings</key>
 		<dict>
 			<key>hash</key>
@@ -1471,6 +1462,15 @@
 			<key>optional</key>
 			<true/>
 		</dict>
+		<key>pt.lproj/SharedMediaView.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			FCxnTnBEAK5oDVgNZmSXJY2nDug=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>read.png</key>
 		<data>
 		Hj0rHL4SaTybkce2QifZEGGeHtk=
@@ -1646,42 +1646,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			gG74mHjjvLIyWWMl9sVa1hpa+xaUBkB9haAbY/YyIPg=
+			ZvXqSI12q7vhuou4WR2HNsB0mhU4Avxrv9QR9Iaatco=
 			</data>
 		</dict>
 		<key>AddMemberView.nib/objects-14.0+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZwUXcsxguKL0Wn49aXZj5WrNV2FQ3gucOiJd4axjT9c=
+			Sl7Y9YvX5SlbnrJTn1a6z0M2rE4XYlqF0U6oX0Z5C0g=
 			</data>
 		</dict>
 		<key>AddMemberView.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IXe+ft0FCNv1s3qVLK5BmBkWCcGXIw8HjePfLNWarTU=
+			bYT5YT/FmtlJKMFseLnSkyQkzTbsSXhnaYsQObz9eLI=
 			</data>
 		</dict>
 		<key>AdministratorView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			qehXnh1UyHTAVJlZBJD72M/0laqSk1Hdj99NQlXEoQw=
+			4+85I03uRqgiv81sWq5/db12dt7f5mPfQQgZ3S1Z8vk=
 			</data>
 		</dict>
 		<key>Assets.car</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			19xOn9+AwmRTBqPQZTjY5ReSVTIdWrme4i30e5D444c=
+			wVwm7NfJtZ8TExGMG13S7LalvNd/+MD9kPf/cdvkRdM=
 			</data>
 		</dict>
 		<key>AudioVisualizationView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4xUxOzLSU/r+wayoo0+ikba/nf6CCOoMKyebmlms6lI=
+			wriai/6RrGdWwMTWyyBu9Oih/0YtKKTImQ7bOVJgjO0=
 			</data>
 		</dict>
 		<key>Base.lproj/Leyenda.plist</key>
@@ -1695,7 +1695,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			XFkgPCDamJxERB3z1zHvnKm1APFxkzCC0N5m8ecxtOM=
+			afD0sjK8od6J3QA4+ZtKNN62ApUz4+3jEJzwxGNQzJ0=
 			</data>
 		</dict>
 		<key>Base.lproj/StartVirtualViewController.nib</key>
@@ -2367,112 +2367,112 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			6coDd+LOl3ayEVxn46FHpbDaO23G5jP9H4kPQRJ9xTI=
+			0qFvcTesXbPiw2YdpyQe4UtuurFV99vV+hxoWPK4Qwc=
 			</data>
 		</dict>
 		<key>CometChatCallDetailLogView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SnmcNMqXv14kD77losaZcxavMghSLYuCG8RNYc4DXSA=
+			xN4NyRWyJM84wqntvQkGTtp5vp9gWuZzx1M+UCHEktc=
 			</data>
 		</dict>
 		<key>CometChatCallsView.nib/objects-14.0+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7tvneP9aqzNWAkDwuHvEKosiyUsFupDBjPfwJ4dNc7M=
+			XAk3yj7FdJfiXQNEAOKhewKsdUXqcofDixlcjXBGYV8=
 			</data>
 		</dict>
 		<key>CometChatCallsView.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8OcHEtrs7KswYvyT/yfGbS0veARb4zEfIuRuXpHRTg8=
+			R/OvM2oebqIap+3oG2e7Ul8tc2I8AWxJA7q2CiCWHYA=
 			</data>
 		</dict>
 		<key>CometChatConversationView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			l+OnS9SfOoKAz6It2nVCc6yFqVQ78sGJoAj2UcIN1k0=
+			hzGUHhTwR0R/BF+lYd7w+9O/Rpf6EvZHr54NiyRbjGY=
 			</data>
 		</dict>
 		<key>CometChatCreateGroup.nib/objects-14.0+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7KjNGK/zllIK7MdIgsaNh1U2WKiDYMyDQFufkgkFDl0=
+			YZEv7Qctg6Edqkjvg4StnVM528cfkypadTJGg+ebvCY=
 			</data>
 		</dict>
 		<key>CometChatCreateGroup.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FkVvLjZBN5yTI4fBG62mO1pFGvXtrQAFnxSu4UgCUac=
+			m0rvIhrU4wt5n9c1ey7ahlvBGxPyXEEMEjLCnjuTkfU=
 			</data>
 		</dict>
 		<key>CometChatDetailView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			46bRAKpO/YRvu7RGBxHxIzz+5um/LAFH1sM5R09V1JY=
+			hbPV+FgWpCutnfK/8w5tMS4N8X0u8qOYiLSQFTkXjbY=
 			</data>
 		</dict>
 		<key>CometChatGroupView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lZpxsL8pOh1Q+HnYpBjRKU+LBNNPAy/7Ls81ESDThZQ=
+			oGoNKnWS4uIU8J8C3oMmgpiG0ENw6shXpALraguBCks=
 			</data>
 		</dict>
 		<key>CometChatIncomingCall.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dWxrAGfgpjad+EbodEveVqOgJnKSGkbZ8UqgbJ6AOhw=
+			vyLBk8HFZYjvZjDMKd9C9SQruXTwOdISI7sdl0IL/mk=
 			</data>
 		</dict>
 		<key>CometChatMessageList.nib/objects-14.0+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SjGOYlBj0aOUzZbNrU/qRTxXB5A9XCXKPoqUJDcTPCI=
+			BTxNXyzJePCPHFNDMw66D9a+R36yx+uAMEXsnNQbiIs=
 			</data>
 		</dict>
 		<key>CometChatMessageList.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			tUcHrNCdMUReuPtKwaoD6WdX3GXkKgifMIhD/zWzIvM=
+			Jez1nmQ2+yb/s5+G9ToQ9OMhZVK6nnEbpOHvNYNiyos=
 			</data>
 		</dict>
 		<key>CometChatOutgoingCall.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KNvLxTaJggtE9pIwy9qBXuvUXj0KvVveKZaNoMsjDR8=
+			Aal7DJ1YwnuNWDK/0UnfpQX1Nr/pmW2/V/pi1pBCXCU=
 			</data>
 		</dict>
 		<key>CometChatSettingsView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			aa6/tdrRfYAh8pHwnj2CE8Hy/RgDHiNVZj9Ws5GxGO0=
+			rPMNSTwDsiNBmmtmGzFwUhYgHwlu8GAd9hvAhJUEHdU=
 			</data>
 		</dict>
 		<key>CometChatUserView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			DgePjTuO/XA1nNbSYPK3TyjbpS5ERsSGJRpzuOoh/x4=
+			cEGQ3fUE1A3bYd0keVANwQzJzwF7B9OOn2mJiliCv54=
 			</data>
 		</dict>
 		<key>Headers/VitaleHealthSDK-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Av9wSPAiS0I/22EqNTOfpA+Iew5BIySo4P/RyPO09Ck=
+			h1/2Ep0O/spJrjT7Dl4kSXAwm0zu+0MIf/l+dxH07es=
 			</data>
 		</dict>
 		<key>Headers/VitaleHealthSDK.h</key>
@@ -2486,14 +2486,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			lqVY3xYYcxCssHB0X7lWIXOFAhsPBYv0o2Ou7laROpg=
+			tFeOaxTj/xEBjYjYT+bhELoemUZDjToKJGAM2URRXvg=
 			</data>
 		</dict>
 		<key>HomeViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			OXDbY/5LB/nZxxOjR3MVZMpMsJV8IpY92lrTaHs9wHk=
+			fHq03y7ALBwOeIeBy98YmmHzgeaLgqmvSmg1sLoNA6Y=
 			</data>
 		</dict>
 		<key>IncomingCall.wav</key>
@@ -2521,70 +2521,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			FcfMHYKQd325DMGak2X5erhYV662oWOVYYnja4SQQl0=
+			gWA+tcQ767u75nGQFY74u9ehDEEc77JKr/Y73t3n5FE=
 			</data>
 		</dict>
 		<key>LeftAudioMessageBubble.nib/objects-14.0+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			LH8rAE9JdwyPDEW47RfIz79xlb0c3emWXg4TsQjNOJ0=
+			UqcJhh+Z7EPoHYsaM9QCZH7ciF/BLBdY13dV8gJIAbc=
 			</data>
 		</dict>
 		<key>LeftAudioMessageBubble.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+FbFaVkY+9kMDDO1Kfb1DByrLMkFp4mzR1tebPiZmNk=
+			Ndu9AWXhHMvGmtETynts1R4t13D/Opz5PHbnqNUkvAM=
 			</data>
 		</dict>
 		<key>LeftFileMessageBubble.nib/objects-14.0+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zDFqg2tuQsenkSo8okPSbXWQkMxbgX0bhJcPPlVfyV0=
+			DqWf7t0Y/hIkzDnniIeP0cwK7Pa7QRh9rDByFX6v68s=
 			</data>
 		</dict>
 		<key>LeftFileMessageBubble.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ANkNDEenXk8Xhu+2n5+bRPjxJsyrDpIsBVxTrrc5eKk=
+			S8zj3nbWmkcMAdAzctRisy0OebnXmiTru0kWUGqP77c=
 			</data>
 		</dict>
 		<key>LeftImageMessageBubble.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			OUX2elDGD2072NONZ3Jj4mN54Dpe9zMpLFZQLyrGUWg=
+			Gpi9lt+JjdkP3RObdPKkghGqz29RMUJTHLeCrBV2b1k=
 			</data>
 		</dict>
 		<key>LeftLinkPreviewBubble.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Y8MVeg4Z/54fJvbiCBl16F3OKEuqVxn3CG8jExNWn1I=
+			4QPTzvbpCMz+g/l24gbwNuzlALW8tE3tEND5nfnMFfM=
 			</data>
 		</dict>
 		<key>LeftReplyMessageBubble.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			LOw9Y/TopcrAEcavY8cqnvAXqolIZwP1SkK0N1MkyO8=
+			AlIEKr8jVjCOcqc9iV7K6MkD7O3f3tOcSYnyIidGWGY=
 			</data>
 		</dict>
 		<key>LeftTextMessageBubble.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5EF3IQZpw3/LkSsoIHeCRJSEY+AYUsikMkNTiUdkTDU=
+			cjsvJwYuANpp1ThA8amsshZSrskuF+mk+1v62NFIZ2Y=
 			</data>
 		</dict>
 		<key>LeftVideoMessageBubble.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			uzSAgokyUYsL+7aAUykYkHoMaWb4MOJBa+0LQYsLtVM=
+			fx4UP3YTlG9ma+EzzdZlW+zRJ62QYxsFwH7NmdPOg9Y=
 			</data>
 		</dict>
 		<key>Localizable.strings</key>
@@ -2605,49 +2605,49 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0whwSzPtS3jDASW+4BwIZLGWVAjL2bHZJ4nhPfnoJy8=
+			ebXtt8hoFbJjotOGNGTzdEYtp3ef0rCY9CtT0iV3cpU=
 			</data>
 		</dict>
 		<key>Modules/VitaleHealthSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			S4brETEfppOv6EV1sKB64WZCaZOlii+H0n56fFDu8Sk=
+			UNg02h0bOv37YP5Qn5TQybvgYlUEYACl47Ye+FAi6uw=
 			</data>
 		</dict>
 		<key>Modules/VitaleHealthSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fytP59lznuPCtHhHMtC5CnWZhWqatPed7fwWJutTExE=
+			EL5FdNu+lgDrghMrPseVVydkF0/6DnQhhl9viicRjGg=
 			</data>
 		</dict>
 		<key>Modules/VitaleHealthSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			cfSJHdCC/v+RExYpSsbM5LeALJv/eZ+R56PsZ7BnTVA=
+			QfOnC74nGSdHR8f2JTJao19zHvvSbsSE8z02Xbhbw3I=
 			</data>
 		</dict>
 		<key>Modules/VitaleHealthSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fytP59lznuPCtHhHMtC5CnWZhWqatPed7fwWJutTExE=
+			EL5FdNu+lgDrghMrPseVVydkF0/6DnQhhl9viicRjGg=
 			</data>
 		</dict>
 		<key>Modules/VitaleHealthSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fL7SArnulLE072DlzISfxARhPLgBY9WprIqckt3bNz0=
+			FvNpiNqCmgPGrxohoXe89x7ATBSBW3f4eB1GKaPOzTY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5HrfE6MjJBYqq2/5fwTYfqKsPY5A4glk0sU18nnj8R8=
+			xj4MAOgfqWJAe8YBVPiO7t0Xp5K0caCy6cGgTS0BNSM=
 			</data>
 		</dict>
 		<key>NewAnnouncement.wav</key>
@@ -2661,7 +2661,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			NOkaZhcbA7fyd8L31wqt2Uu206E6ncwDknvRMLJHK7s=
+			oaFIuudY01+SKdrl9L0h08nhjjCTnKuS3JJ/F7sUznw=
 			</data>
 		</dict>
 		<key>OutgoingCall.wav</key>
@@ -2682,77 +2682,77 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			aayIQGgQO58E+qwH4IoUKuHL6b1QGSyVfn39etUgc3c=
+			udHnJjl82lVREy0Z8GMfdha/PXO1IPcwBqtrrSXgKH0=
 			</data>
 		</dict>
 		<key>ProgressIndicatorView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			21t92egNk4hWOQhCBQwXWz09PXhmrYKm4UN6wqIFtYM=
+			DXm/JiocTqUt/4eP/rokITpGSBkraM5R/lOJQUhuP+Q=
 			</data>
 		</dict>
 		<key>RightAudioMessageBubble.nib/objects-14.0+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			oazI7d4ke01Ys7FMaiJ6bZKCEXvsmbInYrYxFPzd0D0=
+			ZzG5QQR4KSlm1psj90RgijI51LFb+cVSjptWUkomKVw=
 			</data>
 		</dict>
 		<key>RightAudioMessageBubble.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			VtOx7UhlffOnt6ruBuNFPp4GxQFVbvosk2HZVT2TC94=
+			E1pU3HKLWw7ii7+oulicGGi0rO768WPOMFq0ucrxqwk=
 			</data>
 		</dict>
 		<key>RightFileMessageBubble.nib/objects-14.0+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			aC9m0NtCsyT1wC8nvmZJNFk/MjVhMdDW3s+w/OR4r/c=
+			s8UsxqGuli+9x2W9Fqbky6ScqXHf5uH63DWesE9K3XY=
 			</data>
 		</dict>
 		<key>RightFileMessageBubble.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			NAO80TzyeQNtpytglwIjSH0Y0buQfSaJjgN4eYFX6GA=
+			WhrMTqPcTkBM7UJ0xpa2DcbfysCR6WQUqddzC2pMJfE=
 			</data>
 		</dict>
 		<key>RightImageMessageBubble.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lQ/GBnKXOO6a0XtBLrQO0dnAa5zo0DDbDj0FtYq1t6s=
+			5YGiqtT+WVKFLcr/FqMzLhO4VRK0e50YogR8BdkH48A=
 			</data>
 		</dict>
 		<key>RightLinkPreviewBubble.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			rDygdXQKhH/fzxSnrKbO450yChnJEy21dnt/+NZfyyU=
+			SCOl097vciFYzjQ3EwOovP9MqLyQcIPEcrqkcYVui/w=
 			</data>
 		</dict>
 		<key>RightReplyMessageBubble.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			TzQb+SS4wjkHRAny9O/4VFrPhPH8tJvPAMjzPWbvIjE=
+			8o9rS2ap1sKKK9Q2AVzOea+QE+LmvG9QyDjR+7fy3Js=
 			</data>
 		</dict>
 		<key>RightTextMessageBubble.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CsMdaxBcrMsoRaZ+Obf8tVC/YApJcGEHcSWPt1qCtPE=
+			a1VqYswJ6J1W8xTRIJ4pBW+IyjP8Ox6HHHyAgvINvc4=
 			</data>
 		</dict>
 		<key>RightVideoMessageBubble.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9cK+iKe7mVQRl/ATseafoC/Za9eHYGgF9CrTih4oa9Y=
+			LjI4F1P//INnSMCt5TLByty0rKhhUFOMQnkx06q8RiI=
 			</data>
 		</dict>
 		<key>SF-Pro-Display-Black.otf</key>
@@ -2885,21 +2885,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pqVqBqXgnSa98aqDOD29qQNfng/o88GcO46G98Z2h4E=
+			nV/wtDUeqQs85vvFORO/6ujrHCfDH0ciehjkJRoXnzM=
 			</data>
 		</dict>
 		<key>SharedMediaCell.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			AfBhlEeu4WxcbOdoS1Pq9i6FJ4/QIX5dlewDfbeO+1Y=
+			+Z67KpL0P8wilxvJZUZS11Br78sRmAoFsBjgEXoZkXA=
 			</data>
 		</dict>
 		<key>SmartReplyCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			tmQtTBDJwpwYCD0AZ56bTUC1waqfMmG3lzITbW0f6qo=
+			THEpNsCe0tbAm96/FLlS2DpFb9wmIlG4HZfKBG86qc0=
 			</data>
 		</dict>
 		<key>StartVirtualViewController.strings</key>
@@ -2913,7 +2913,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			90og/7t0JWdBiKZTuXYpC5XdsiAhdkcHRwZpxVIVq/o=
+			oOVN9vJu00B+bTX92T2nAibUfmPf9nVVOVPgrv+nkj4=
 			</data>
 		</dict>
 		<key>TrainingProfile1ViewController.strings</key>
@@ -3325,7 +3325,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			aMIYR26y8JLo3wfUjuhHf1H8xAyTca15Lf+EcXXFBP4=
+			aL2lME/7c7MJPGNs4hpChznvjsFTP4ZaPVz/SR/f2hc=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3581,15 +3581,6 @@
 			<key>hash2</key>
 			<data>
 			L0CHduJuada4XDNTzlmnbxjkZeOAaivqKgsNAHWH9Fc=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>eu.lproj/SharedMediaView.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			QohpvfFeQAHnXM8gHnT9zdywJ4e62b9yuzVGcxinE10=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3935,6 +3926,15 @@
 			<key>hash2</key>
 			<data>
 			5p3/N6jsDI8+xuWcd7evMOtOgFzGiEXqw4OUAW5RQDA=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>pt.lproj/SharedMediaView.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			QohpvfFeQAHnXM8gHnT9zdywJ4e62b9yuzVGcxinE10=
 			</data>
 			<key>optional</key>
 			<true/>

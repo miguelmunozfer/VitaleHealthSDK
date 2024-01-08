@@ -1,7 +1,7 @@
 framework module VitaleHealthSDK {
   umbrella header "VitaleHealthSDK.h"
-
   export *
+
   module * { export * }
 }
 
