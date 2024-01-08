@@ -434,7 +434,7 @@
 		</data>
 		<key>CometChatConversationView.nib</key>
 		<data>
-		yS758XsEf3u1Y7wuORI5zeKJblw=
+		YgwEkMYK2HcA9psB9rYLHe4sGfI=
 		</data>
 		<key>CometChatCreateGroup.nib/objects-14.0+.nib</key>
 		<data>
@@ -538,7 +538,7 @@
 		</data>
 		<key>LeftReplyMessageBubble.nib</key>
 		<data>
-		SKxmpShtDIb7JWefGovtvJHONBQ=
+		ujYnwYJBV0TN3rnfANIN3cwafjc=
 		</data>
 		<key>LeftTextMessageBubble.nib</key>
 		<data>
@@ -562,7 +562,7 @@
 		</data>
 		<key>Modules/VitaleHealthSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		z1aVdss5PyjTqQnsZQNzVjpZiXs=
+		QqPPAP9Hx3XZw17yjtsvDssoyhU=
 		</data>
 		<key>Modules/VitaleHealthSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
@@ -578,7 +578,7 @@
 		</data>
 		<key>Modules/VitaleHealthSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		LoaGq6n0DuxolJbMTce8EeXnfhk=
+		y/oHaUiH6I0vEpVb8CyyJ10P7m8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -630,7 +630,7 @@
 		</data>
 		<key>RightLinkPreviewBubble.nib</key>
 		<data>
-		Kitb99ctzOxRHiI6yNcToB3Jedk=
+		HELLjIOaUwoNQcHqLmFlJUyunx8=
 		</data>
 		<key>RightReplyMessageBubble.nib</key>
 		<data>
@@ -2395,7 +2395,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			fVJ7OOT6IO72QN9E5brbDVP08zgaHa2D413+gS+WIRE=
+			hzGUHhTwR0R/BF+lYd7w+9O/Rpf6EvZHr54NiyRbjGY=
 			</data>
 		</dict>
 		<key>CometChatCreateGroup.nib/objects-14.0+.nib</key>
@@ -2570,7 +2570,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			/AGPRI/oQ1vLh9DxuE3LQPm1bvKvE7PcVEJWKyANQnQ=
+			AlIEKr8jVjCOcqc9iV7K6MkD7O3f3tOcSYnyIidGWGY=
 			</data>
 		</dict>
 		<key>LeftTextMessageBubble.nib</key>
@@ -2612,7 +2612,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			BQPIz9H0Xc+zGjXrgNskL8YXxY9bxWC15g7dsxwIcgo=
+			lFLASTo6n3t/QIRWRNSKZGP0TfpHdI8uMKWdIfqZ1zI=
 			</data>
 		</dict>
 		<key>Modules/VitaleHealthSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
@@ -2640,7 +2640,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9B9zo58zWWWEhfLS86Bcy7Wou+nrWff6m3v3I+JTfoM=
+			w6iST0WAD61xzZBAi0owxZdeb1Z+huEIfznE8Rs/Pzw=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -2731,7 +2731,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			SCOl097vciFYzjQ3EwOovP9MqLyQcIPEcrqkcYVui/w=
+			2B7yhGelfu7Q2dbp7JBsozDPJfdQfo6rVG6evr7QPkI=
 			</data>
 		</dict>
 		<key>RightReplyMessageBubble.nib</key>
