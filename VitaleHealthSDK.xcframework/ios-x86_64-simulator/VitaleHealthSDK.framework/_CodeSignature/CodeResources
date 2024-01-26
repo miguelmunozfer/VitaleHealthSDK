@@ -434,7 +434,7 @@
 		</data>
 		<key>CometChatConversationView.nib</key>
 		<data>
-		HykM3qh1muNeJcq+BTftpfL8lEY=
+		YgwEkMYK2HcA9psB9rYLHe4sGfI=
 		</data>
 		<key>CometChatCreateGroup.nib/objects-14.0+.nib</key>
 		<data>
@@ -450,7 +450,7 @@
 		</data>
 		<key>CometChatGroupView.nib</key>
 		<data>
-		CvHJcBEiDXm+OROOoy0Kt6bprDc=
+		jHhEknytWtcDYkZ6llYu7fByIqw=
 		</data>
 		<key>CometChatIncomingCall.nib</key>
 		<data>
@@ -490,7 +490,7 @@
 		</data>
 		<key>HomeViewController.nib</key>
 		<data>
-		aPjQd6Q8RtA5Yc47MfPYNUqHb/4=
+		hJ37Jn7ukX2maOZa+d5zaKZSzVg=
 		</data>
 		<key>IncomingCall.wav</key>
 		<data>
@@ -534,11 +534,11 @@
 		</data>
 		<key>LeftLinkPreviewBubble.nib</key>
 		<data>
-		NRjwe2PhF1SfBw0qMz4qjTkXnOQ=
+		rmbGO6BFosMgABBOoZmbTXmJN68=
 		</data>
 		<key>LeftReplyMessageBubble.nib</key>
 		<data>
-		ujYnwYJBV0TN3rnfANIN3cwafjc=
+		vyOGhDMtuaHwabvBUE01xzAC0xU=
 		</data>
 		<key>LeftTextMessageBubble.nib</key>
 		<data>
@@ -562,7 +562,7 @@
 		</data>
 		<key>Modules/VitaleHealthSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		L5ttcoCzUF+YXgEE6Ay9n9LxbJ0=
+		mav2UcvIOFpONccadF8JBMuES7A=
 		</data>
 		<key>Modules/VitaleHealthSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -578,7 +578,7 @@
 		</data>
 		<key>Modules/VitaleHealthSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		Ladfa6le24G0BHEzPjp54TYZXyE=
+		jAS4vBi6Iyhulc3RyM2bBM4Aolo=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -602,7 +602,7 @@
 		</data>
 		<key>ProfileViewController.nib</key>
 		<data>
-		n6CNr+iM4D9qF8MAtZ6dfijcxAM=
+		0i2qUZyRyzES2RPH3IR3ypRYGlM=
 		</data>
 		<key>ProgressIndicatorView.nib</key>
 		<data>
@@ -2395,7 +2395,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			cZSdO4GcktS+8g7BNcXr4Lko0wjvoCUy1Z8ja3XJeM4=
+			hzGUHhTwR0R/BF+lYd7w+9O/Rpf6EvZHr54NiyRbjGY=
 			</data>
 		</dict>
 		<key>CometChatCreateGroup.nib/objects-14.0+.nib</key>
@@ -2423,7 +2423,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			oGoNKnWS4uIU8J8C3oMmgpiG0ENw6shXpALraguBCks=
+			0VJE+2x86cCu4LSFnmUCTE5bcnDs0inO8fiMPWu6IK8=
 			</data>
 		</dict>
 		<key>CometChatIncomingCall.nib</key>
@@ -2493,7 +2493,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			fHq03y7ALBwOeIeBy98YmmHzgeaLgqmvSmg1sLoNA6Y=
+			MfdbjC8x884dCudh4V0cbRoiqpOFCyHtaepBPS/tg/c=
 			</data>
 		</dict>
 		<key>IncomingCall.wav</key>
@@ -2563,14 +2563,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			4QPTzvbpCMz+g/l24gbwNuzlALW8tE3tEND5nfnMFfM=
+			0uPLxIkAet4PfXyD/SPtvEvCVS6g1cR4H2Xepc754AE=
 			</data>
 		</dict>
 		<key>LeftReplyMessageBubble.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			AlIEKr8jVjCOcqc9iV7K6MkD7O3f3tOcSYnyIidGWGY=
+			e1HOuAJ/jpgGa/T8SZdXLFMs26FZfpDWwX1kHn5ilW8=
 			</data>
 		</dict>
 		<key>LeftTextMessageBubble.nib</key>
@@ -2612,7 +2612,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			3i3O5zEJ8sdsapoXR4cYCl5fkEXHJ1wgL+tEx68T/+I=
+			YIOssNxfz1/leLVL+XEMtd0hNndKlbl1oPrh6S8aB8s=
 			</data>
 		</dict>
 		<key>Modules/VitaleHealthSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -2640,7 +2640,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pc+D7HeF5SVPmHaklOGxzJxCI43oGqiY263c2T6dV9w=
+			iLDpLnLqmQUAMr4XImtOer6agJ4Z7rEoOo/c5U21AxM=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -2682,7 +2682,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			udHnJjl82lVREy0Z8GMfdha/PXO1IPcwBqtrrSXgKH0=
+			6XpzL0Y4sq0RA5ny39rhNZoVvur9apszozVUSxwZj/s=
 			</data>
 		</dict>
 		<key>ProgressIndicatorView.nib</key>

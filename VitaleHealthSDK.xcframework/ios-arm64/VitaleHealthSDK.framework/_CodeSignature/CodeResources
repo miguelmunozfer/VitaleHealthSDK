@@ -434,7 +434,7 @@
 		</data>
 		<key>CometChatConversationView.nib</key>
 		<data>
-		YgwEkMYK2HcA9psB9rYLHe4sGfI=
+		Yij2ltlr2Zg77Ec55kD8IPQEflI=
 		</data>
 		<key>CometChatCreateGroup.nib/objects-14.0+.nib</key>
 		<data>
@@ -490,7 +490,7 @@
 		</data>
 		<key>HomeViewController.nib</key>
 		<data>
-		aPjQd6Q8RtA5Yc47MfPYNUqHb/4=
+		hJ37Jn7ukX2maOZa+d5zaKZSzVg=
 		</data>
 		<key>IncomingCall.wav</key>
 		<data>
@@ -542,7 +542,7 @@
 		</data>
 		<key>LeftTextMessageBubble.nib</key>
 		<data>
-		oWu9Jxc2A5+s8c8CwwDQ4MXBxq4=
+		KDXyT2jqSKchYj/7MLKfP1Gf30w=
 		</data>
 		<key>LeftVideoMessageBubble.nib</key>
 		<data>
@@ -562,7 +562,7 @@
 		</data>
 		<key>Modules/VitaleHealthSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		QqPPAP9Hx3XZw17yjtsvDssoyhU=
+		WG82cl5h8EoQLTsKDcDeKkr0ufo=
 		</data>
 		<key>Modules/VitaleHealthSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
@@ -578,7 +578,7 @@
 		</data>
 		<key>Modules/VitaleHealthSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		y/oHaUiH6I0vEpVb8CyyJ10P7m8=
+		e42dZsEO9QSs3xKW72N2dpVxK88=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -602,7 +602,7 @@
 		</data>
 		<key>ProfileViewController.nib</key>
 		<data>
-		n6CNr+iM4D9qF8MAtZ6dfijcxAM=
+		0i2qUZyRyzES2RPH3IR3ypRYGlM=
 		</data>
 		<key>ProgressIndicatorView.nib</key>
 		<data>
@@ -2395,7 +2395,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			hzGUHhTwR0R/BF+lYd7w+9O/Rpf6EvZHr54NiyRbjGY=
+			GKP8khYrXkNajLjrFgoJWA33VRPFxa+VTORQu6McQBs=
 			</data>
 		</dict>
 		<key>CometChatCreateGroup.nib/objects-14.0+.nib</key>
@@ -2493,7 +2493,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			fHq03y7ALBwOeIeBy98YmmHzgeaLgqmvSmg1sLoNA6Y=
+			MfdbjC8x884dCudh4V0cbRoiqpOFCyHtaepBPS/tg/c=
 			</data>
 		</dict>
 		<key>IncomingCall.wav</key>
@@ -2577,7 +2577,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			cjsvJwYuANpp1ThA8amsshZSrskuF+mk+1v62NFIZ2Y=
+			qtTZEuFF/fikcgF6TWE5hD3vyKLfKujc5tXfvvGfBAw=
 			</data>
 		</dict>
 		<key>LeftVideoMessageBubble.nib</key>
@@ -2612,7 +2612,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			lFLASTo6n3t/QIRWRNSKZGP0TfpHdI8uMKWdIfqZ1zI=
+			Pg2XMCO8vv9OK7X1gdlR7SZee5nULHv3/SsL9nA/A+A=
 			</data>
 		</dict>
 		<key>Modules/VitaleHealthSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
@@ -2640,7 +2640,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			w6iST0WAD61xzZBAi0owxZdeb1Z+huEIfznE8Rs/Pzw=
+			h/SW6E5FLIFG8/u6LXE4Q20yoiIgNuz0QmjZpDXmkOY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -2682,7 +2682,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			udHnJjl82lVREy0Z8GMfdha/PXO1IPcwBqtrrSXgKH0=
+			6XpzL0Y4sq0RA5ny39rhNZoVvur9apszozVUSxwZj/s=
 			</data>
 		</dict>
 		<key>ProgressIndicatorView.nib</key>
