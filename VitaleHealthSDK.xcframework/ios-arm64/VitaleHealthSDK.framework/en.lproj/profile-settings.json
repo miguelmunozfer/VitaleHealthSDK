@@ -6,7 +6,7 @@
                 "title": "What is your goal?",
                 "type": "list",
                 "identifier": "goal",
-                "info": "We can offer you programs to lose weight, increase your muscle mass, improve your performance in a marathon... Tell us your goal and we will help you achieve it.",
+                "info": "We offer you healthy life programs, weight loss, build muscle, prevent diseases, etc. Tell us what your goal is and we will help you achieve it",
                 "isMultipleSelection": false
             },
             {
@@ -49,7 +49,7 @@
                 "title": "Preferred training duration",
                 "type": "list",
                 "identifier": "trainingDuration",
-                "info": "Tell us how long you want your workout to last at most.",
+                "info": "Tell us how long you would ideally like to workout.",
                 "isMultipleSelection": false
             },
             {

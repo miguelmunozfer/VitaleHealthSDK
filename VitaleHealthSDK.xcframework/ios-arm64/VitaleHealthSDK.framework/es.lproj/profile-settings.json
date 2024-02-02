@@ -42,6 +42,7 @@
                 "title": "¿Dispones de algún material de entrenamiento?",
                 "type": "list",
                 "identifier": "equipment",
+                "info": "Indícanos que equipo tienes disponible, para que podamos sugerir ejercicios utilizando solo ese equipo. Si no tienes ningún equipo, está bien. No marques ninguna opción y sugeriremos ejercicios que no requieren de ningún equipo, ya que usarás el peso de tu cuerpo",
                 "isMultipleSelection": true
             },
             {

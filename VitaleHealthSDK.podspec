@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Miguel Muñoz' => 'miguel.munoz@myvitale.com' }
   s.source           = { :git => 'https://github.com/miguelmunozfer/VitaleHealthSDK.git', :tag => "1.1.3" }
-  s.resources = ["**/*.lproj", "**/*.strings"]
+  s.resources = ["**/*.lproj", "**/*.strings", "**/*.xib", "**/*.nib", "**/*.png"]
   s.ios.deployment_target = '13.0'
   s.vendored_frameworks = 'VitaleHealthSDK.xcframework'
   s.dependency 'NutritionSDK', '~> 2.3.2'
