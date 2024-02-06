@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '13.0'
   s.vendored_frameworks = 'VitaleHealthSDK.xcframework'
   s.dependency 'NutritionSDK', '~> 2.3.4'
-  s.dependency 'WorkoutLib', '~> 1.6.6'
+  s.dependency 'WorkoutLib', '~> 1.6.7'
   s.dependency 'CometChatPro', '~> 2.1.3'
   # s.swift_version = "5.0"
   s.swift_versions = ['4.0', '4.2', '5.0']
