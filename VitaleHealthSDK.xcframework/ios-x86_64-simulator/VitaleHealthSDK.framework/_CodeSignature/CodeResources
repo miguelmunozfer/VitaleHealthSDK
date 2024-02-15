@@ -438,15 +438,15 @@
 		</data>
 		<key>CometChatCallsView.nib/objects-14.0+.nib</key>
 		<data>
-		BcMaD2tNOVpuxhPedGQvsFMfvb0=
+		XGtJ5SHB/+IYvVDZP35ik0qIPq4=
 		</data>
 		<key>CometChatCallsView.nib/runtime.nib</key>
 		<data>
-		NmrJKXZU5GEtBvsNZWbRous5bw8=
+		Cj6zSu7uztnBnmpcBZOjB/scwHQ=
 		</data>
 		<key>CometChatConversationView.nib</key>
 		<data>
-		YgwEkMYK2HcA9psB9rYLHe4sGfI=
+		yS758XsEf3u1Y7wuORI5zeKJblw=
 		</data>
 		<key>CometChatCreateGroup.nib/objects-14.0+.nib</key>
 		<data>
@@ -462,7 +462,7 @@
 		</data>
 		<key>CometChatGroupView.nib</key>
 		<data>
-		jHhEknytWtcDYkZ6llYu7fByIqw=
+		CvHJcBEiDXm+OROOoy0Kt6bprDc=
 		</data>
 		<key>CometChatIncomingCall.nib</key>
 		<data>
@@ -550,11 +550,11 @@
 		</data>
 		<key>LeftReplyMessageBubble.nib</key>
 		<data>
-		vyOGhDMtuaHwabvBUE01xzAC0xU=
+		SKxmpShtDIb7JWefGovtvJHONBQ=
 		</data>
 		<key>LeftTextMessageBubble.nib</key>
 		<data>
-		MAQZ6sC1y6fof8WZklDgU27YOjg=
+		oWu9Jxc2A5+s8c8CwwDQ4MXBxq4=
 		</data>
 		<key>LeftVideoMessageBubble.nib</key>
 		<data>
@@ -2472,21 +2472,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			XAk3yj7FdJfiXQNEAOKhewKsdUXqcofDixlcjXBGYV8=
+			HRLMgdGRtpwQ5PA0sU032C1yoTmunmRAnCT5Oi90670=
 			</data>
 		</dict>
 		<key>CometChatCallsView.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			R/OvM2oebqIap+3oG2e7Ul8tc2I8AWxJA7q2CiCWHYA=
+			g7h2taScA05NNK0ziaBaW8IWSICVrEM0iBYXYaTAypo=
 			</data>
 		</dict>
 		<key>CometChatConversationView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			hzGUHhTwR0R/BF+lYd7w+9O/Rpf6EvZHr54NiyRbjGY=
+			fVJ7OOT6IO72QN9E5brbDVP08zgaHa2D413+gS+WIRE=
 			</data>
 		</dict>
 		<key>CometChatCreateGroup.nib/objects-14.0+.nib</key>
@@ -2514,7 +2514,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0VJE+2x86cCu4LSFnmUCTE5bcnDs0inO8fiMPWu6IK8=
+			oGoNKnWS4uIU8J8C3oMmgpiG0ENw6shXpALraguBCks=
 			</data>
 		</dict>
 		<key>CometChatIncomingCall.nib</key>
@@ -2661,14 +2661,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			e1HOuAJ/jpgGa/T8SZdXLFMs26FZfpDWwX1kHn5ilW8=
+			/AGPRI/oQ1vLh9DxuE3LQPm1bvKvE7PcVEJWKyANQnQ=
 			</data>
 		</dict>
 		<key>LeftTextMessageBubble.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/3U8o+trUlqQ6No22hg3XC/YASRvRCl5BZUlQQqvR14=
+			cjsvJwYuANpp1ThA8amsshZSrskuF+mk+1v62NFIZ2Y=
 			</data>
 		</dict>
 		<key>LeftVideoMessageBubble.nib</key>
