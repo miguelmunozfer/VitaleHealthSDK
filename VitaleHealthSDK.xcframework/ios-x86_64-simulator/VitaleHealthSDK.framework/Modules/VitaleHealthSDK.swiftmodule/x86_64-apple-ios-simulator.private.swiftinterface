@@ -517,6 +517,16 @@ extension VitaleHealthSDK.ImageDownloader : VitaleHealthSDK.AuthenticationChalle
 }
 extension VitaleHealthSDK.ImageDownloader : VitaleHealthSDK.ImageDownloaderDelegate {
 }
+public enum UserGender : Swift.Codable {
+  case male, female
+  public static func == (a: VitaleHealthSDK.UserGender, b: VitaleHealthSDK.UserGender) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public var hashValue: Swift.Int {
+    get
+  }
+  public init(from decoder: any Swift.Decoder) throws
+}
 @_inheritsConvenienceInitializers @objc public class CometChatCallManager : ObjectiveC.NSObject {
   @objc weak public static var incomingCallDelegate: (any VitaleHealthSDK.IncomingCallDelegate)?
   @objc weak public static var outgoingCallDelegate: (any VitaleHealthSDK.OutgoingCallDelegate)?
@@ -1514,6 +1524,7 @@ extension VitaleHealthSDK.CometChatMessageList : VitaleHealthSDK.LinkPreviewDele
   public func showExperts()
   public func showProfile()
   public func setSmallLogo(_ logo: UIKit.UIImage?)
+  public func updatePersonalProfile(gender: VitaleHealthSDK.UserGender? = nil, height: Swift.Int? = nil, weight: Swift.Int? = nil, birthDate: Foundation.Date? = nil)
   @objc deinit
 }
 public protocol VitaleSDKDelegate : AnyObject {
@@ -2059,6 +2070,8 @@ extension VitaleHealthSDK.CometChatGroupList : UIKit.UISearchBarDelegate, UIKit.
 }
 extension VitaleHealthSDK.CacheType : Swift.Equatable {}
 extension VitaleHealthSDK.CacheType : Swift.Hashable {}
+extension VitaleHealthSDK.UserGender : Swift.Equatable {}
+extension VitaleHealthSDK.UserGender : Swift.Hashable {}
 extension VitaleHealthSDK.ContentMode : Swift.Equatable {}
 extension VitaleHealthSDK.ContentMode : Swift.Hashable {}
 extension VitaleHealthSDK.ImageFormat : Swift.Equatable {}
