@@ -47,22 +47,46 @@ VitaleSDK.shared.startSDKWithConfig(config: "vitaleCredentials", userID: "USER_I
 
 ```
 
-### Show health module
+### Display Functionalities
+
+The SDK provides methods to display different functionalities:
 
 ```swift
-VitaleSDK.shared.showVitale()
-
+sdk.showNutrition()
+sdk.showTraining()
+sdk.showExperts()
+sdk.showProfile()
 ```
 
-### Custom navigation bar logo
+### Update Personal Profile
 
-Add your App’s logo to the navigationBar.
+To update the user's personal profile:
 
 ```swift
-VitaleSDK.shared.setSmallLogo(UIImage(named: "IMAGE_NAME"))
-
+sdk.updatePersonalProfile(gender: .male, height: 180, weight: 75, birthDate: Date())
 ```
 
+
+### UI Customization
+
+`VitaleSDK` allows for the customization of various user interface aspects:
+
+```swift
+// Set the main color
+sdk.setMainColor(color: "#hexColor")
+
+// Set the primary button color
+sdk.setPrimaryButtonColor("#hexColor")
+
+// Set the navigation bar color
+sdk.setNavigationBarColor(color: "#hexColor")
+
+// Set the navigation tint color
+sdk.setNavigationTintColor(color: "#hexColor")
+
+// Set a small logo
+sdk.setSmallLogo(UIImage(named: "logoImage"))
+```
 
 
 ## Author
