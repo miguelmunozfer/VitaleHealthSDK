@@ -27,9 +27,6 @@ import UIKit
 import UIKit
 import UIKit
 import UIKit
-import UIKit
-import UIKit
-import UIKit
 @_exported import VitaleHealthSDK
 import WebKit
 import WorkoutLib
@@ -525,6 +522,10 @@ public enum UserGender : Swift.Codable {
   public var hashValue: Swift.Int {
     get
   }
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct PersonalProfile : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 @_inheritsConvenienceInitializers @objc public class CometChatCallManager : ObjectiveC.NSObject {
@@ -1525,6 +1526,8 @@ extension VitaleHealthSDK.CometChatMessageList : VitaleHealthSDK.LinkPreviewDele
   public func showProfile()
   public func setSmallLogo(_ logo: UIKit.UIImage?)
   public func updatePersonalProfile(gender: VitaleHealthSDK.UserGender? = nil, height: Swift.Int? = nil, weight: Swift.Int? = nil, birthDate: Foundation.Date? = nil)
+  public func setPathologies(_ pathologies: [WorkoutLib.Pathologies])
+  public func getProfile(_ completion: @escaping (VitaleHealthSDK.PersonalProfile?) -> ())
   @objc deinit
 }
 public protocol VitaleSDKDelegate : AnyObject {

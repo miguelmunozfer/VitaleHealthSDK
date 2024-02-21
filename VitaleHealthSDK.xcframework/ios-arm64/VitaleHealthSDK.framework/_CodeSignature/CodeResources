@@ -446,7 +446,7 @@
 		</data>
 		<key>CometChatConversationView.nib</key>
 		<data>
-		HykM3qh1muNeJcq+BTftpfL8lEY=
+		qBT00H/qNN2GhRGzNIcW2106FKg=
 		</data>
 		<key>CometChatCreateGroup.nib/objects-14.0+.nib</key>
 		<data>
@@ -546,11 +546,11 @@
 		</data>
 		<key>LeftLinkPreviewBubble.nib</key>
 		<data>
-		rmbGO6BFosMgABBOoZmbTXmJN68=
+		NRjwe2PhF1SfBw0qMz4qjTkXnOQ=
 		</data>
 		<key>LeftReplyMessageBubble.nib</key>
 		<data>
-		vyOGhDMtuaHwabvBUE01xzAC0xU=
+		ujYnwYJBV0TN3rnfANIN3cwafjc=
 		</data>
 		<key>LeftTextMessageBubble.nib</key>
 		<data>
@@ -574,11 +574,11 @@
 		</data>
 		<key>Modules/VitaleHealthSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		fRZjNtgk8Zn+MYbyp4bMBUKuRDs=
+		dn50LdibJH4zvnkCSG5LYlzehoM=
 		</data>
 		<key>Modules/VitaleHealthSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		1SRbiX6wpqn17CaLn3TFvrcin4Y=
+		hBxPa9N+IYDmtq71TuNZbw9nXsM=
 		</data>
 		<key>Modules/VitaleHealthSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -586,11 +586,11 @@
 		</data>
 		<key>Modules/VitaleHealthSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		1SRbiX6wpqn17CaLn3TFvrcin4Y=
+		hBxPa9N+IYDmtq71TuNZbw9nXsM=
 		</data>
 		<key>Modules/VitaleHealthSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		RBYBd4O3I9QZVA+rpEs1qUU7EIw=
+		M9NsgKMxRICMx6w0eLoPiTMfC+M=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -642,7 +642,7 @@
 		</data>
 		<key>RightLinkPreviewBubble.nib</key>
 		<data>
-		Kitb99ctzOxRHiI6yNcToB3Jedk=
+		HELLjIOaUwoNQcHqLmFlJUyunx8=
 		</data>
 		<key>RightReplyMessageBubble.nib</key>
 		<data>
@@ -1053,7 +1053,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			BYMIv8cx6fwmazDlKW9gY9XaX5Q=
+			/KqOhIyCvMfPSgOzoVW3kMv8RhQ=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2486,7 +2486,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			cZSdO4GcktS+8g7BNcXr4Lko0wjvoCUy1Z8ja3XJeM4=
+			fHF7Wjma+Neuo0Ttp+9gqW60+pw6myCRDopCN444HRw=
 			</data>
 		</dict>
 		<key>CometChatCreateGroup.nib/objects-14.0+.nib</key>
@@ -2654,14 +2654,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0uPLxIkAet4PfXyD/SPtvEvCVS6g1cR4H2Xepc754AE=
+			4QPTzvbpCMz+g/l24gbwNuzlALW8tE3tEND5nfnMFfM=
 			</data>
 		</dict>
 		<key>LeftReplyMessageBubble.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			e1HOuAJ/jpgGa/T8SZdXLFMs26FZfpDWwX1kHn5ilW8=
+			AlIEKr8jVjCOcqc9iV7K6MkD7O3f3tOcSYnyIidGWGY=
 			</data>
 		</dict>
 		<key>LeftTextMessageBubble.nib</key>
@@ -2703,14 +2703,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			YfZkMkXp3O0mZGxIlPJkzAPV/On6ruBoXiR8uS3StCc=
+			TezX82dOEoGxOV63bbjAWmS2IpLNJ+QgHO0yAD2bs2c=
 			</data>
 		</dict>
 		<key>Modules/VitaleHealthSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			En7u2duI3uvDmdQvjD+cz7kxezFcuMq79ci0wTQwpLo=
+			/30O44k9J86lYIbZmufGfKAHx4wyBh7oEv7KU77KnKc=
 			</data>
 		</dict>
 		<key>Modules/VitaleHealthSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -2724,14 +2724,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			En7u2duI3uvDmdQvjD+cz7kxezFcuMq79ci0wTQwpLo=
+			/30O44k9J86lYIbZmufGfKAHx4wyBh7oEv7KU77KnKc=
 			</data>
 		</dict>
 		<key>Modules/VitaleHealthSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RTeocPWDiUtuNeO23gsazI/RUiK4PcDmX23dnAx97+w=
+			Q8F5QrCjQMMP5lk6cSY1adEuHGI81pLu85JVBp5AgI8=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -2822,7 +2822,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			SCOl097vciFYzjQ3EwOovP9MqLyQcIPEcrqkcYVui/w=
+			2B7yhGelfu7Q2dbp7JBsozDPJfdQfo6rVG6evr7QPkI=
 			</data>
 		</dict>
 		<key>RightReplyMessageBubble.nib</key>
@@ -3477,7 +3477,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jJY4coJ1GWGGoHpENJmbsTYfFfdjCsv9PzGXvmhTEsc=
+			VUjL24sWrdEBPrwpovaAmfwOyvRSnZUpGcNJPVK9QcU=
 			</data>
 			<key>optional</key>
 			<true/>

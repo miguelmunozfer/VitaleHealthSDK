@@ -438,15 +438,15 @@
 		</data>
 		<key>CometChatCallsView.nib/objects-14.0+.nib</key>
 		<data>
-		XGtJ5SHB/+IYvVDZP35ik0qIPq4=
+		BcMaD2tNOVpuxhPedGQvsFMfvb0=
 		</data>
 		<key>CometChatCallsView.nib/runtime.nib</key>
 		<data>
-		Cj6zSu7uztnBnmpcBZOjB/scwHQ=
+		NmrJKXZU5GEtBvsNZWbRous5bw8=
 		</data>
 		<key>CometChatConversationView.nib</key>
 		<data>
-		yS758XsEf3u1Y7wuORI5zeKJblw=
+		YgwEkMYK2HcA9psB9rYLHe4sGfI=
 		</data>
 		<key>CometChatCreateGroup.nib/objects-14.0+.nib</key>
 		<data>
@@ -574,11 +574,11 @@
 		</data>
 		<key>Modules/VitaleHealthSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		yyl0toNWkxReE0bg1XdntYCy0wI=
+		GeC005Rr+RRo8x6naEJGghPgLPA=
 		</data>
 		<key>Modules/VitaleHealthSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		uFh20/cIcOUcUhOCijNWRoTnPys=
+		oRWyjpHl1JbWiJoIg/F6t/TBYwk=
 		</data>
 		<key>Modules/VitaleHealthSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -586,11 +586,11 @@
 		</data>
 		<key>Modules/VitaleHealthSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		uFh20/cIcOUcUhOCijNWRoTnPys=
+		oRWyjpHl1JbWiJoIg/F6t/TBYwk=
 		</data>
 		<key>Modules/VitaleHealthSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		s2gPljruvBovrrZwLX/6aUI72lI=
+		ctdPr0Hebd/S2rs0FUnX9y6BxGI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -1053,7 +1053,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			BYMIv8cx6fwmazDlKW9gY9XaX5Q=
+			/KqOhIyCvMfPSgOzoVW3kMv8RhQ=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2472,21 +2472,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			HRLMgdGRtpwQ5PA0sU032C1yoTmunmRAnCT5Oi90670=
+			XAk3yj7FdJfiXQNEAOKhewKsdUXqcofDixlcjXBGYV8=
 			</data>
 		</dict>
 		<key>CometChatCallsView.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			g7h2taScA05NNK0ziaBaW8IWSICVrEM0iBYXYaTAypo=
+			R/OvM2oebqIap+3oG2e7Ul8tc2I8AWxJA7q2CiCWHYA=
 			</data>
 		</dict>
 		<key>CometChatConversationView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fVJ7OOT6IO72QN9E5brbDVP08zgaHa2D413+gS+WIRE=
+			hzGUHhTwR0R/BF+lYd7w+9O/Rpf6EvZHr54NiyRbjGY=
 			</data>
 		</dict>
 		<key>CometChatCreateGroup.nib/objects-14.0+.nib</key>
@@ -2703,14 +2703,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			fikchSCYQtmG0BFBLKJP56twn9EFQ9SZo+dm5VMrb6o=
+			DErZ32MeYpx5CqEKNf/gn7EWlmLecD0JtrC1mgfYkI4=
 			</data>
 		</dict>
 		<key>Modules/VitaleHealthSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			H699Kemw7kPUFiOsHQV+V8jALz35Z3jNO5tTJe+hp6w=
+			i8viGevkRHsPwC8PGic3UubVRx8uUZOVtDS+bbIXdQw=
 			</data>
 		</dict>
 		<key>Modules/VitaleHealthSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -2724,14 +2724,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			H699Kemw7kPUFiOsHQV+V8jALz35Z3jNO5tTJe+hp6w=
+			i8viGevkRHsPwC8PGic3UubVRx8uUZOVtDS+bbIXdQw=
 			</data>
 		</dict>
 		<key>Modules/VitaleHealthSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Z/PY1/IjneB7180RDeMk2hs5BmUlfrA+Avav1HSBGPw=
+			9DAxZv5DhgdZBF7ITvgjxRFLtPEcytUbRvoh5h7uGUM=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -3477,7 +3477,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jJY4coJ1GWGGoHpENJmbsTYfFfdjCsv9PzGXvmhTEsc=
+			VUjL24sWrdEBPrwpovaAmfwOyvRSnZUpGcNJPVK9QcU=
 			</data>
 			<key>optional</key>
 			<true/>
