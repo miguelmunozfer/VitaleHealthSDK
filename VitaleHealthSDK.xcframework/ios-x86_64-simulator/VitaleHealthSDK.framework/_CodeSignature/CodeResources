@@ -438,15 +438,15 @@
 		</data>
 		<key>CometChatCallsView.nib/objects-14.0+.nib</key>
 		<data>
-		BcMaD2tNOVpuxhPedGQvsFMfvb0=
+		XGtJ5SHB/+IYvVDZP35ik0qIPq4=
 		</data>
 		<key>CometChatCallsView.nib/runtime.nib</key>
 		<data>
-		NmrJKXZU5GEtBvsNZWbRous5bw8=
+		Cj6zSu7uztnBnmpcBZOjB/scwHQ=
 		</data>
 		<key>CometChatConversationView.nib</key>
 		<data>
-		YgwEkMYK2HcA9psB9rYLHe4sGfI=
+		yS758XsEf3u1Y7wuORI5zeKJblw=
 		</data>
 		<key>CometChatCreateGroup.nib/objects-14.0+.nib</key>
 		<data>
@@ -574,7 +574,7 @@
 		</data>
 		<key>Modules/VitaleHealthSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		GeC005Rr+RRo8x6naEJGghPgLPA=
+		FJD84CEqlPzIxXowM+ygwgRkj3E=
 		</data>
 		<key>Modules/VitaleHealthSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -1053,7 +1053,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			/KqOhIyCvMfPSgOzoVW3kMv8RhQ=
+			cWWWae9h6D2ec9IIP6qlh0/bmVI=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2472,21 +2472,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			XAk3yj7FdJfiXQNEAOKhewKsdUXqcofDixlcjXBGYV8=
+			HRLMgdGRtpwQ5PA0sU032C1yoTmunmRAnCT5Oi90670=
 			</data>
 		</dict>
 		<key>CometChatCallsView.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			R/OvM2oebqIap+3oG2e7Ul8tc2I8AWxJA7q2CiCWHYA=
+			g7h2taScA05NNK0ziaBaW8IWSICVrEM0iBYXYaTAypo=
 			</data>
 		</dict>
 		<key>CometChatConversationView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			hzGUHhTwR0R/BF+lYd7w+9O/Rpf6EvZHr54NiyRbjGY=
+			fVJ7OOT6IO72QN9E5brbDVP08zgaHa2D413+gS+WIRE=
 			</data>
 		</dict>
 		<key>CometChatCreateGroup.nib/objects-14.0+.nib</key>
@@ -2703,7 +2703,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			DErZ32MeYpx5CqEKNf/gn7EWlmLecD0JtrC1mgfYkI4=
+			y9UbH4MAuwaL/J8kVu7USlW8ePhgbIt+8D9qX7tGUrU=
 			</data>
 		</dict>
 		<key>Modules/VitaleHealthSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -3477,7 +3477,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			VUjL24sWrdEBPrwpovaAmfwOyvRSnZUpGcNJPVK9QcU=
+			vN8b7oWlECO6MNbKDfAI3XzZ6igMsqEJW3zubq/+tDc=
 			</data>
 			<key>optional</key>
 			<true/>
