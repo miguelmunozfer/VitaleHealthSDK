@@ -88,6 +88,65 @@ sdk.setNavigationTintColor(color: "#hexColor")
 sdk.setSmallLogo(UIImage(named: "logoImage"))
 ```
 
+### `updatePersonalProfile(gender:height:weight:birthDate:)`
+
+#### Description
+Updates the personal profile of the user within the SDK. This method allows for the modification of the user's gender, height, weight, and birth date. All parameters are optional, enabling the update of specific information as needed.
+
+#### Parameters
+- `gender: UserGender?` (Optional): The gender of the user. Can be `nil` if not updating this information.
+- `height: Int?` (Optional): The user's height in centimeters. Can be `nil` if not updating this information.
+- `weight: Int?` (Optional): The user's weight in kilograms. Can be `nil` if not updating this information.
+- `birthDate: Date?` (Optional): The user's birth date. Can be `nil` if not updating this information.
+
+#### Example Usage
+```swift
+VitaleSDK.updatePersonalProfile(gender: .female, height: 170, weight: 65, birthDate: Date())
+```
+
+### `setPathologies(_:)`
+
+#### Description
+Sets the user's pathologies in the SDK. This method allows defining a list of specific medical conditions affecting the user, based on a predefined set of conditions.
+
+#### Parameters
+- `pathologies: [Pathologies]`: An array of the user's pathologies. Possible options include:
+  - `.arterialHypertension`: Arterial Hypertension.
+  - `.osteoporosis`: Osteoporosis.
+  - `.diabetes`: Diabetes.
+  - `.obesity`: Obesity.
+  - `.highCholesterolOrTriglycerides`: High Cholesterol or Triglycerides.
+  - `.backPain`: Back Pain.
+  - `.metabolicsyndrome`: Metabolic Syndrome.
+  - `.copd`: Chronic Obstructive Pulmonary Disease (COPD).
+  - `.multipleSclerosis`: Multiple Sclerosis.
+  - `.fibromyalgia`: Fibromyalgia.
+  - `.stroke`: Stroke.
+  - `.heartDisease`: Heart Disease.
+
+#### Example Usage
+```swift
+VitaleSDK.setPathologies([.diabetes, .obesity, .highCholesterolOrTriglycerides])
+```
+
+### `getProfile(_:)`
+
+#### Description
+Retrieves the personal profile of the user. This function is asynchronous and returns the data through a completion block.
+
+#### Parameters
+- `completion: @escaping(PersonalProfile?)->()`: A completion block that is called with the user's profile. It may be `nil` if the information could not be retrieved.
+
+#### Example Usage
+```swift
+VitaleSDK.getProfile { userProfile in
+    if let profile = userProfile {
+        print("User profile: \(profile)")
+    } else {
+        print("Failed to retrieve user profile")
+    }
+}
+```
 
 ## Author
 
