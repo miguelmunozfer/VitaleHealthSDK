@@ -52,10 +52,10 @@ VitaleSDK.shared.startSDKWithConfig(config: "vitaleCredentials", userID: "USER_I
 The SDK provides methods to display different functionalities:
 
 ```swift
-sdk.showNutrition()
-sdk.showTraining()
-sdk.showExperts()
-sdk.showProfile()
+VitaleSDK.showNutrition()
+VitaleSDK.showTraining()
+VitaleSDK.showExperts()
+VitaleSDK.showProfile()
 ```
 
 ### Update Personal Profile
@@ -63,32 +63,8 @@ sdk.showProfile()
 To update the user's personal profile:
 
 ```swift
-sdk.updatePersonalProfile(gender: .male, height: 180, weight: 75, birthDate: Date())
+VitaleSDK.updatePersonalProfile(firstName: "John", lastName: "Cook", gender: .male, height: 180, weight: 75, birthDate: Date())
 ```
-
-
-### UI Customization
-
-`VitaleSDK` allows for the customization of various user interface aspects:
-
-```swift
-// Set the main color
-sdk.setMainColor(color: "#hexColor")
-
-// Set the primary button color
-sdk.setPrimaryButtonColor("#hexColor")
-
-// Set the navigation bar color
-sdk.setNavigationBarColor(color: "#hexColor")
-
-// Set the navigation tint color
-sdk.setNavigationTintColor(color: "#hexColor")
-
-// Set a small logo
-sdk.setSmallLogo(UIImage(named: "logoImage"))
-```
-
-### `updatePersonalProfile(firstName:lastName:gender:height:weight:birthDate:)`
 
 #### Description
 Updates the personal profile of the user within the SDK. This method allows for the modification of the user's gender, height, weight, and birth date. All parameters are optional, enabling the update of specific information as needed.
@@ -103,7 +79,28 @@ Updates the personal profile of the user within the SDK. This method allows for 
 
 #### Example Usage
 ```swift
-VitaleSDK.updatePersonalProfile(gender: .female, height: 170, weight: 65, birthDate: Date())
+VitaleSDK.updatePersonalProfile(firstName: "John", lastName: "Cook", gender: .male, height: 180, weight: 75, birthDate: Date())
+```
+
+### UI Customization
+
+`VitaleSDK` allows for the customization of various user interface aspects:
+
+```swift
+// Set the main color
+VitaleSDK.setMainColor(color: "#hexColor")
+
+// Set the primary button color
+VitaleSDK.setPrimaryButtonColor("#hexColor")
+
+// Set the navigation bar color
+VitaleSDK.setNavigationBarColor(color: "#hexColor")
+
+// Set the navigation tint color
+VitaleSDK.setNavigationTintColor(color: "#hexColor")
+
+// Set a small logo
+VitaleSDK.setSmallLogo(UIImage(named: "logoImage"))
 ```
 
 ### `setPathologies(_:)`
