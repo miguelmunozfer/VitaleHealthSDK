@@ -88,12 +88,14 @@ sdk.setNavigationTintColor(color: "#hexColor")
 sdk.setSmallLogo(UIImage(named: "logoImage"))
 ```
 
-### `updatePersonalProfile(gender:height:weight:birthDate:)`
+### `updatePersonalProfile(firstName:lastName:gender:height:weight:birthDate:)`
 
 #### Description
 Updates the personal profile of the user within the SDK. This method allows for the modification of the user's gender, height, weight, and birth date. All parameters are optional, enabling the update of specific information as needed.
 
 #### Parameters
+- `firstName: String?` (Optional): The firstName of the user. Can be `nil` if not updating this information.
+- `lastName: String?` (Optional): The lastName of the user. Can be `nil` if not updating this information.
 - `gender: UserGender?` (Optional): The gender of the user. Can be `nil` if not updating this information.
 - `height: Int?` (Optional): The user's height in centimeters. Can be `nil` if not updating this information.
 - `weight: Int?` (Optional): The user's weight in kilograms. Can be `nil` if not updating this information.
