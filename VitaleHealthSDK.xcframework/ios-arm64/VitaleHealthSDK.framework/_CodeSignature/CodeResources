@@ -42,7 +42,7 @@
 		</data>
 		<key>Base.lproj/StartVirtualViewController.nib</key>
 		<data>
-		z4lJxyEP0lS02IevazZn5eXcau4=
+		lHUi9jd3uguiCgbfg6p5Mi1jNDo=
 		</data>
 		<key>Base.lproj/TrainingProfile1ViewController.nib</key>
 		<data>
@@ -442,7 +442,7 @@
 		</data>
 		<key>CometChatCallsView.nib/runtime.nib</key>
 		<data>
-		Cj6zSu7uztnBnmpcBZOjB/scwHQ=
+		NmrJKXZU5GEtBvsNZWbRous5bw8=
 		</data>
 		<key>CometChatConversationView.nib</key>
 		<data>
@@ -574,11 +574,11 @@
 		</data>
 		<key>Modules/VitaleHealthSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		wQPPheSb0yKtQh7CmM6/fjq2p+I=
+		t9AeF6g7XDfrx4lbkJWQ1+nnbIk=
 		</data>
 		<key>Modules/VitaleHealthSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		hBxPa9N+IYDmtq71TuNZbw9nXsM=
+		294VHmcLG6S5+YMGtlrKKGGjBA0=
 		</data>
 		<key>Modules/VitaleHealthSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -586,11 +586,11 @@
 		</data>
 		<key>Modules/VitaleHealthSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		hBxPa9N+IYDmtq71TuNZbw9nXsM=
+		294VHmcLG6S5+YMGtlrKKGGjBA0=
 		</data>
 		<key>Modules/VitaleHealthSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		M9NsgKMxRICMx6w0eLoPiTMfC+M=
+		XKQQaAok9QlywIytFQA9GYt22zw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -1053,7 +1053,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			cWWWae9h6D2ec9IIP6qlh0/bmVI=
+			9t+hnfmW6Knudp4aFgiuMehLNW8=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1779,7 +1779,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			NHbXGfl1nLzQRn1d9A3kaKfsS9I5nbHNhxPhY7ZRMvo=
+			0iKCJGsmYNrZr3b22GLsY4De2S62D2jepPMf2cUO1ww=
 			</data>
 		</dict>
 		<key>Base.lproj/TrainingProfile1ViewController.nib</key>
@@ -2479,7 +2479,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			g7h2taScA05NNK0ziaBaW8IWSICVrEM0iBYXYaTAypo=
+			R/OvM2oebqIap+3oG2e7Ul8tc2I8AWxJA7q2CiCWHYA=
 			</data>
 		</dict>
 		<key>CometChatConversationView.nib</key>
@@ -2703,14 +2703,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			D/HW66DNt4ILsQtjONaWa3HLZndxVcO6wxiKELv6NlU=
+			XKluCHbGgPuJaV7n4pjpdPM2SocqVczEeDysKMyiJhA=
 			</data>
 		</dict>
 		<key>Modules/VitaleHealthSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/30O44k9J86lYIbZmufGfKAHx4wyBh7oEv7KU77KnKc=
+			oV302IGPsU5/wiHG9JBY1UJ/mIcvjrAFrJQQ4rNwBHk=
 			</data>
 		</dict>
 		<key>Modules/VitaleHealthSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -2724,14 +2724,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			/30O44k9J86lYIbZmufGfKAHx4wyBh7oEv7KU77KnKc=
+			oV302IGPsU5/wiHG9JBY1UJ/mIcvjrAFrJQQ4rNwBHk=
 			</data>
 		</dict>
 		<key>Modules/VitaleHealthSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Q8F5QrCjQMMP5lk6cSY1adEuHGI81pLu85JVBp5AgI8=
+			tqxOHQ6MHjsrg1Tx/1KhhvNHKdcr84S3LP/9ih4NTUc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -3477,7 +3477,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			vN8b7oWlECO6MNbKDfAI3XzZ6igMsqEJW3zubq/+tDc=
+			Z0Y/DDLMX2CLS0+grBvdVrdvHFNA5cpsVuYYyUIOphA=
 			</data>
 			<key>optional</key>
 			<true/>

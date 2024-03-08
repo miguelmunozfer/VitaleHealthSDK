@@ -1525,7 +1525,7 @@ extension VitaleHealthSDK.CometChatMessageList : VitaleHealthSDK.LinkPreviewDele
   public func showExperts()
   public func showProfile()
   public func setSmallLogo(_ logo: UIKit.UIImage?)
-  public func updatePersonalProfile(gender: VitaleHealthSDK.UserGender? = nil, height: Swift.Int? = nil, weight: Swift.Int? = nil, birthDate: Foundation.Date? = nil)
+  public func updatePersonalProfile(firstName: Swift.String? = nil, lastName: Swift.String? = nil, gender: VitaleHealthSDK.UserGender? = nil, height: Swift.Int? = nil, weight: Swift.Int? = nil, birthDate: Foundation.Date? = nil)
   public func setPathologies(_ pathologies: [WorkoutLib.Pathologies])
   public func getProfile(_ completion: @escaping (VitaleHealthSDK.PersonalProfile?) -> ())
   @objc deinit
